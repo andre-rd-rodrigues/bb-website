@@ -1,0 +1,21 @@
+/* Navbar.module.css */
+
+/* CSS Transition Animation */
+.menu-enter {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.menu-enter-active {
+  max-height: 1000px; /* Adjust as needed */
+  transition: max-height 300ms ease-out;
+}
+
+.menu-exit {
+  max-height: 1000px; /* Adjust as needed */
+}
+
+.menu-exit-active {
+  max-height: 0;
+  transition: max-height 300ms ease-out;
+}

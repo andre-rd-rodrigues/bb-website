@@ -1,0 +1,29 @@
+{
+  "pages": {
+    "homepage": {
+      "title": "Bárbara Barbizani",
+      "subtitle": "Advocacia & Consultoria Jurídica"
+    }
+  },
+  "components": {
+    "navbar": {
+      "links": [
+        {
+          "name": "Sobre",
+          "href": "/sobre"
+        },
+        {
+          "name": "Serviços",
+          "href": "/servicos"
+        },
+        {
+          "name": "Contatos",
+          "href": "/contatos"
+        }
+      ]
+    },
+    "buttons": {
+      "contact": "Contato"
+    }
+  }
+}

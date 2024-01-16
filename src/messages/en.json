@@ -1,0 +1,128 @@
+{
+  "pages": {
+    "homepage": {
+      "title": "Bárbara Barbizani",
+      "subtitle": "Law Practice & Legal Consulting",
+      "practice": {
+        "title": "Practice Areas",
+        "subtitle": "Problems trying to resolve the conflict between  the two major realms of Classical physics: Newtonian mechanics "
+      },
+      "about": {
+        "title": "Helping to overcome and ease the legal burden",
+        "subtitle": "About me",
+        "description": "Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molestie pellentesque urna libero velit porta. Velit pellentesque hac gravida pellentesque est semper. Duis lectus gravida ultricies eleifend in pharetra faucibus orci sem. Proin ac a cursus praesent.",
+        "extraInfo": [
+          {
+            "title": "Experience",
+            "value": "12+"
+          },
+          {
+            "title": "Cases Handled",
+            "value": "100+"
+          },
+          {
+            "title": "Clients",
+            "value": "128+"
+          }
+        ]
+      },
+      "hero1": {
+        "title": "Your Legal Partner for Trustworthy Advice",
+        "description": "I'm here to help. As your legal partner, I provide personalized solutions that protect your interests and guide you to informed decisions. Let's work together to find clarity in legal matters. Schedule a consultation today and take the first step toward peace of mind."
+      },
+      "contacts": {
+        "title": "Get in Touch for Expert Advice",
+        "subtitle": "Contacts",
+        "description": "Whether you're navigating complex legal issues or simply seeking guidance, I'm here to assist you. Let's embark on this journey together - your legal matters deserve the attention and expertise I provide. Get in touch today and experience personalized counsel that puts your needs first. Your concerns matter, and I'm committed to providing the expert advice you deserve. I look forward to hearing from you and addressing your legal needs with care and precision."
+      }
+    }
+  },
+  "components": {
+    "navbar": {
+      "links": [
+        {
+          "name": "About",
+          "href": "/about"
+        },
+        {
+          "name": "Services",
+          "href": "/services"
+        },
+        {
+          "name": "Contacts",
+          "href": "/contacts"
+        }
+      ]
+    },
+    "practiceAreas": [
+      {
+        "title": "Title",
+        "description": "Newton thought that light was made up of particles, but then it was discovered ",
+        "imageUrl": "https://images.unsplash.com/photo-1589391886645-d51941baf7fb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      }
+    ],
+    "testimonials": {
+      "title": "What My Clients Experienced",
+      "subtitle": "Testimonials",
+      "feedback": [
+        {
+          "author": "André Rodrigues",
+          "feedback": "Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molestie pellentesque urna libero velit porta. Velit pellentesque hac gravida pellentesque est semper. Duis lectus gravida ultricies eleifend in pharetra faucibus orci sem. Proin ac a cursus praesent. Malesuada risus amet nunc posuere rhoncus accumsan congue id dolor. Convallis maecenas sed in pellentesque. Diam tristique semper mauris dolor amet. Dolor elit nunc et purus quam amet laoreet eu risus.",
+          "imageUrl": "https://images.unsplash.com/photo-1673623702948-082634e585e4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+        },
+        {
+          "author": "André Rodrigues",
+          "feedback": "Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molestie pellentesque urna libero velit porta. Velit pellentesque hac gravida pellentesque est semper. Duis lectus gravida ultricies eleifend in pharetra faucibus orci sem. Proin ac a cursus praesent. Malesuada risus amet nunc posuere rhoncus accumsan congue id dolor. Convallis maecenas sed in pellentesque. Diam tristique semper mauris dolor amet. Dolor elit nunc et purus quam amet laoreet eu risus.",
+          "imageUrl": "https://plus.unsplash.com/premium_photo-1700575181270-87f37b2ebb4f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "author": "André Rodrigues",
+          "feedback": "Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molestie pellentesque urna libero velit porta. Velit pellentesque hac gravida pellentesque est semper. Duis lectus gravida ultricies eleifend in pharetra faucibus orci sem. Proin ac a cursus praesent. Malesuada risus amet nunc posuere rhoncus accumsan congue id dolor. Convallis maecenas sed in pellentesque. Diam tristique semper mauris dolor amet. Dolor elit nunc et purus quam amet laoreet eu risus.",
+          "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+      ]
+    },
+    "articles": {
+      "title": "Published Articles",
+      "subtitle": "News",
+      "articles": [
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "title": "23 cases have been successfully ",
+          "description": "Lorem ipsum dolor sit amet consecter Commodo pulvinar molestie pellentesque urna libero",
+          "href": ""
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "title": "23 cases have been successfully ",
+          "description": "Lorem ipsum dolor sit amet consecter Commodo pulvinar molestie pellentesque urna libero",
+          "href": ""
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "title": "23 cases have been successfully ",
+          "description": "Lorem ipsum dolor sit amet consecter Commodo pulvinar molestie pellentesque urna libero",
+          "href": ""
+        }
+      ]
+    },
+    "faqs": {
+      "title": "Frequentley Asked Questions",
+      "questions": [
+        {
+          "question": "Education Lawyer & Consultation",
+          "answer": "Lorem ipsum dolor sit amet consecter Commodo pulvinar molestie pellentesque urna libero"
+        },
+        {
+          "question": "Education Lawyer & Consultation",
+          "answer": "Lorem ipsum dolor sit amet consecter Commodo pulvinar molestie pellentesque urna libero"
+        }
+      ]
+    },
+    "buttons": {
+      "contact": "Contact",
+      "see more": "See more",
+      "read more": "Read more"
+    }
+  }
+}
