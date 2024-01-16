@@ -2,7 +2,39 @@
   "pages": {
     "homepage": {
       "title": "Bárbara Barbizani",
-      "subtitle": "Advocacia & Consultoria Jurídica"
+      "subtitle": "Advocacia & Consultoria Jurídica",
+      "practice": {
+        "title": "Áreas de Atuação",
+        "subtitle": "Problemas tentando resolver o conflito entre os dois grandes domínios da física clássica: mecânica newtoniana"
+      },
+      "about": {
+        "title": "Ajudando a superar e aliviar o fardo jurídico",
+        "subtitle": "Sobre mim",
+        "description": "Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molestie pellentesque urna libero velit porta. Velit pellentesque hac gravida pellentesque est semper. Duis lectus gravida ultricies eleifend in pharetra faucibus orci sem. Proin ac a cursus praesent.",
+        "extraInfo": [
+          {
+            "title": "Experiência",
+            "value": "12+"
+          },
+          {
+            "title": "Casos Tratados",
+            "value": "100+"
+          },
+          {
+            "title": "Clientes",
+            "value": "128+"
+          }
+        ]
+      },
+      "hero1": {
+        "title": "Seu Parceiro Jurídico para Conselhos Confiáveis",
+        "description": "Estou aqui para ajudar. Como seu parceiro jurídico, ofereço soluções personalizadas que protegem seus interesses e o orientam para decisões informadas. Vamos trabalhar juntos para encontrar clareza em questões legais. Agende uma consulta hoje e dê o primeiro passo em direção à tranquilidade."
+      },
+      "contacts": {
+        "title": "Entre em Contato para Consultoria Especializada",
+        "subtitle": "Contatos",
+        "description": "Esteja você navegando por questões legais complexas ou apenas buscando orientação, estou aqui para ajudar. Vamos embarcar juntos nesta jornada - seus assuntos legais merecem a atenção e a experiência que ofereço. Entre em contato hoje e experimente a consultoria personalizada que coloca suas necessidades em primeiro lugar. Suas preocupações são importantes, e estou comprometido em fornecer o aconselhamento especializado que você merece. Aguardo seu contato para atender às suas necessidades legais com cuidado e precisão."
+      }
     }
   },
   "components": {
@@ -10,20 +42,144 @@
       "links": [
         {
           "name": "Sobre",
-          "href": "/sobre"
+          "href": "/about"
         },
         {
           "name": "Serviços",
-          "href": "/servicos"
+          "href": "/services"
         },
         {
           "name": "Contatos",
-          "href": "/contatos"
+          "href": "/contacts"
         }
       ]
     },
-    "buttons": {
-      "contact": "Contato"
+    "practiceAreas": [
+      {
+        "title": "Título",
+        "description": "Newton pensava que a luz era feita de partículas, mas então foi descoberto",
+        "imageUrl": "https://images.unsplash.com/photo-1589391886645-d51941baf7fb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      }
+    ],
+    "testimonials": {
+      "title": "O Que Meus Clientes Experienciaram",
+      "subtitle": "Depoimentos",
+      "feedback": [
+        {
+          "author": "André Rodrigues",
+          "feedback": "Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molestie pellentesque urna libero velit porta. Velit pellentesque hac gravida pellentesque est semper. Duis lectus gravida ultricies eleifend in pharetra faucibus orci sem. Proin ac a cursus praesent. Malesuada risus amet nunc posuere rhoncus accumsan congue id dolor. Convallis maecenas sed in pellentesque. Diam tristique semper mauris dolor amet. Dolor elit nunc et purus quam amet laoreet eu risus.",
+          "imageUrl": "https://images.unsplash.com/photo-1673623702948-082634e585e4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+        },
+        {
+          "author": "André Rodrigues",
+          "feedback": "Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molestie pellentesque urna libero velit porta. Velit pellentesque hac gravida pellentesque est semper. Duis lectus gravida ultricies eleifend in pharetra faucibus orci sem. Proin ac a cursus praesent. Malesuada risus amet nunc posuere rhoncus accumsan congue id dolor. Convallis maecenas sed in pellentesque. Diam tristique semper mauris dolor amet. Dolor elit nunc et purus quam amet laoreet eu risus.",
+          "imageUrl": "https://plus.unsplash.com/premium_photo-1700575181270-87f37b2ebb4f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "author": "André Rodrigues",
+          "feedback": "Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molestie pellentesque urna libero velit porta. Velit pellentesque hac gravida pellentesque est semper. Duis lectus gravida ultricies eleifend in pharetra faucibus orci sem. Proin ac a cursus praesent. Malesuada risus amet nunc posuere rhoncus accumsan congue id dolor. Convallis maecenas sed in pellentesque. Diam tristique semper mauris dolor amet. Dolor elit nunc et purus quam amet laoreet eu risus.",
+          "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+      ]
+    },
+    "articles": {
+      "title": "Artigos Publicados",
+      "subtitle": "Notícias",
+      "articles": [
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "title": "23 casos foram resolvidos com sucesso",
+          "description": "Lorem ipsum dolor sit amet consecter Commodo pulvinar molestie pellentesque urna libero",
+          "href": ""
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "title": "23 casos foram resolvidos com sucesso",
+          "description": "Lorem ipsum dolor sit amet consecter Commodo pulvinar molestie pellentesque urna libero",
+          "href": ""
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "title": "23 casos foram resolvidos com sucesso",
+          "description": "Lorem ipsum dolor sit amet consecter Commodo pulvinar molestie pellentesque urna libero",
+          "href": ""
+        }
+      ]
+    },
+    "faqs": {
+      "title": "Perguntas Frequentes",
+      "questions": [
+        {
+          "question": "Advogado de Educação e Consultoria",
+          "answer": "Lorem ipsum dolor sit amet consecter Commodo pulvinar molestie pellentesque urna libero"
+        },
+        {
+          "question": "Advogado de Educação e Consultoria",
+          "answer": "Lorem ipsum dolor sit amet consecter Commodo pulvinar molestie pellentesque urna libero"
+        }
+      ]
+    },
+    "footer": {
+      "description": "Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molesti.",
+      "links": [
+        {
+          "name": "Sobre",
+          "href": "/about",
+          "subLinks": [
+            {
+              "name": "Sobre",
+              "href": "/about"
+            },
+            {
+              "name": "História",
+              "href": "/about#history"
+            },
+            {
+              "name": "Artigos",
+              "href": "/about#articles"
+            }
+          ]
+        },
+        {
+          "name": "Serviços",
+          "href": "/services",
+          "subLinks": [
+            {
+              "name": "Serviços",
+              "href": "/services"
+            },
+            {
+              "name": "História",
+              "href": "/services#history"
+            },
+            {
+              "name": "Artigos",
+              "href": "/services#articles"
+            }
+          ]
+        },
+        {
+          "name": "Contatos",
+
+          "subLinks": [
+            {
+              "name": "João de Deus Street nº9 - 9054-527, Funchal",
+              "icon": "mdi:location",
+              "href": ""
+            },
+            {
+              "name": "+351 291615579",
+              "href": "tel:+351291615579",
+              "icon": "mingcute:phone-fill"
+            },
+            {
+              "name": "cdeff.madeira@esffranco.edu.pt",
+              "href": "mailto: cdeff.madeira@esffranco.edu.pt",
+              "icon": "ic:baseline-email"
+            }
+          ]
+        }
+      ]
     }
   }
 }

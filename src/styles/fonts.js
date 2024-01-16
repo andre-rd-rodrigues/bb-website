@@ -1,4 +1,4 @@
-import { DM_Sans, DM_Serif_Display } from "next/font/google";
+import { DM_Sans, DM_Serif_Display, Encode_Sans } from "next/font/google";
 
 const dm_serif = DM_Serif_Display({
   subsets: ["latin"],
@@ -12,4 +12,9 @@ const dm_sans = DM_Sans({
   variable: "--font-sans"
 });
 
-export { dm_serif, dm_sans };
+const encode = Encode_Sans({
+  subsets: ["latin"],
+  weight: ["300"]
+});
+
+export { dm_serif, dm_sans, encode };

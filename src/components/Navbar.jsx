@@ -4,6 +4,7 @@ import { useState } from "react";
 import Logo from "./Logo";
 import { dm_sans } from "@/styles/fonts";
 import { useRouter } from "next/router";
+import LanguageSelector from "./LanguageSelector";
 
 export default function Navbar() {
   const router = useRouter();
@@ -66,6 +67,7 @@ export default function Navbar() {
                   </li>
                 </Link>
               ))}
+              <LanguageSelector />
             </ul>
           </div>
         </div>

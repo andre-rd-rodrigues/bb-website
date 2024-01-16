@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import Button from "@/components/Button";
 import Logo from "@/components/Logo";
-import { dm_sans, dm_serif } from "@/styles/fonts";
+import { dm_sans, dm_serif, encode } from "@/styles/fonts";
 import Section from "@/components/Section";
 import Card from "@/components/Card";
 import useTranslation from "@/hooks/useTranslation";
@@ -14,11 +14,8 @@ import Testimonials from "@/components/Testimonials/Testimonials";
 import PublishedArticlesSection from "@/components/PublishedArticlesSection/PublishedArticlesSection";
 import Faqs from "@/components/Faqs";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
   const t = useTranslations("pages");
-  const { locale } = useRouter();
 
   const { getTranslationsArray } = useTranslation();
 
@@ -37,7 +34,7 @@ export default function Home() {
         <Logo fill="#B19460" width={"auto"} height={100} />
         <h1 className="text-blue">Bárbara Barbizani</h1>
         <h2
-          className={`${dm_sans.className} mb-6 text-gold font-normal text-lg`}
+          className={`${encode.className} mb-6 text-gold font-normal text-lg`}
         >
           {t("homepage.subtitle")}
         </h2>

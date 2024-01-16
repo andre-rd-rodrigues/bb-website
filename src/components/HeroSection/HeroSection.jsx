@@ -6,17 +6,15 @@ const HeroSection = ({
   children,
   className,
   style,
-  overlayColor
+  overlayStyle = {
+    backgroundColor: "#1E2E45",
+    opacity: 0.75
+  }
 }) => {
   const containerStyle = {
     background: imageSrc ? `url(${imageSrc}) no-repeat center center` : "",
     backgroundSize: "cover",
     ...style
-  };
-
-  const overlayStyle = {
-    backgroundColor: overlayColor, // Set a default color if overlayColor is not provided
-    opacity: 0.75
   };
 
   return (
