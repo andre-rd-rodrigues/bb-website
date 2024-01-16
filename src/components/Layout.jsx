@@ -16,7 +16,7 @@ export default function Layout({ children }) {
       <div className="relative">
         <Navbar />
         <div className="min-h-screen">{children}</div>
-        {/*  <Footer /> */}
+        <Footer />
       </div>
     </>
   );

@@ -119,6 +119,68 @@
         }
       ]
     },
+    "footer": {
+      "description": "Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molesti.",
+      "links": [
+        {
+          "name": "About",
+          "href": "/about",
+          "subLinks": [
+            {
+              "name": "About",
+              "href": "/about"
+            },
+            {
+              "name": "History",
+              "href": "/about#history"
+            },
+            {
+              "name": "Articles",
+              "href": "/about#articles"
+            }
+          ]
+        },
+        {
+          "name": "Services",
+          "href": "/services",
+          "subLinks": [
+            {
+              "name": "Services",
+              "href": "/services"
+            },
+            {
+              "name": "History",
+              "href": "/services#history"
+            },
+            {
+              "name": "Articles",
+              "href": "/services#articles"
+            }
+          ]
+        },
+        {
+          "name": "Contact",
+
+          "subLinks": [
+            {
+              "name": "João de Deus Street nº9 - 9054-527, Funchal",
+              "icon": "mdi:location",
+              "href": ""
+            },
+            {
+              "name": "+351 291615579",
+              "href": "tel:+351291615579",
+              "icon": "mingcute:phone-fill"
+            },
+            {
+              "name": "cdeff.madeira@esffranco.edu.pt",
+              "href": "mailto: cdeff.madeira@esffranco.edu.pt",
+              "icon": "ic:baseline-email"
+            }
+          ]
+        }
+      ]
+    },
     "buttons": {
       "contact": "Contact",
       "see more": "See more",
