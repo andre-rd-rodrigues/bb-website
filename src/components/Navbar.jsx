@@ -2,13 +2,18 @@ import useTranslation from "@/hooks/useTranslation";
 import Link from "next/link";
 import { useState } from "react";
 import Logo from "./Logo";
+import { dm_sans } from "@/styles/fonts";
+import { useRouter } from "next/router";
 
 export default function Navbar() {
+  const router = useRouter();
+
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   const { getTranslationsArray } = useTranslation();
 
   const navlinks = getTranslationsArray("components.navbar.links");
+  const pathname = router.pathname;
 
   return (
     <header className="fixed z-50 w-full backdrop-blur-md bg-white/30">
@@ -45,15 +50,21 @@ export default function Navbar() {
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               {navlinks.map(({ href, name }) => (
-                <li className="nav-item" key={name}>
-                  <Link
-                    className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-blue hover:opacity-75"
-                    href={href}
+                <Link
+                  className="px-5 py-1 flex items-center text-md  text-blue hover:opacity-75"
+                  href={href}
+                  key={name}
+                >
+                  <li
+                    className={`${
+                      pathname.includes(name.toLowerCase())
+                        ? "border-b-2 border-blue"
+                        : ""
+                    } ${dm_sans.className}`}
                   >
-                    <i className="fab fa-facebook-square text-lg leading-lg text-blue opacity-75"></i>
-                    <span className="ml-2">{name}</span>
-                  </Link>
-                </li>
+                    {name}
+                  </li>
+                </Link>
               ))}
             </ul>
           </div>
