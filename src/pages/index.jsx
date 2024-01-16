@@ -26,7 +26,10 @@ export default function Home() {
     <main>
       <HeroSection
         imageSrc={"/img/panteao.jpg"}
-        overlayColor="#E8E9E1"
+        overlayStyle={{
+          backgroundColor: "#E8E9E1",
+          opacity: 0.7
+        }}
         style={{
           height: "600px"
         }}
@@ -106,7 +109,9 @@ export default function Home() {
           {t("homepage.hero1.title")}
         </h3>
         <p className="mb-10 max-w-5xl">{t("homepage.hero1.description")}</p>
-        <Button label="contact" />
+        <Link to="/contacts" href="/contacts">
+          <Button label="contact" />
+        </Link>
       </HeroSection>
       {/* Published Articles */}
       <PublishedArticlesSection />
