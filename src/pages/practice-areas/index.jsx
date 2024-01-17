@@ -17,10 +17,10 @@ function PracticeAreas() {
     (acc, currentValue) => {
       currentValue.type.toLowerCase() === "citizens"
         ? acc.citizens.push(currentValue)
-        : acc.company.push(currentValue);
+        : acc.companies.push(currentValue);
       return acc;
     },
-    { citizens: [], company: [] }
+    { citizens: [], companies: [] }
   );
 
   return (
@@ -35,6 +35,7 @@ function PracticeAreas() {
         <h1 className="text-white mt-10">{t("practiceAreas.title")}</h1>
       </HeroSection>
 
+      <span id="citizens" />
       <Section>
         <h2 className="text-blue text-3xl">{t("practiceAreas.citizens")}</h2>
         <div className="flex gap-10 flex-wrap mt-5">
@@ -49,10 +50,11 @@ function PracticeAreas() {
         </div>
       </Section>
 
+      <span id="companies" />
       <Section>
         <h2 className="text-blue text-3xl">{t("practiceAreas.companies")}</h2>
         <div className="flex gap-10 flex-wrap mt-5">
-          {services.company.map(({ title, description, imageUrl }) => (
+          {services.companies.map(({ title, description, imageUrl }) => (
             <Card
               title={title}
               description={description}

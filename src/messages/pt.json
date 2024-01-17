@@ -28,18 +28,13 @@
       },
       "hero1": {
         "title": "Uma abordagem cuidadosa, comprometida e digna da advocacia.",
-        "description": "Estou aqui para ajudar. Como sua parceira jurídica, forneço soluções personalizadas que protegem os seus interesses e orientam para decisões informadas. Vamos trabalhar juntos para encontrar clareza em questões legais. Marque uma sessão hoje e dê o primeiro passo para a paz de espírito."
+        "description": "Como sua parceira jurídica, forneço soluções personalizadas que protegem os seus interesses e orientam para decisões informadas. Vamos trabalhar juntos para encontrar clareza em questões legais. Marque uma sessão hoje e dê o primeiro passo para a paz de espírito."
       },
       "contacts": {
         "title": "Entre em Contato para Consultoria Especializada",
         "subtitle": "Contatos",
         "description": "Esteja você navegando por questões legais complexas ou apenas buscando orientação, estou aqui para ajudar. Vamos embarcar juntos nesta jornada - seus assuntos legais merecem a atenção e a experiência que ofereço. Entre em contato hoje e experimente a consultoria personalizada que coloca suas necessidades em primeiro lugar. Suas preocupações são importantes, e estou comprometido em fornecer o aconselhamento especializado que você merece. Aguardo seu contato para atender às suas necessidades legais com cuidado e precisão."
       }
-    },
-    "practiceAreas": {
-      "title": "Áreas de Atuação",
-      "citizens": "Cidadãos",
-      "companies": "Empresas"
     },
     "about": {
       "title": "Sobre",
@@ -49,6 +44,40 @@
         "title": "Empowering You Through Expert Legal Services and Consulting",
         "description": "I'm dedicated to providing expert advice and comprehensive consulting services tailored to your unique needs. Whether you're facing intricate legal challenges or simply seeking guidance, I am here to assist you. My commitment is to safeguard your interests and guide you towards well-informed decisions, ensuring you receive the highest level of professional expertise. Explore the range of services."
       }
+    },
+    "practiceAreas": {
+      "title": "Áreas de Atuação",
+      "citizens": "Cidadãos",
+      "companies": "Empresas"
+    },
+    "contacts": {
+      "title": "Contactos",
+      "formTitle": "Envie uma mensagem direta.",
+      "formDescription": "Se tiver dúvidas, precisar de ajuda ou apenas quiser estabelecer contacto, enviar uma mensagem direta é uma forma simples de entrar em contacto comigo. Basta clicar no botão 'Enviar mensagem' abaixo e partilhar as suas ideias, preocupações ou questões. Valorizo a sua comunicação e estou empenhado em fornecer-lhe uma resposta rápida e útil.",
+      "title2": "Conexão para compreensão.",
+      "description": "Os assuntos jurídicos exigem uma comunicação rápida e fiável. Se tiver dúvidas, precisar de assistência jurídica ou quiser marcar uma consulta, estou aqui para o ajudar. Sinta-se à vontade para entrar em contacto através dos seguintes canais: ",
+      "links": [
+        {
+          "description": "Rua Alvaro Velho, 2D, 2830-327 Barreiro",
+          "icon": "mdi:location",
+          "href": "https://maps.app.goo.gl/3uHBdwxH8aqrWCp76"
+        },
+        {
+          "description": "+351 211 956 606",
+          "href": "tel:+351211956606",
+          "icon": "mingcute:phone-fill"
+        },
+        {
+          "description": "Bárbara Barbizani - +351 916 690 609",
+          "href": "https://wa.me/916690609",
+          "icon": "mingcute:whatsapp-fill"
+        },
+        {
+          "description": "barbara.caiado@caiadolaw.com",
+          "href": "mailto: barbara.caiado@caiadolaw.com",
+          "icon": "ic:baseline-email"
+        }
+      ]
     }
   },
   "components": {
@@ -60,7 +89,7 @@
         },
         {
           "name": "Áreas de Atuação",
-          "href": "/praticeAreas"
+          "href": "/practice-areas"
         },
         {
           "name": "Contatos",
@@ -232,16 +261,16 @@
           "href": "/practice-areas",
           "subLinks": [
             {
-              "name": "Áreas de Atuação",
+              "name": "Todas",
               "href": "/practice-areas"
             },
             {
-              "name": "História",
-              "href": "/practice-areas#history"
+              "name": "Cidadãos",
+              "href": "/practice-areas#citizens"
             },
             {
-              "name": "Artigos",
-              "href": "/practice-areas#articles"
+              "name": "Empresas",
+              "href": "/practice-areas#companies"
             }
           ]
         },

@@ -56,7 +56,7 @@
       "formTitle": "Send a direct message.",
       "formDescription": "Whether you have questions, need assistance, or just want to connect, sending a direct message is a hassle-free way to get in touch with me. Simply click on the 'Send Message' button bellow, and share your thoughts, concerns, or inquiries. I value your communication and am dedicated to providing you with a prompt and helpful response.",
       "title2": "Connecting for clarity.",
-      "description": "Legal matters require prompt and reliable communication. Feel free to get in touch through the following channels. Whether you have questions, need legal assistance, or want to schedule a consultation, I'm here to help.",
+      "description": "Legal matters require prompt and reliable communication. Whether you have questions, need legal assistance, or want to schedule a consultation, I'm here to help. Feel free to get in touch through the following channels:",
       "links": [
         {
           "description": "Rua Alvaro Velho, 2D, 2830-327 Barreiro",
@@ -71,7 +71,7 @@
         {
           "description": "Bárbara Barbizani - +351 916 690 609",
           "href": "https://wa.me/916690609",
-          "icon": "ic:baseline-whatsapp"
+          "icon": "mingcute:whatsapp-fill"
         },
         {
           "description": "barbara.caiado@caiadolaw.com",
@@ -262,16 +262,16 @@
           "href": "/practice-areas",
           "subLinks": [
             {
-              "name": "Pratice Areas",
+              "name": "All",
               "href": "/practice-areas"
             },
             {
-              "name": "History",
-              "href": "/practice-areas#history"
+              "name": "Citizens",
+              "href": "/practice-areas#citizens"
             },
             {
-              "name": "Articles",
-              "href": "/practice-areas#articles"
+              "name": "Companies",
+              "href": "/practice-areas#companies"
             }
           ]
         },
