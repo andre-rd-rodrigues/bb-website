@@ -40,6 +40,15 @@
       "title": "Áreas de Atuação",
       "citizens": "Cidadãos",
       "companies": "Empresas"
+    },
+    "about": {
+      "title": "Sobre",
+      "title2": "Ajudando-o a superar e aliviar o fardo legal.",
+      "description": "Além de consultoria jurídica e disputas em tribunal para cidadãos e empresas, criou o departamento jurídico do Grupo Abraito em Portugal. Residente em Portugal nos últimos 10 anos, mas nascida no Brasil, defendeu em ambos os países, detendo um alto entendimento das suas diferenças legais, culturais e sistémicas.\nMestre em Ciências Jurídicas e Laborais – Universidade de Direito de Lisboa.\nEspecialista avançada em Direito Comercial e do Trabalho pela Faculdade de Direito da Universidade de Lisboa. Advogada e consultora jurídica, Membro da Ordem dos Advogados Portugueses. Membro da Ordem dos Advogados do Brasil. Pesquisadora académico com vários artigos e livros publicados, destacando-se a publicação em Direito Constitucional «[Ir]Redutibilidade Salarial e Princípio da Proibição do Retrocesso», em 2017.\n\nORDEM DOS ADVOGADOS DE PORTUGAL No 52419L\n\nORDEM DOS ADVOGADOS DO BRASIL / PR No 63348",
+      "hero": {
+        "title": "Empowering You Through Expert Legal Services and Consulting",
+        "description": "I'm dedicated to providing expert advice and comprehensive consulting services tailored to your unique needs. Whether you're facing intricate legal challenges or simply seeking guidance, I am here to assist you. My commitment is to safeguard your interests and guide you towards well-informed decisions, ensuring you receive the highest level of professional expertise. Explore the range of services."
+      }
     }
   },
   "components": {
@@ -159,21 +168,27 @@
       "subtitle": "Notícias",
       "articles": [
         {
-          "imageUrl": "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "title": "23 casos foram resolvidos com sucesso",
-          "description": "Lorem ipsum dolor sit amet consecter Commodo pulvinar molestie pellentesque urna libero",
+          "imageUrl": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "title": "Desconsideração da Personalidade Jurídica na Sociedade por Quotas",
+          "description": "O recurso à desconsideração da personalidade jurídica, deve ser moderado como um penduluum mobile para que seja um recurso verdadeiramente credível, racional e justo do modelo econômico-social, atuando como mitigador dos desvios sistémicos e indutor de confiança no funcionamento econômico, mas com critérios transparentes, analiticamente determináveis e formalmente expressos, dispensando a ambiguidade que a arbitrariedade pode causar. Se assim for, ao invés de gerar o aniquilamento da personalidade jurídica, este recurso aprimora- rá o instituto coletivo, através da prossecução tão-somente de fins sociais lícitos, impedindo o desvio de finalidade das figuras societárias.",
           "href": ""
         },
         {
-          "imageUrl": "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "title": "23 casos foram resolvidos com sucesso",
-          "description": "Lorem ipsum dolor sit amet consecter Commodo pulvinar molestie pellentesque urna libero",
+          "imageUrl": "https://images.unsplash.com/photo-1619418602850-35ad20aa1700?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "title": "Alteração Código Trabalho 2009",
+          "description": "Não obstante pese a pessoalidade e a importância deste elemento na situação individual laboral, pois o trabalho não existe, o que existe são pessoas que trabalham, o trabalho é, do ângulo econômico das empresas, um fator de produção, que deve ser atrativo para que possa ser procurado. Não significa isso que o trabalho possa ser levado a todo custo na lógica de otimização absoluta da competitividade e empregabilidade, mas sim que em qualquer conjuntura econômica ele deverá sempre assumir lugar cativo.",
           "href": ""
         },
         {
-          "imageUrl": "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "title": "23 casos foram resolvidos com sucesso",
-          "description": "Lorem ipsum dolor sit amet consecter Commodo pulvinar molestie pellentesque urna libero",
+          "imageUrl": "https://images.unsplash.com/photo-1593115057322-e94b77572f20?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "title": "Margens do juiz frente as restrições ao direito fundamental a retribuição",
+          "description": "Como Direito Fundamental, a garantia retributiva é um trunfo contra a maioria política e, deste modo, atua como uma armadura face as intervenções que afetem o grau de concretização a ela subjacente, pois as concretizações legislativas diminuem o grau de abstração e generalidade da norma, e aumentam a margem de controle do juiz perante uma restrição, por meio da integração do conteúdo realizado à garantia fundamental.",
+          "href": ""
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1494888427482-242d32babc0b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "title": "Redutibilidade Salarial e Proibição do Retrocesso",
+          "description": "Munida de coragem e de ousadia científicas, a autora propõe uma desconstrução do princípio da proibição do retrocesso – que não há de ser um princípio absoluto, até porque o Direito não é uma ciência que trabalha com o absoluto como regra –para o enquadrar no devido lugar reduzindo-o ao sentido que lhe é próprio na escala dos valores das instituições jurídico-laborais. E assim, na medida da constatação de sua ineficácia prática, faz a ponte com a jusracionalidade para evidenciar a incongruência dogmática que subjaz ao predito princípio.",
           "href": ""
         }
       ]
@@ -214,19 +229,19 @@
         },
         {
           "name": "Áreas de Atuação",
-          "href": "/pratice-areas",
+          "href": "/practice-areas",
           "subLinks": [
             {
               "name": "Áreas de Atuação",
-              "href": "/pratice-areas"
+              "href": "/practice-areas"
             },
             {
               "name": "História",
-              "href": "/pratice-areas#history"
+              "href": "/practice-areas#history"
             },
             {
               "name": "Artigos",
-              "href": "/pratice-areas#articles"
+              "href": "/practice-areas#articles"
             }
           ]
         },

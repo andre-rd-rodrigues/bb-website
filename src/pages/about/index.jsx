@@ -2,6 +2,7 @@ import Button from "@/components/Button";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import PublishedArticlesSection from "@/components/PublishedArticlesSection/PublishedArticlesSection";
 import Section from "@/components/Section";
+import useTranslation from "@/hooks/useTranslation";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,6 +10,8 @@ import React from "react";
 
 function About() {
   const t = useTranslations("pages");
+  const { getTranslationsArray } = useTranslation();
+  const articles = getTranslationsArray("components.articles.articles");
 
   return (
     <main>
@@ -47,13 +50,13 @@ function About() {
       <HeroSection className="bg-blue text-white py-20">
         <h3 className="text-2xl md:text-4xl mb-4">{t("about.hero.title")}</h3>
         <p className="mb-10 max-w-5xl">{t("about.hero.description")}</p>
-        <Link to="/praticeAreas" href="practiceAreas">
+        <Link to="/practice-areas" href="practice-areas">
           <Button label="pratice areas" />
         </Link>
       </HeroSection>
 
       {/* Articles */}
-      <PublishedArticlesSection />
+      <PublishedArticlesSection articles={articles} />
     </main>
   );
 }

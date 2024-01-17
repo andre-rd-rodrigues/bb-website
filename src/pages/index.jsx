@@ -24,11 +24,15 @@ export default function Home() {
     6
   );
   const aboutExtraInfo = getTranslationsArray("pages.homepage.about.extraInfo");
+  const articles = getTranslationsArray("components.articles.articles").slice(
+    0,
+    2
+  );
 
   return (
     <main>
       <HeroSection
-        imageSrc={"/img/panteao.jpg"}
+        imageSrc="/img/panteao.jpg"
         overlayStyle={{
           backgroundColor: "#E8E9E1",
           opacity: 0.7
@@ -48,8 +52,8 @@ export default function Home() {
       </HeroSection>
 
       {/* About me */}
-      <Section sectionClassName="flex flex-wrap">
-        <div className="w-full md:w-1/2 p-0 sm:p-4 justify-center items-center">
+      <Section sectionClassName="flex flex-wrap lg:flex-nowrap gap-10">
+        <div className="w-full lg:w-1/2 p-0 sm:p-4 justify-center items-center">
           <h3 className="text-blue"> {t("homepage.about.subtitle")}</h3>
           <h4 className="text-4xl text-blue mt-3">
             {t("homepage.about.title")}
@@ -67,8 +71,8 @@ export default function Home() {
             <Button label={"see more"} variant className={"mt-8"} />
           </Link>
         </div>
-        <div className="w-full md:w-1/2 p-4">
-          <div className="max-w-md m-auto h-full mt-12">
+        <div className="w-full lg:w-1/2 p-4">
+          <div className="m-auto h-full mt-12">
             <Image
               src="/img/bb.jpg"
               alt="Barbara Barbizani"
@@ -83,16 +87,14 @@ export default function Home() {
       </Section>
 
       {/* Practice Areas  */}
-      <Section containerClassName={"bg-blue text-white"}>
-        <h3 className=" text-center text-4xl">
-          {t("homepage.practice.title")}
-        </h3>
+      <Section containerClassName="bg-blue text-white">
+        <h3 className="text-center text-4xl">{t("homepage.practice.title")}</h3>
         <p
           className={`${dm_sans.className} text-center font-extralight mt-3 mb-12 max-w-4xl mx-auto`}
         >
           {t("homepage.practice.subtitle")}
         </p>
-        <div className="flex gap-10 flex-wrap">
+        <div className="flex flex-wrap justify-center gap-10">
           {praticeAreas.map(({ title, description, imageUrl }) => (
             <Card
               title={title}
@@ -102,7 +104,7 @@ export default function Home() {
             />
           ))}
         </div>
-        <Link href="/pratice-areas">
+        <Link href="/practice-areas">
           <Button label="see more" className="block mx-auto mt-10" />
         </Link>
       </Section>
@@ -122,8 +124,9 @@ export default function Home() {
           <Button label="contact" />
         </Link>
       </HeroSection>
+
       {/* Published Articles */}
-      <PublishedArticlesSection />
+      <PublishedArticlesSection articles={articles} seeMore />
 
       {/* FAQS */}
       <Section containerClassName="bg-blue">

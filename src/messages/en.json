@@ -38,8 +38,9 @@
     },
     "about": {
       "title": "About",
-      "title2": "Helping You To Overcome And Ease The Legal Burden",
-      "description": "Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molestie pellentesque urna libero velit porta. Velit pellentesque hac gravida pellentesque est semper. Duis lectus gravida ultricies eleifend in pharetra faucibus orci sem. Proin ac a cursus praesent. Malesuada risus amet nunc posuere rhoncus accumsan congue id dolor. Convallis maecenas sed in pellentesque. Diam tristique semper mauris dolor amet. Dolor elit nunc et purus quam amet laoreet eu risus.\n Cum mattis mollis odio gravida adipiscing. Facilisis scelerisque non lacinia tincidunt faucibus tortor vel. Erat risus etiam quam pretium ornare. Semper orci arcu pulvinar adipiscing pretium. Erat facilisis dis arcu senectus sit mi fermentum eu aliquam. Felis neque posuere. \n Augue tristique quis fringilla nisl quam nisi. Erat pellentesque elementum consequat quis volutpat diam praesent molestie. Molestie scelerisque eleifend eu amet quam vitae fusce aliquam ornare. Accumsan est ut at tristique arcu. Semper lectus vulputate volutpat consectetur gravida ac gravida. Sem placerat pellentesque turpis tellus etiam porttitor sed. Scelerisque condimentum volutpat tempus lobortis. Accumsan dui felis turpis elementum. Leo nibh magnis sociis diam purus dui. Amet nulla urna curabitur consequat augue risus faucibus cursus. Egestas eros rutrum etiam mauris. Facilisis cras elementum diam bibendum tortor id. Magna facilisi egestas sapien phasellus consectetur arcu faucibus. Mattis sapien tellus id rutrum met in nunc.",
+      "title2": "Helping You To Overcome And Ease The Legal Burden.",
+
+      "description": "Além de consultoria jurídica e disputas em tribunal para cidadãos e empresas, criou o departamento jurídico do Grupo Abraito em Portugal. Residente em Portugal nos últimos 10 anos, mas nascida no Brasil, defendeu em ambos os países, detendo um alto entendimento das suas diferenças legais, culturais e sistémicas.\nMestre em Ciências Jurídicas e Laborais – Universidade de Direito de Lisboa.\nEspecialista avançada em Direito Comercial e do Trabalho pela Faculdade de Direito da Universidade de Lisboa. Advogada e consultora jurídica, Membro da Ordem dos Advogados Portugueses. Membro da Ordem dos Advogados do Brasil. Pesquisadora académico com vários artigos e livros publicados, destacando-se a publicação em Direito Constitucional «[Ir]Redutibilidade Salarial e Princípio da Proibição do Retrocesso», em 2017.\n\nPORTUGUESE BAR ASSOCIATION NO. 52419L\n\nBRAZILIAN / PR BAR ASSOCIATION NO. 63348",
       "hero": {
         "title": "Empowering You Through Expert Legal Services and Consulting",
         "description": "I'm dedicated to providing expert advice and comprehensive consulting services tailored to your unique needs. Whether you're facing intricate legal challenges or simply seeking guidance, I am here to assist you. My commitment is to safeguard your interests and guide you towards well-informed decisions, ensuring you receive the highest level of professional expertise. Explore the range of services."
@@ -89,7 +90,7 @@
         },
         {
           "name": "Pratice Areas",
-          "href": "/pratice-areas"
+          "href": "/practice-areas"
         },
         {
           "name": "Contacts",
@@ -197,21 +198,27 @@
       "subtitle": "News",
       "articles": [
         {
-          "imageUrl": "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "title": "23 cases have been successfully ",
-          "description": "Lorem ipsum dolor sit amet consecter Commodo pulvinar molestie pellentesque urna libero",
+          "imageUrl": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "title": "The Disregard of Legal Personality in the Private Limited Company",
+          "description": "The use of disregard for legal personality, should be moderated as a mobile penduluum so that it is a truly credible, rational and fair resource of the economic-social model, acting as a mitigator of systemic deviations and inducer of confidence in the economic functioning, but with transparent criteria , analytically determinable and formally expressed, eliminating the ambiguity that arbitrariness can cause. If so, instead of generating the annihilation of legal personality, this resource will improve the collective institute, through the pursuit only of lawful social purposes, preventing the deviation of the purpose of corporate entities.",
           "href": ""
         },
         {
-          "imageUrl": "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "title": "23 cases have been successfully ",
-          "description": "Lorem ipsum dolor sit amet consecter Commodo pulvinar molestie pellentesque urna libero",
+          "imageUrl": "https://images.unsplash.com/photo-1619418602850-35ad20aa1700?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "title": "Amendments to the 2009 Labor Code.",
+          "description": "Despite the personality and the importance of this element in the individual employment situation, as work does not exist, what exists are people who work, work is, from the economic angle of the companies, a factor of production, which must be attractive so that can be searched. This does not mean that work can be carried out at all costs in the logic of absolute optimization of competitiveness and employability, but that in any economic situation it should always assume a captive place.",
           "href": ""
         },
         {
-          "imageUrl": "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "title": "23 cases have been successfully ",
-          "description": "Lorem ipsum dolor sit amet consecter Commodo pulvinar molestie pellentesque urna libero",
+          "imageUrl": "https://images.unsplash.com/photo-1593115057322-e94b77572f20?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "title": "The judge’s margins in the face of restrictions on the fundamental right to retribution",
+          "description": "As a fundamental right, the retributive guarantee is an asset against the political majority and, therefore, acts as an armor in the face of interventions that affect the degree of concretization underlying it, as legislative concretizations reduce the degree of abstraction and generality of the rule, and increase the judge’s margin of control in the face of a restriction, by integrating the content made with the fundamental guarantee.",
+          "href": ""
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1494888427482-242d32babc0b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "title": "Wage Reducibility and the Prohibition of Retrogression",
+          "description": "Armed with scientific courage and boldness, the author proposes a deconstruction of the principle of the prohibition of retrogression – which does not have to be an absolute principle, not least because Law is not a science that works with the absolute as a rule – to fit in due place reducing it to its own sense in the scale of the values of legal and labor institutions. And so, to the extent of the verification of its practical ineffectiveness, it makes the bridge with jusrationality to show the dogmatic incongruence that underlies the predicted principle.",
           "href": ""
         }
       ]
@@ -252,19 +259,19 @@
         },
         {
           "name": "Pratice Areas",
-          "href": "/pratice-areas",
+          "href": "/practice-areas",
           "subLinks": [
             {
               "name": "Pratice Areas",
-              "href": "/pratice-areas"
+              "href": "/practice-areas"
             },
             {
               "name": "History",
-              "href": "/pratice-areas#history"
+              "href": "/practice-areas#history"
             },
             {
               "name": "Articles",
-              "href": "/pratice-areas#articles"
+              "href": "/practice-areas#articles"
             }
           ]
         },
