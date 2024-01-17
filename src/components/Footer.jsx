@@ -6,26 +6,12 @@ import useTranslation from "@/hooks/useTranslation";
 import Logo from "./Logo";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
+import { SOCIAL_MEDIA } from "@/constants";
 
 function Footer() {
   const t = useTranslations("components");
   const { getTranslationsArray } = useTranslation();
   const footerLinks = getTranslationsArray("components.footer.links");
-
-  const socialMedia = [
-    {
-      href: "www.whatsapp.com",
-      icon: "ri:whatsapp-fill"
-    },
-    {
-      href: "www.facebook.com",
-      icon: "ic:baseline-facebook"
-    },
-    {
-      href: "www.linkedin.com",
-      icon: "mdi:linkedin"
-    }
-  ];
 
   return (
     <footer className="bg-blue">
@@ -40,8 +26,8 @@ function Footer() {
           <div className="mb-6 md:mb-0 max-w-52">
             <p className="text-white text-sm">{t("footer.description")}</p>
             <div className="flex gap-4 mt-3">
-              {socialMedia.map(({ icon, href }) => (
-                <Link href={href} key={href}>
+              {SOCIAL_MEDIA.map(({ icon, href }) => (
+                <Link href={href} key={href} target="_blank">
                   <Icon color="white" icon={icon} fontSize={20} />
                 </Link>
               ))}

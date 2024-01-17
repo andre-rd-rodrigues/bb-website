@@ -75,6 +75,35 @@
           "type": "citizens"
         }
       ]
+    },
+    "contacts": {
+      "title": "Contacts",
+      "formTitle": "Send a direct message.",
+      "formDescription": "Whether you have questions, need assistance, or just want to connect, sending a direct message is a hassle-free way to get in touch with me. Simply click on the 'Send Message' button bellow, and share your thoughts, concerns, or inquiries. I value your communication and am dedicated to providing you with a prompt and helpful response.",
+      "title2": "Connecting for clarity.",
+      "description": "Legal matters require prompt and reliable communication. Feel free to get in touch through the following channels. Whether you have questions, need legal assistance, or want to schedule a consultation, I'm here to help.",
+      "links": [
+        {
+          "description": "Rua Alvaro Velho, 2D, 2830-327 Barreiro",
+          "icon": "mdi:location",
+          "href": "https://maps.app.goo.gl/3uHBdwxH8aqrWCp76"
+        },
+        {
+          "description": "+351 211 956 606",
+          "href": "tel:+351211956606",
+          "icon": "mingcute:phone-fill"
+        },
+        {
+          "description": "Bárbara Barbizani - +351 916 690 609",
+          "href": "https://wa.me/916690609",
+          "icon": "ic:baseline-whatsapp"
+        },
+        {
+          "description": "barbara.caiado@caiadolaw.com",
+          "href": "mailto: barbara.caiado@caiadolaw.com",
+          "icon": "ic:baseline-email"
+        }
+      ]
     }
   },
   "components": {
@@ -160,7 +189,7 @@
       ]
     },
     "footer": {
-      "description": "Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molesti.",
+      "description": "Whether you have questions, need assistance, or just want to connect, I'm here to help.",
       "links": [
         {
           "name": "About",
@@ -203,18 +232,18 @@
 
           "subLinks": [
             {
-              "name": "João de Deus Street nº9 - 9054-527, Funchal",
+              "name": "Rua Alvaro Velho, 2D, 2830-327 Barreiro",
               "icon": "mdi:location",
-              "href": ""
+              "href": "https://maps.app.goo.gl/3uHBdwxH8aqrWCp76"
             },
             {
-              "name": "+351 291615579",
-              "href": "tel:+351291615579",
+              "name": "+351 211 956 606",
+              "href": "tel:+351211956606",
               "icon": "mingcute:phone-fill"
             },
             {
-              "name": "cdeff.madeira@esffranco.edu.pt",
-              "href": "mailto: cdeff.madeira@esffranco.edu.pt",
+              "name": "barbara.caiado@caiadolaw.com",
+              "href": "mailto: barbara.caiado@caiadolaw.com",
               "icon": "ic:baseline-email"
             }
           ]
@@ -225,7 +254,8 @@
       "contact": "Contact",
       "see more": "See more",
       "read more": "Read more",
-      "services": "Services"
+      "services": "Services",
+      "fill form": "Send Message"
     }
   }
 }
