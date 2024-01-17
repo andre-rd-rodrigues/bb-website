@@ -19,7 +19,10 @@ export default function Home() {
 
   const { getTranslationsArray } = useTranslation();
 
-  const praticeAreas = getTranslationsArray("components.practiceAreas");
+  const praticeAreas = getTranslationsArray("components.practiceAreas").slice(
+    0,
+    6
+  );
   const aboutExtraInfo = getTranslationsArray("pages.homepage.about.extraInfo");
 
   return (
@@ -78,16 +81,17 @@ export default function Home() {
           </div>
         </div>
       </Section>
+
       {/* Practice Areas  */}
       <Section containerClassName={"bg-blue text-white"}>
         <h3 className=" text-center text-4xl">
           {t("homepage.practice.title")}
         </h3>
-        <h4
-          className={`${dm_sans.className} text-center  font-extralight mt-3 mb-12`}
+        <p
+          className={`${dm_sans.className} text-center font-extralight mt-3 mb-12 max-w-4xl mx-auto`}
         >
           {t("homepage.practice.subtitle")}
-        </h4>
+        </p>
         <div className="flex gap-10 flex-wrap">
           {praticeAreas.map(({ title, description, imageUrl }) => (
             <Card
@@ -98,11 +102,16 @@ export default function Home() {
             />
           ))}
         </div>
+        <Link href="/pratice-areas">
+          <Button label="see more" className="block mx-auto mt-10" />
+        </Link>
       </Section>
+
       {/* Testimonials  */}
       <Section>
         <Testimonials />
       </Section>
+
       {/* Hero */}
       <HeroSection className="bg-blue text-white py-20">
         <h3 className="text-2xl md:text-4xl mb-4">

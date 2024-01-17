@@ -5,16 +5,16 @@
       "subtitle": "Law Practice & Legal Consulting",
       "practice": {
         "title": "Practice Areas",
-        "subtitle": "Problems trying to resolve the conflict between  the two major realms of Classical physics: Newtonian mechanics "
+        "subtitle": "My practice revolves around trust, ethics, and commitment. Specializing in international, citizenship, and corporate law, I deliver results with care and precision. Your legal ally for a seamless journey through the complexities of the legal landscape. Explore the power of legal advocacy with me."
       },
       "about": {
-        "title": "Helping to overcome and ease the legal burden",
+        "title": "Helping to overcome and ease the legal burden.",
         "subtitle": "About me",
-        "description": "Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molestie pellentesque urna libero velit porta. Velit pellentesque hac gravida pellentesque est semper. Duis lectus gravida ultricies eleifend in pharetra faucibus orci sem. Proin ac a cursus praesent.",
+        "description": "My name is Bárbara Barbizani de Carvalho, I have a client-oriented approach where trust, ethics, and commitment remain fundamental in building lasting business relationships. I only accept cases when I possess the level of knowledge and experience to provide prompt and excellent service. I operate locally with a global mindset, specializing in serving Portuguese, Brazilian, and Chinese companies and individuals.\nI collaborate with companies and individuals with a partnership mindset, aligned with their goals and focused on optimizing value in their legal issues and disputes. I aim for clients to feel a high level of confidence that they have made the right choice in our partnership and respect their time.\nI create a coherent process that not only delivers results of technical excellence but also does so quickly and robustly.",
         "extraInfo": [
           {
             "title": "Experience",
-            "value": "12+"
+            "value": "10+"
           },
           {
             "title": "Cases Handled",
@@ -27,7 +27,7 @@
         ]
       },
       "hero1": {
-        "title": "Your Legal Partner for Trustworthy Advice",
+        "title": "A Careful, Committed, and Dignified Approach to Law.",
         "description": "I'm here to help. As your legal partner, I provide personalized solutions that protect your interests and guide you to informed decisions. Let's work together to find clarity in legal matters. Schedule a consultation today and take the first step toward peace of mind."
       },
       "contacts": {
@@ -45,36 +45,10 @@
         "description": "I'm dedicated to providing expert advice and comprehensive consulting services tailored to your unique needs. Whether you're facing intricate legal challenges or simply seeking guidance, I am here to assist you. My commitment is to safeguard your interests and guide you towards well-informed decisions, ensuring you receive the highest level of professional expertise. Explore the range of services."
       }
     },
-    "services": {
-      "title": "Services",
+    "practiceAreas": {
+      "title": "Practice Areas",
       "citizens": "Citizens",
-      "companies": "Companies",
-      "areas": [
-        {
-          "title": "Title",
-          "description": "Newton thought that light was made up of particles, but then it was discovered ",
-          "imageUrl": "https://images.unsplash.com/photo-1589391886645-d51941baf7fb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "type": "company"
-        },
-        {
-          "title": "Title",
-          "description": "Newton thought that light was made up of particles, but then it was discovered ",
-          "imageUrl": "https://images.unsplash.com/photo-1589391886645-d51941baf7fb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "type": "citizens"
-        },
-        {
-          "title": "Title",
-          "description": "Newton thought that light was made up of particles, but then it was discovered ",
-          "imageUrl": "https://images.unsplash.com/photo-1589391886645-d51941baf7fb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "type": "company"
-        },
-        {
-          "title": "Title",
-          "description": "Newton thought that light was made up of particles, but then it was discovered ",
-          "imageUrl": "https://images.unsplash.com/photo-1589391886645-d51941baf7fb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "type": "citizens"
-        }
-      ]
+      "companies": "Companies"
     },
     "contacts": {
       "title": "Contacts",
@@ -114,8 +88,8 @@
           "href": "/about"
         },
         {
-          "name": "Services",
-          "href": "/services"
+          "name": "Pratice Areas",
+          "href": "/pratice-areas"
         },
         {
           "name": "Contacts",
@@ -125,9 +99,76 @@
     },
     "practiceAreas": [
       {
-        "title": "Title",
-        "description": "Newton thought that light was made up of particles, but then it was discovered ",
-        "imageUrl": "https://images.unsplash.com/photo-1589391886645-d51941baf7fb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "title": "Private International Law",
+        "description": "Specialization in emigration processes, Golden Visas in Portugal, Portuguese and Brazilian nationality, regularization and work in Portugal and Brazil, document research, translation and certification of foreign documents, recognition of foreign judgments, regularization of assets, inheritances, and property transfer in Portugal and Brazil, judicial appeals against administrative decisions.",
+        "imageUrl": "https://images.unsplash.com/photo-1614107151491-6876eecbff89?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Citizens"
+      },
+      {
+        "title": "Real Estate Law",
+        "description": "Specialization in real estate due diligence, drafting and review of purchase and sale contracts, conflicts involving false powers of attorney, breach of fiduciary duty, risk mitigation in leasing, representation in assemblies and supervision of properties in plural ownership, licensing, licensing with municipalities, judicial appeals against administrative decisions, judicial representation in property disputes such as leasing, eviction, dispossession, property claims, repossession, and adverse possession.",
+        "imageUrl": "https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1596&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Citizens"
+      },
+      {
+        "title": "Tax Law",
+        "description": "Specialization in tax optimization, financial planning, tax obligations, income tax return, transnational taxation, advice on tax residence and double-taxation regimes, definitive departure from Brazil, non-habitual resident status, judicial appeals against tax executions.",
+        "imageUrl": "https://images.unsplash.com/photo-1604156425963-9be03f86a428?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Citizens"
+      },
+      {
+        "title": "Labor Law",
+        "description": "Specialization in contractual advice and negotiation of working conditions, consultancy and negotiation in case of dismissals, labor calculations of benefits and compensations, communications in case of disconnection and leaves with or without pay, labor litigation and judicial sponsorship.",
+        "imageUrl": "https://images.unsplash.com/photo-1620433042638-c9a00b98637c?q=80&w=1494&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Citizens"
+      },
+      {
+        "title": "Family Law",
+        "description": "Specialization in drafting prenuptial agreements, assistance and representation in marriages between foreign spouses, proxy marriage, transcription of marriages that occurred abroad, approval and recognition of common-law unions, drafting of common-law union contracts, consensual and litigious divorce, divorce conference, parental power regulation, judicial representation in cases of parental alienation and international child abduction, judicial representation in probate and division proceedings.",
+        "imageUrl": "https://images.unsplash.com/photo-1620433042631-3df212941910?q=80&w=1500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Citizens"
+      },
+      {
+        "title": "Civil Law",
+        "description": "Specialization in drafting and understanding contracts, validation of conditions, rules, and clauses of commercial legal transactions in general, construction contracts, intellectual property, copyright, and conflicts arising from electronic business and custom software production, insolvency and default, civil liability and corporate liability, representation in judicial proceedings.",
+        "imageUrl": "https://images.unsplash.com/photo-1530469525856-cf37954301f7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Citizens"
+      },
+      {
+        "title": "General Civil Law",
+        "description": "Specialization in drafting and reviewing contracts, debt collection, judicial representation in debt collection processes, judicial representation in processes against insurers, judicial representation in processes against airlines.",
+        "imageUrl": "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Citizens"
+      },
+      {
+        "title": "Labor Law & Unions",
+        "description": "Specialization in drafting and analysis of employment contracts, how to properly dismiss employees, advice, calculations, and negotiation, consultancy in subcontracting, consultancy in company's ancillary obligations to employees, resolution of labor disputes, judicial representation, and negotiations.",
+        "imageUrl": "https://images.unsplash.com/photo-1556484687-30636164638b?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Company"
+      },
+      {
+        "title": "Civil Law",
+        "description": "Specialization in drafting and understanding contracts, validation of conditions, rules, and clauses of commercial legal transactions in general, construction contracts, intellectual property, copyright, and conflicts arising from electronic business and custom software production, insolvency and default, civil liability and corporate liability, representation in judicial proceedings.",
+        "imageUrl": "https://images.unsplash.com/photo-1530469525856-cf37954301f7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Company"
+      },
+      {
+        "title": "Commercial Law",
+        "description": "Specialization in the creation and registration of companies, assemblies, assignments, mergers, closure, and sale of commercial companies, licensing of activities, joint venture regime, adherence to current regulations, mitigation of legal risks, franchise contracts.",
+        "imageUrl": "https://images.unsplash.com/photo-1542908371-3d8e22825a4f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Company"
+      },
+      {
+        "title": "Intellectual Property",
+        "description": "Specialization in the registration and protection of trademarks and patents, licensing and royalties contracts, patents and utility models, marketing and transfer of IP, disputes and IP assessment, judicial representation in industrial property and copyright conflicts.",
+        "imageUrl": "https://images.unsplash.com/photo-1593444285553-28163240e3f1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Company"
+      },
+      {
+        "title": "Tax Consulting",
+        "description": "Specialization in tax optimization, financial planning, tax obligations, collective income tax return, transnational taxation, dividends, advice on tax residence and double-taxation regimes, judicial appeals against tax executions.",
+        "imageUrl": "https://images.unsplash.com/photo-1554224155-a1487473ffd9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Company"
       }
     ],
     "testimonials": {
@@ -210,20 +251,20 @@
           ]
         },
         {
-          "name": "Services",
-          "href": "/services",
+          "name": "Pratice Areas",
+          "href": "/pratice-areas",
           "subLinks": [
             {
-              "name": "Services",
-              "href": "/services"
+              "name": "Pratice Areas",
+              "href": "/pratice-areas"
             },
             {
               "name": "History",
-              "href": "/services#history"
+              "href": "/pratice-areas#history"
             },
             {
               "name": "Articles",
-              "href": "/services#articles"
+              "href": "/pratice-areas#articles"
             }
           ]
         },
@@ -254,7 +295,7 @@
       "contact": "Contact",
       "see more": "See more",
       "read more": "Read more",
-      "services": "Services",
+      "pratice areas": "Pratice Areas",
       "fill form": "Send Message"
     }
   }

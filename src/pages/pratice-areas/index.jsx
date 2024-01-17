@@ -8,14 +8,14 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
 
-function Services() {
+function PracticeAreas() {
   const t = useTranslations("pages");
 
   const { getTranslationsArray } = useTranslation();
 
-  const services = getTranslationsArray("pages.services.areas").reduce(
+  const services = getTranslationsArray("components.practiceAreas").reduce(
     (acc, currentValue) => {
-      currentValue.type === "citizens"
+      currentValue.type.toLowerCase() === "citizens"
         ? acc.citizens.push(currentValue)
         : acc.company.push(currentValue);
       return acc;
@@ -32,11 +32,11 @@ function Services() {
           height: "350px"
         }}
       >
-        <h1 className="text-white mt-10">{t("services.title")}</h1>
+        <h1 className="text-white mt-10">{t("practiceAreas.title")}</h1>
       </HeroSection>
 
       <Section>
-        <h2 className="text-blue text-3xl">{t("services.citizens")}</h2>
+        <h2 className="text-blue text-3xl">{t("practiceAreas.citizens")}</h2>
         <div className="flex gap-10 flex-wrap mt-5">
           {services.citizens.map(({ title, description, imageUrl }) => (
             <Card
@@ -50,7 +50,7 @@ function Services() {
       </Section>
 
       <Section>
-        <h2 className="text-blue text-3xl">{t("services.companies")}</h2>
+        <h2 className="text-blue text-3xl">{t("practiceAreas.companies")}</h2>
         <div className="flex gap-10 flex-wrap mt-5">
           {services.company.map(({ title, description, imageUrl }) => (
             <Card
@@ -80,7 +80,7 @@ function Services() {
   );
 }
 
-export default Services;
+export default PracticeAreas;
 
 export async function getStaticProps({ locale }) {
   return {

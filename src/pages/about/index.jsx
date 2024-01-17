@@ -4,6 +4,7 @@ import PublishedArticlesSection from "@/components/PublishedArticlesSection/Publ
 import Section from "@/components/Section";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function About() {
@@ -46,7 +47,9 @@ function About() {
       <HeroSection className="bg-blue text-white py-20">
         <h3 className="text-2xl md:text-4xl mb-4">{t("about.hero.title")}</h3>
         <p className="mb-10 max-w-5xl">{t("about.hero.description")}</p>
-        <Button label="services" />
+        <Link to="/praticeAreas" href="practiceAreas">
+          <Button label="pratice areas" />
+        </Link>
       </HeroSection>
 
       {/* Articles */}

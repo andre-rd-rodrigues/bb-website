@@ -16,7 +16,7 @@ export const headConfig = {
   "/about": {
     title: "aboutTitle"
   },
-  "/services": {
+  "/praticeAreas": {
     title: "servicesTitle"
   },
   "/contacts": {

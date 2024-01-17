@@ -5,16 +5,16 @@
       "subtitle": "Advocacia & Consultoria Jurídica",
       "practice": {
         "title": "Áreas de Atuação",
-        "subtitle": "Problemas tentando resolver o conflito entre os dois grandes domínios da física clássica: mecânica newtoniana"
+        "subtitle": "A minha prática gira em torno da confiança, da ética e do empenhamento. Especializada em direito internacional, direito de cidadania e direito societário, apresento resultados com cuidado e precisão. O seu aliado legal para uma viagem sem problemas através das complexidades da paisagem legal. Explore o poder da advocacia legal comigo."
       },
       "about": {
-        "title": "Ajudando a superar e aliviar o fardo jurídico",
+        "title": "Ajudando a superar e aliviar o fardo jurídico.",
         "subtitle": "Sobre mim",
-        "description": "Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molestie pellentesque urna libero velit porta. Velit pellentesque hac gravida pellentesque est semper. Duis lectus gravida ultricies eleifend in pharetra faucibus orci sem. Proin ac a cursus praesent.",
+        "description": "O meu nome é Bárbara Barbizani de Carvalho, tenho uma matriz de atuação orientada para o cliente, na qual confiança, ética e compromisso permanecem como fundamentais na criação de relacionamentos comerciais duradouros.\n Só aceito casos quando detenho nível de conhecimento e experiência para prestar um serviço tempestivo e de excelência. Atuo localmente com uma mentalidade global, especializada em empresas e cidadãos portugueses, brasileiros e chineses.\n Trabalho em conjunto com empresas e indivíduos com uma mentalidade de parceria, alinhada com os seus objetivos e otimização de valor nos seus problemas e disputas jurídicas.\n Procuro que os clientes sintam um elevado grau de segurança de que fizeram a escolha certa na nossa parceiria e respeitar o seu tempo.\n Crio um processo coerente que permite não apenas entregar resultados de excelência técnica, mas também fazê-lo de forma rápida e robusta.",
         "extraInfo": [
           {
             "title": "Experiência",
-            "value": "12+"
+            "value": "10+"
           },
           {
             "title": "Casos Tratados",
@@ -27,14 +27,19 @@
         ]
       },
       "hero1": {
-        "title": "Seu Parceiro Jurídico para Conselhos Confiáveis",
-        "description": "Estou aqui para ajudar. Como seu parceiro jurídico, ofereço soluções personalizadas que protegem seus interesses e o orientam para decisões informadas. Vamos trabalhar juntos para encontrar clareza em questões legais. Agende uma consulta hoje e dê o primeiro passo em direção à tranquilidade."
+        "title": "Uma abordagem cuidadosa, comprometida e digna da advocacia.",
+        "description": "Estou aqui para ajudar. Como sua parceira jurídica, forneço soluções personalizadas que protegem os seus interesses e orientam para decisões informadas. Vamos trabalhar juntos para encontrar clareza em questões legais. Marque uma sessão hoje e dê o primeiro passo para a paz de espírito."
       },
       "contacts": {
         "title": "Entre em Contato para Consultoria Especializada",
         "subtitle": "Contatos",
         "description": "Esteja você navegando por questões legais complexas ou apenas buscando orientação, estou aqui para ajudar. Vamos embarcar juntos nesta jornada - seus assuntos legais merecem a atenção e a experiência que ofereço. Entre em contato hoje e experimente a consultoria personalizada que coloca suas necessidades em primeiro lugar. Suas preocupações são importantes, e estou comprometido em fornecer o aconselhamento especializado que você merece. Aguardo seu contato para atender às suas necessidades legais com cuidado e precisão."
       }
+    },
+    "practiceAreas": {
+      "title": "Áreas de Atuação",
+      "citizens": "Cidadãos",
+      "companies": "Empresas"
     }
   },
   "components": {
@@ -45,8 +50,8 @@
           "href": "/about"
         },
         {
-          "name": "Serviços",
-          "href": "/services"
+          "name": "Áreas de Atuação",
+          "href": "/praticeAreas"
         },
         {
           "name": "Contatos",
@@ -56,9 +61,76 @@
     },
     "practiceAreas": [
       {
-        "title": "Título",
-        "description": "Newton pensava que a luz era feita de partículas, mas então foi descoberto",
-        "imageUrl": "https://images.unsplash.com/photo-1589391886645-d51941baf7fb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "title": "Direito Internacional Privado",
+        "description": "Especialização em processos de emigração, Vistos Gold em Portugal, nacionalidade portuguesa e brasileira, regularização e trabalho em Portugal e no Brasil, pesquisa de documentos, tradução e certificação de documentos estrangeiros, reconhecimento de sentença estrangeira, regularização de património, heranças e transferência de propriedade, recursos judiciais contra decisões administrativas.",
+        "imageUrl": "https://images.unsplash.com/photo-1614107151491-6876eecbff89?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Citizens"
+      },
+      {
+        "title": "Direito Imobiliário",
+        "description": "Especialização em Due Diligence Imobiliária, elaboração e conferência de contratos de compra e venda, conflitos de procurações falsas, violação do dever fiduciário, mitigação de riscos de arrendamento, representação em assembleias e fiscalização de propriedades em propriedade plural, licença de utilização, licenciamento junto às câmaras, recursos judiciais contra decisões administrativas, representação judicial em conflitos de propriedade como arrendamento, despejo, esbulho, reivindicação de propriedade, restituição de posse e usucapião.",
+        "imageUrl": "https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1596&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Citizens"
+      },
+      {
+        "title": "Direito Fiscal",
+        "description": "Especialização em otimização tributária, planeamento financeiro, obrigações fiscais, declaração de imposto rendimento, tributação transnacional, aconselhamento acerca de residência fiscal e regimes de dupla-tributação, saída definitiva do Brasil, residente não-habitual, recursos judiciais contra execuções fiscais.",
+        "imageUrl": "https://images.unsplash.com/photo-1604156425963-9be03f86a428?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Citizens"
+      },
+      {
+        "title": "Direito Laboral",
+        "description": "Especialização em aconselhamento contratual e negociação de condições de trabalho, consultoria e negociação em caso de despedimentos, cálculos laborais de benefícios e indemnizações, comunicações em caso de desligamento e licenças com ou sem vencimento, contencioso laboral e patrocínio judicial.",
+        "imageUrl": "https://images.unsplash.com/photo-1620433042638-c9a00b98637c?q=80&w=1494&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Citizens"
+      },
+      {
+        "title": "Direito de Família",
+        "description": "Especialização em elaboração de pacto antenupcial, acompanhamento e representação em casamentos entre cônjuges estrangeiros, casamento por procuração, transcrição de casamento ocorrido no estrangeiro, homologação e reconhecimento de união de facto, elaboração de contratos de união de facto, divórcio consensual e litigioso, conferência de divórcio, regulação de poder paternal, representação judicial em processos de alienação parental e sequestro internacional de crianças, representação judicial em processos de inventário e partilha.",
+        "imageUrl": "https://images.unsplash.com/photo-1620433042631-3df212941910?q=80&w=1500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Citizens"
+      },
+      {
+        "title": "Direito Civil",
+        "description": "Especialização em elaboração e entendimento de contratos, validação de condições, regras e cláusulas dos negócios jurídicos comerciais em geral, empreitadas, propriedade intelectual, direitos de autor e conflitos oriundos de negócios eletrónicos e produção de software sob medida, insolvência e inadimplência, responsabilidade civil e responsabilidade societária, representação em processos judiciais.",
+        "imageUrl": "https://images.unsplash.com/photo-1530469525856-cf37954301f7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Citizens"
+      },
+      {
+        "title": "Direito Civil em Geral",
+        "description": "Especialização em elaboração e conferência de contratos, cobrança de dívidas, representação judicial em processos de cobrança de dívidas, representação judicial em processos contra seguradoras, representação judicial em processos contra cia aérea.",
+        "imageUrl": "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Citizens"
+      },
+      {
+        "title": "Direito do Trabalho & Sindicatos",
+        "description": "Especialização em elaboração e análise de contratos de trabalho, como despedir corretamente, aconselhamento, cálculos e negociação, consultoria em subcontratação, consultoria em obrigações acessórias da empresa para com os funcionários, resolução de litígios trabalhistas, representação judicial e negociações.",
+        "imageUrl": "https://images.unsplash.com/photo-1556484687-30636164638b?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Company"
+      },
+      {
+        "title": "Direito Civil",
+        "description": "Especialização em elaboração e entendimento de contratos, validação de condições, regras e cláusulas dos negócios jurídicos comerciais em geral, empreitadas, propriedade intelectual, direitos de autor e conflitos oriundos de negócios eletrónicos e produção de software sob medida, insolvência e inadimplência, responsabilidade civil e responsabilidade societária, representação em processos judiciais.",
+        "imageUrl": "https://images.unsplash.com/photo-1530469525856-cf37954301f7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Company"
+      },
+      {
+        "title": "Direito Comercial",
+        "description": "Especialização em criação e registo de empresa, assembleias, cessões, fusões, fechamento e venda de sociedade comerciais, licenciamento de atividades, regime de joint-venture, aderência a regulação em vigor, mitigação de riscos legais, contratos de franchise.",
+        "imageUrl": "https://images.unsplash.com/photo-1542908371-3d8e22825a4f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Company"
+      },
+      {
+        "title": "Propriedade Intelectual",
+        "description": "Especialização em registo e proteção de marcas e patentes, contratos de licenciamento e royalties, patentes e modelos de utilidade, comercialização e transferência de IP, disputas e avaliação de IP, representação judicial em conflitos de propriedade industrial e direito de autor.",
+        "imageUrl": "https://images.unsplash.com/photo-1593444285553-28163240e3f1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Company"
+      },
+      {
+        "title": "Consultoria Fiscal",
+        "description": "Especialização em otimização tributária, planeamento financeiro, obrigações fiscais, declaração de imposto de rendimento coletivo, tributação transnacional, dividendos, aconselhamento acerca de residência fiscal e regimes de dupla-tributação, recursos judiciais contra execuções fiscais.",
+        "imageUrl": "https://images.unsplash.com/photo-1554224155-a1487473ffd9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "type": "Company"
       }
     ],
     "testimonials": {
@@ -141,20 +213,20 @@
           ]
         },
         {
-          "name": "Serviços",
-          "href": "/services",
+          "name": "Áreas de Atuação",
+          "href": "/pratice-areas",
           "subLinks": [
             {
-              "name": "Serviços",
-              "href": "/services"
+              "name": "Áreas de Atuação",
+              "href": "/pratice-areas"
             },
             {
               "name": "História",
-              "href": "/services#history"
+              "href": "/pratice-areas#history"
             },
             {
               "name": "Artigos",
-              "href": "/services#articles"
+              "href": "/pratice-areas#articles"
             }
           ]
         },
@@ -163,23 +235,30 @@
 
           "subLinks": [
             {
-              "name": "João de Deus Street nº9 - 9054-527, Funchal",
+              "name": "Rua Alvaro Velho, 2D, 2830-327 Barreiro",
               "icon": "mdi:location",
-              "href": ""
+              "href": "https://maps.app.goo.gl/3uHBdwxH8aqrWCp76"
             },
             {
-              "name": "+351 291615579",
-              "href": "tel:+351291615579",
+              "name": "+351 211 956 606",
+              "href": "tel:+351211956606",
               "icon": "mingcute:phone-fill"
             },
             {
-              "name": "cdeff.madeira@esffranco.edu.pt",
-              "href": "mailto: cdeff.madeira@esffranco.edu.pt",
+              "name": "barbara.caiado@caiadolaw.com",
+              "href": "mailto: barbara.caiado@caiadolaw.com",
               "icon": "ic:baseline-email"
             }
           ]
         }
       ]
+    },
+    "buttons": {
+      "contact": "Contacto",
+      "see more": "Saber mais",
+      "read more": "Ler mais",
+      "pratice areas": "Áreas de Atuação",
+      "fill form": "Enviar Mensagem"
     }
   }
 }
