@@ -1,3 +1,4 @@
+import Animated from "@/components/Animated";
 import Button from "@/components/Button";
 import Card from "@/components/Card";
 import HeroSection from "@/components/HeroSection/HeroSection";
@@ -32,47 +33,65 @@ function PracticeAreas() {
           height: "350px"
         }}
       >
-        <h1 className="text-white mt-10">{t("practiceAreas.title")}</h1>
+        <Animated>
+          <h1 className="text-white mt-10">{t("practiceAreas.title")}</h1>
+        </Animated>
       </HeroSection>
 
       <span id="citizens" />
       <Section>
-        <h2 className="text-blue text-3xl">{t("practiceAreas.citizens")}</h2>
-        <div className="flex gap-10 flex-wrap mt-5">
-          {services.citizens.map(({ title, description, imageUrl }) => (
-            <Card
-              title={title}
-              description={description}
-              imageUrl={imageUrl}
-              key={title}
-            />
+        <Animated type="slide-in-left">
+          <h2 className="text-blue text-3xl">{t("practiceAreas.citizens")}:</h2>
+        </Animated>
+        <div className="flex gap-10 flex-wrap mt-12">
+          {services.citizens.map(({ title, description, imageUrl }, i) => (
+            <Animated delay={i * 100} key={title} type="slide">
+              <Card
+                title={title}
+                description={description}
+                imageUrl={imageUrl}
+              />
+            </Animated>
           ))}
         </div>
       </Section>
 
       <span id="companies" />
       <Section>
-        <h2 className="text-blue text-3xl">{t("practiceAreas.companies")}</h2>
-        <div className="flex gap-10 flex-wrap mt-5">
-          {services.companies.map(({ title, description, imageUrl }) => (
-            <Card
-              title={title}
-              description={description}
-              imageUrl={imageUrl}
-              key={title}
-            />
+        <Animated type="slide-in-left">
+          <h2 className="text-blue text-3xl">
+            {t("practiceAreas.companies")}:
+          </h2>
+        </Animated>
+        <div className="flex gap-10 flex-wrap mt-12">
+          {services.companies.map(({ title, description, imageUrl }, i) => (
+            <Animated delay={i * 100} key={title} type="slide">
+              <Card
+                title={title}
+                description={description}
+                imageUrl={imageUrl}
+                key={title}
+              />
+            </Animated>
           ))}
         </div>
       </Section>
 
       <HeroSection className="bg-blue text-white py-20">
-        <h3 className="text-2xl md:text-4xl mb-4">
-          {t("homepage.hero1.title")}
-        </h3>
-        <p className="mb-10 max-w-5xl">{t("homepage.hero1.description")}</p>
-        <Link to="/contacts" href="/contacts">
-          <Button label="contact" />
-        </Link>
+        <Animated>
+          <h3 className="text-2xl md:text-4xl mb-4">
+            {t("homepage.hero1.title")}
+          </h3>
+        </Animated>
+        <Animated delay={200}>
+          <p className="mb-10 max-w-5xl">{t("homepage.hero1.description")}</p>
+        </Animated>
+
+        <Animated delay={300}>
+          <Link to="/contacts" href="/contacts">
+            <Button label="contact" />
+          </Link>
+        </Animated>
       </HeroSection>
 
       <Section>
