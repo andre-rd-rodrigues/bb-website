@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://barbizanicarvalholaw.com
+
+# Sitemaps
+Sitemap: https://barbizanicarvalholaw.com/sitemap.xml

@@ -5,14 +5,14 @@ import { init, trackPages } from "insights-js";
 import { useEffect } from "react";
 
 export default function Layout({ children }) {
-  /*   useEffect(() => {
+  useEffect(() => {
     init(process.env.NEXT_PUBLIC_METRICS_ID);
     trackPages();
-  }, []); */
+  }, []);
 
   return (
     <>
-      {/*  <AppHead /> */}
+      <AppHead />
       <div className="relative">
         <Navbar />
         <div className="min-h-screen">{children}</div>

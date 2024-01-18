@@ -1,12 +1,18 @@
 {
   "name": "bb-website",
+  "author": {
+    "name": "André Rodrigues",
+    "url": "https://www.andrerodrigo.com"
+  },
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap",
+    "prod": "next build && next start"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",

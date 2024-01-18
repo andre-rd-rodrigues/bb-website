@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 const AppHead = (props) => {
   const router = useRouter();
-  const t = useTranslations();
+  const t = useTranslations("metadata");
   const { pathname, locale } = router;
   const { title: titleTranslation } = headConfig[pathname] || {
     title: "notFoundTitle"
@@ -13,8 +13,8 @@ const AppHead = (props) => {
 
   const { openGraph } = props;
 
-  const title = t(`common.metadata.${titleTranslation}`);
-  const description = t("common.metadata.description");
+  const title = t(titleTranslation);
+  const description = t("description");
 
   return (
     <NextSeo
@@ -24,16 +24,14 @@ const AppHead = (props) => {
         openGraph
           ? openGraph
           : {
-              url: `https://www.EXAMPLE.com`,
+              url: `https://www.barbizanicarvalholaw.com`,
               title,
               description,
               locale,
               images: [
                 {
                   url:
-                    locale === "pt"
-                      ? "https://i.postimg.cc/Fs4jGHxq/meta-pt.png"
-                      : "https://i.postimg.cc/yxbC1bn3/meta-en.png",
+                    locale === "pt" ? "/img/meta_pt.png" : "/img/meta_en.png",
                   alt: title
                 }
               ]
