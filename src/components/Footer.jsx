@@ -23,9 +23,9 @@ function Footer() {
 
         {/* Description & Social Media */}
         <div className="md:flex md:justify-between ">
-          <div className="mb-6 md:mb-0 max-w-52">
+          <div className="mb-6 md:mb-0 sm:max-w-52">
             <p className="text-white text-sm">{t("footer.description")}</p>
-            <div className="flex gap-4 mt-3">
+            <div className="flex gap-4 mt-3 justify-center sm:justify-start">
               {SOCIAL_MEDIA.map(({ icon, href }) => (
                 <Link href={href} key={href} target="_blank">
                   <Icon color="white" icon={icon} fontSize={20} />

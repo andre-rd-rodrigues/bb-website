@@ -16,7 +16,7 @@ const ArticleCard = ({ imageUrl, title, description, href }) => {
         <h6 className="text-3xl text-blue">{title}</h6>
         <div className="border-b border-blue my-6"></div>
         <p className="mb-5">{description}</p>
-        <Link href={href}>
+        <Link href={href} className="flex justify-end sm:block">
           <Button label="read more" variant />
         </Link>
       </div>

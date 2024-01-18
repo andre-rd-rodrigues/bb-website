@@ -62,7 +62,9 @@ function About() {
         </Animated>
 
         <Animated delay={200}>
-          <p className="mb-10 max-w-5xl">{t("about.hero.description")}</p>
+          <p className="mb-10 text-left sm:text-center max-w-5xl">
+            {t("about.hero.description")}
+          </p>
         </Animated>
 
         <Animated delay={300}>

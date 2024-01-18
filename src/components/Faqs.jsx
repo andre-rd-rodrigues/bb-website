@@ -17,9 +17,9 @@ const Faqs = () => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex flex-wrap">
       {/* Image on the left */}
-      <div className="relative h-96 flex-shrink-0 w-1/2 flex items-center justify-end">
+      <div className="relative h-64 sm:h-96 w-full text-center sm:text-left sm:w-1/2 flex items-center justify-end">
         <div className="absolute top-0 left-0 h-52 w-96">
           <Animated>
             <Image
@@ -32,14 +32,14 @@ const Faqs = () => {
           </Animated>
         </div>
         <Animated type="slide-in-left" delay={200}>
-          <h2 className="relative max-w-80 text-4xl text-white">
+          <h2 className="relative w-full sm:max-w-80 text-4xl text-white">
             {t("faqs.title")}
           </h2>
         </Animated>
       </div>
 
       {/* FAQs section on the right */}
-      <div className="flex-grow p-8">
+      <div className="flex-grow sm:p-8">
         {/* FAQs List */}
         <ul>
           {faqsData.map((faq, index) => (

@@ -27,7 +27,7 @@ export default function Navbar() {
             <button
               className="text-blue cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
-              onClick={() => setNavbarOpen(!navbarOpen)}
+              onClick={() => setNavbarOpen((prevState) => !prevState)}
             >
               <svg
                 className="h-6 w-6"
@@ -44,23 +44,21 @@ export default function Navbar() {
           </div>
           <div
             className={
-              "lg:flex flex-grow items-center" +
+              "lg:flex w-full lg:w-auto justify-end" +
               (navbarOpen ? " flex" : " hidden")
             }
-            id="example-navbar-danger"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               {navlinks.map(({ href, name }) => (
                 <Link
-                  className="px-5 py-1 flex items-center text-md  text-blue hover:opacity-75"
+                  className="px-5 py-1 flex items-center justify-end lg:justify-center text-md text-left text-blue hover:opacity-75"
                   href={href}
                   key={name}
+                  onClick={() => setNavbarOpen((prevState) => !prevState)}
                 >
                   <li
                     className={`${
-                      pathname.includes(name.toLowerCase())
-                        ? "border-b-2 border-blue"
-                        : ""
+                      pathname === href ? "border-b-2 border-blue" : ""
                     } ${dm_sans.className}`}
                   >
                     {name}

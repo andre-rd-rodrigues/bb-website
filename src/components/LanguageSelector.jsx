@@ -14,10 +14,10 @@ function LanguageSelector() {
   const isMobile = useIsMobile();
 
   return (
-    <Popover className="relative mx-5 my-1">
+    <Popover className="relative mx-5 my-1 flex justify-end">
       {/* Icon Button */}
       <Popover.Button className="h-full flex items-center justify-center focus:outline-none">
-        <Icon icon="ph:globe-thin" fontSize={33} className="text-dark" />
+        <Icon icon="ph:globe-thin" fontSize={33} className="text-blue" />
       </Popover.Button>
 
       {/* Dropdown */}

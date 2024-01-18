@@ -84,7 +84,9 @@ function PracticeAreas() {
           </h3>
         </Animated>
         <Animated delay={200}>
-          <p className="mb-10 max-w-5xl">{t("homepage.hero1.description")}</p>
+          <p className="mb-10 max-w-5xl text-left sm:text-left">
+            {t("homepage.hero1.description")}
+          </p>
         </Animated>
 
         <Animated delay={300}>

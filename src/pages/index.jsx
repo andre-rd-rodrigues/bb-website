@@ -114,13 +114,13 @@ export default function Home() {
             </div>
           </Animated>
           <Animated type="fade" delay={1000}>
-            <Link href="/about">
-              <Button label={"see more"} variant className={"mt-8"} />
+            <Link href="/about" className="flex justify-end sm:block">
+              <Button label="see more" variant className={"mt-8"} />
             </Link>
           </Animated>
         </div>
-        <div className="w-full lg:w-1/2 p-4">
-          <div className="m-auto h-full mt-12">
+        <div className="w-full lg:w-1/2">
+          <div className="m-auto h-full">
             <Animated delay={500}>
               <Image
                 src="/img/bb.jpg"
@@ -145,7 +145,7 @@ export default function Home() {
         </Animated>
         <Animated delay={300}>
           <p
-            className={`${dm_sans.className} text-center font-extralight mt-3 mb-12 max-w-4xl mx-auto`}
+            className={`${dm_sans.className} sm:text-center  font-extralight mt-3 mb-12 max-w-4xl mx-auto`}
           >
             {t("homepage.practice.subtitle")}
           </p>
@@ -182,7 +182,9 @@ export default function Home() {
           </h3>
         </Animated>
         <Animated delay={200}>
-          <p className="mb-10 max-w-5xl">{t("homepage.hero1.description")}</p>
+          <p className="mb-10 max-w-5xl text-left sm:text-center">
+            {t("homepage.hero1.description")}
+          </p>
         </Animated>
         <Animated delay={400}>
           <Link to="/contacts" href="/contacts">
@@ -214,12 +216,15 @@ export default function Home() {
             <p className="my-7">{t("homepage.contacts.description")}</p>
           </Animated>
           <Animated delay={400}>
-            <Link href="/contacts">
-              <Button label={"contact"} variant className={"mt-8"} />
+            <Link
+              href="/contacts"
+              className="flex justify-center sm:justify-start"
+            >
+              <Button label={"contact"} variant />
             </Link>
           </Animated>
         </div>
-        <div className="w-full md:w-1/2 p-4">
+        <div className="w-full md:w-1/2">
           <div className="max-w-md m-auto h-full mt-12">
             <Animated delay={300}>
               <Image
