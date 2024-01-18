@@ -45,7 +45,14 @@ export default function Home() {
         }}
       >
         <Animated type="slide">
-          <Logo fill="#B19460" width={"auto"} height={100} />
+          <div className="relative mx-auto w-full h-28">
+            <Image
+              src="/img/logo_gold.png"
+              alt="Bárbara Barbizani"
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
         </Animated>
 
         <Animated type="slide-in-right" delay={200}>
@@ -54,7 +61,7 @@ export default function Home() {
 
         <Animated type="slide-in-left" delay={200}>
           <h2
-            className={`${encode.className} mb-6 text-gold font-normal text-lg`}
+            className={`${encode.className} mb-6 text-gold font-medium text-lg`}
           >
             {t("homepage.subtitle")}
           </h2>
@@ -88,7 +95,7 @@ export default function Home() {
           </Animated>
 
           <Animated type="fade" delay={800}>
-            <div className="flex gap-10">
+            <div className="flex justify-center sm:justify-start gap-10">
               {aboutExtraInfo.map(({ title, value }) => (
                 <div className="text-blue" key={title} ref={counterRef}>
                   <p className={`${dm_serif.className}`}>{title}</p>
@@ -114,7 +121,7 @@ export default function Home() {
             </div>
           </Animated>
           <Animated type="fade" delay={1000}>
-            <Link href="/about" className="flex justify-end sm:block">
+            <Link href="/about" className="flex justify-center sm:block">
               <Button label="see more" variant className={"mt-8"} />
             </Link>
           </Animated>

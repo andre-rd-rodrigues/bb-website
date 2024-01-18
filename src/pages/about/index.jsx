@@ -50,6 +50,7 @@ function About() {
             </Animated>
           </div>
         </div>
+        <span id="journey"></span>
         <Animated>
           <p className="mt-12">{t("about.description")}</p>
         </Animated>
@@ -75,6 +76,7 @@ function About() {
       </HeroSection>
 
       {/* Articles */}
+      <span id="articles"></span>
       <PublishedArticlesSection articles={articles} />
     </main>
   );

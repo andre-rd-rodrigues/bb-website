@@ -14,7 +14,7 @@ const dm_sans = DM_Sans({
 
 const encode = Encode_Sans({
   subsets: ["latin"],
-  weight: ["300"]
+  weight: ["400"]
 });
 
 export { dm_serif, dm_sans, encode };

@@ -243,12 +243,12 @@
           "href": "/about",
           "subLinks": [
             {
-              "name": "Sobre",
+              "name": "Página",
               "href": "/about"
             },
             {
-              "name": "História",
-              "href": "/about#history"
+              "name": "Percurso",
+              "href": "/about#journey"
             },
             {
               "name": "Artigos",

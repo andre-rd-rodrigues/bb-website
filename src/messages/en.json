@@ -244,12 +244,12 @@
           "href": "/about",
           "subLinks": [
             {
-              "name": "About",
+              "name": "Page",
               "href": "/about"
             },
             {
-              "name": "History",
-              "href": "/about#history"
+              "name": "Journey",
+              "href": "/about#journey"
             },
             {
               "name": "Articles",
@@ -276,7 +276,7 @@
           ]
         },
         {
-          "name": "Contact",
+          "name": "Contacts",
 
           "subLinks": [
             {
