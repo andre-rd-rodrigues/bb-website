@@ -13,7 +13,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Animated from "@/components/Animated";
-import CountUp from "react-countup";
+import { CountUp } from "use-count-up";
 import { useInView } from "react-intersection-observer";
 
 export default function Home() {
@@ -99,23 +99,18 @@ export default function Home() {
               {aboutExtraInfo.map(({ title, value }) => (
                 <div className="text-blue" key={title} ref={counterRef}>
                   <p className={`${dm_serif.className}`}>{title}</p>
-                  {counterInView && (
-                    <CountUp start={0} end={value} duration={5}>
-                      {({ countUpRef }) => (
-                        <div className="flex">
-                          <p
-                            className={`${dm_serif.className} text-5xl`}
-                            ref={countUpRef}
-                          >
-                            {value}
-                          </p>
-                          <span className={`${dm_serif.className} text-5xl`}>
-                            +
-                          </span>
-                        </div>
-                      )}
-                    </CountUp>
-                  )}
+                  <CountUp isCounting={counterInView} end={value} duration={5}>
+                    {({ value }) => (
+                      <div className="flex">
+                        <p className={`${dm_serif.className} text-5xl`}>
+                          {value}
+                        </p>
+                        <span className={`${dm_serif.className} text-5xl`}>
+                          +
+                        </span>
+                      </div>
+                    )}
+                  </CountUp>
                 </div>
               ))}
             </div>

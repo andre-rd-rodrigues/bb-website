@@ -25,12 +25,12 @@
     "next-seo": "^6.4.0",
     "next-sitemap": "^4.2.3",
     "react": "^18",
-    "react-countup": "^6.5.0",
     "react-dom": "^18",
     "react-intersection-observer": "^9.5.3",
     "react-responsive-carousel": "^3.2.23",
     "react-transition-group": "^4.4.5",
-    "sass": "^1.69.7"
+    "sass": "^1.69.7",
+    "use-count-up": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
