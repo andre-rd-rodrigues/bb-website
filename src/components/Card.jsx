@@ -4,7 +4,7 @@ import React from "react";
 
 const Card = ({ title, description, imageUrl }) => {
   return (
-    <div className="w-full lg:w-96 flex flex-col justify-between overflow-hidden shadow-lg bg-white">
+    <div className="w-full lg:w-96 h-full flex flex-col justify-between overflow-hidden shadow-lg bg-white">
       <div className="px-7 py-6">
         <h6 className={`font-bold text-2xl text-blue ${dm_serif.className}`}>
           {title}
