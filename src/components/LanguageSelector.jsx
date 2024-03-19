@@ -1,8 +1,8 @@
 import useIsMobile from "@/hooks/useIsMobile";
 import { dm_sans } from "@/styles/fonts";
-import { Disclosure, Popover, Transition } from "@headlessui/react";
+import { Popover, Transition } from "@headlessui/react";
 import { Icon } from "@iconify/react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Fragment } from "react";
@@ -10,8 +10,13 @@ import { Fragment } from "react";
 function LanguageSelector() {
   const t = useTranslations();
   const { route } = useRouter();
+  const locale = useLocale();
 
   const isMobile = useIsMobile();
+
+  const checkMark = (lang) => (
+    <span className="ml-4">{locale === lang && `✔`}</span>
+  );
 
   return (
     <Popover className="relative mx-5 my-1 flex justify-end">
@@ -41,7 +46,7 @@ function LanguageSelector() {
             locale={"en"}
             className={`group relative flex items-center px-9 py-4 text-m  hover:bg-gray-50 ${dm_sans.className}`}
           >
-            English
+            English {checkMark("en")}
           </Popover.Button>
           <Popover.Button
             as={Link}
@@ -49,7 +54,7 @@ function LanguageSelector() {
             locale={"pt"}
             className={`group relative flex items-center px-9 py-4 text-m  hover:bg-gray-50 ${dm_sans.className}`}
           >
-            Português
+            Português {checkMark("pt")}
           </Popover.Button>
         </Popover.Panel>
       </Transition>
