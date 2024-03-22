@@ -198,11 +198,6 @@ export default function Home() {
       {/* Published Articles */}
       <PublishedArticlesSection articles={articles} seeMore />
 
-      {/* FAQS */}
-      <Section containerClassName="bg-blue">
-        <Faqs />
-      </Section>
-
       {/* Contacts */}
       <Section sectionClassName="flex flex-wrap">
         <div className="w-full md:w-1/2 p-0 sm:p-4 flex flex-col justify-center ">
