@@ -40,7 +40,8 @@
       "title": "About",
       "title2": "Helping You To Overcome And Ease The Legal Burden.",
 
-      "description": "Além de consultoria jurídica e disputas em tribunal para cidadãos e empresas, criou o departamento jurídico do Grupo Abraito em Portugal. Residente em Portugal nos últimos 10 anos, mas nascida no Brasil, defendeu em ambos os países, detendo um alto entendimento das suas diferenças legais, culturais e sistémicas.\nMestre em Ciências Jurídicas e Laborais – Universidade de Direito de Lisboa.\nEspecialista avançada em Direito Comercial e do Trabalho pela Faculdade de Direito da Universidade de Lisboa. Advogada e consultora jurídica, Membro da Ordem dos Advogados Portugueses. Membro da Ordem dos Advogados do Brasil. Pesquisadora académico com vários artigos e livros publicados, destacando-se a publicação em Direito Constitucional «[Ir]Redutibilidade Salarial e Princípio da Proibição do Retrocesso», em 2017.\n\nPORTUGUESE BAR ASSOCIATION NO. 52419L\n\nBRAZILIAN / PR BAR ASSOCIATION NO. 63348",
+      "description": "In addition to providing legal consultancy and courtroom representation for citizens and businesses, she established the legal department of Grupo Abraito in Portugal. Having been a resident of Portugal for the past 10 years, but born in Brazil, she has advocated in both countries, possessing a deep understanding of their legal, cultural, and systemic differences.\nMaster of Legal and Labor Sciences – University of Law of Lisbon.\nAdvanced Specialist in Commercial and Labor Law from the Faculty of Law of the University of Lisbon. Lawyer and legal consultant, Member of the Portuguese Bar Association. Member of the Brazilian Bar Association. Academic researcher with several articles and books published, notably the publication in Constitutional Law '[Ir]Redutibilidade Salarial e Princípio da Proibição do Retrocesso', in 2017.\n\nPORTUGUESE BAR ASSOCIATION NO. 52419L\n\nBRAZILIAN / PR BAR ASSOCIATION NO. 63348",
+
       "hero": {
         "title": "Empowering You Through Expert Legal Services and Consulting",
         "description": "I'm dedicated to providing expert advice and comprehensive consulting services tailored to your unique needs. Whether you're facing intricate legal challenges or simply seeking guidance, I am here to assist you. My commitment is to safeguard your interests and guide you towards well-informed decisions, ensuring you receive the highest level of professional expertise. Explore the range of services."
@@ -177,49 +178,45 @@
       "subtitle": "Testimonials",
       "feedback": [
         {
-          "author": "André Rodrigues",
-          "feedback": "Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molestie pellentesque urna libero velit porta. Velit pellentesque hac gravida pellentesque est semper. Duis lectus gravida ultricies eleifend in pharetra faucibus orci sem. Proin ac a cursus praesent. Malesuada risus amet nunc posuere rhoncus accumsan congue id dolor. Convallis maecenas sed in pellentesque. Diam tristique semper mauris dolor amet. Dolor elit nunc et purus quam amet laoreet eu risus.",
-          "imageUrl": "https://images.unsplash.com/photo-1673623702948-082634e585e4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+          "author": "Sofia Pimenta",
+          "feedback": "From the very first moment I met Bárbara Barbizani, her blend of warmth and professionalism was immediately apparent. Her unparalleled competence sets her apart, making her an exceptional choice for legal representation. She's a dedicated ally who genuinely cares about your well-being. She is truly exceptional.",
+          "imageUrl": "/img/testimonials/sofia.jpg"
         },
         {
           "author": "André Rodrigues",
-          "feedback": "Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molestie pellentesque urna libero velit porta. Velit pellentesque hac gravida pellentesque est semper. Duis lectus gravida ultricies eleifend in pharetra faucibus orci sem. Proin ac a cursus praesent. Malesuada risus amet nunc posuere rhoncus accumsan congue id dolor. Convallis maecenas sed in pellentesque. Diam tristique semper mauris dolor amet. Dolor elit nunc et purus quam amet laoreet eu risus.",
-          "imageUrl": "https://plus.unsplash.com/premium_photo-1700575181270-87f37b2ebb4f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-          "author": "André Rodrigues",
-          "feedback": "Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molestie pellentesque urna libero velit porta. Velit pellentesque hac gravida pellentesque est semper. Duis lectus gravida ultricies eleifend in pharetra faucibus orci sem. Proin ac a cursus praesent. Malesuada risus amet nunc posuere rhoncus accumsan congue id dolor. Convallis maecenas sed in pellentesque. Diam tristique semper mauris dolor amet. Dolor elit nunc et purus quam amet laoreet eu risus.",
-          "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          "feedback": "Bárbara Barbizani epitomizes professionalism, warmth, and unmatched competence. Under her guidance, I confidently navigated through complex legal matters, secure in the knowledge that she had my best interests at heart. Barbara's dedication and expertise are unmatched, and her compassionate approach sets her apart. With Barbara by your side, you're not just getting a lawyer - you're gaining a trusted ally who will go above and beyond to ensure your success.",
+          "imageUrl": "/img/testimonials/andre.jpg"
         }
       ]
     },
     "articles": {
       "title": "Published Articles",
       "subtitle": "News",
+
       "articles": [
         {
-          "imageUrl": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "title": "The Disregard of Legal Personality in the Private Limited Company",
-          "description": "The use of disregard for legal personality, should be moderated as a mobile penduluum so that it is a truly credible, rational and fair resource of the economic-social model, acting as a mitigator of systemic deviations and inducer of confidence in the economic functioning, but with transparent criteria , analytically determinable and formally expressed, eliminating the ambiguity that arbitrariness can cause. If so, instead of generating the annihilation of legal personality, this resource will improve the collective institute, through the pursuit only of lawful social purposes, preventing the deviation of the purpose of corporate entities.",
-          "href": ""
+          "imageUrl": "https://images.unsplash.com/photo-1494888427482-242d32babc0b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "title": "Salary Reductibility and Prohibition of Retrogression",
+          "description": "Equipped with scientific courage and audacity, the author proposes a deconstruction of the principle of prohibition of retrogression - which should not be an absolute principle, since Law is not a science that deals with the absolute as a rule - in order to place it in its proper place by reducing it to the meaning that is proper to it on the scale of values of labor law institutions. Thus, to the extent of the practical ineffectiveness, she bridges to juridical rationality to highlight the dogmatic incongruence underlying the aforementioned principle.",
+          "href": "https://issuu.com/editoradplacido/docs/issuu_irredutibilidade_salarial"
         },
         {
-          "imageUrl": "https://images.unsplash.com/photo-1619418602850-35ad20aa1700?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "title": "Amendments to the 2009 Labor Code.",
-          "description": "Despite the personality and the importance of this element in the individual employment situation, as work does not exist, what exists are people who work, work is, from the economic angle of the companies, a factor of production, which must be attractive so that can be searched. This does not mean that work can be carried out at all costs in the logic of absolute optimization of competitiveness and employability, but that in any economic situation it should always assume a captive place.",
-          "href": ""
+          "imageUrl": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "title": "Disregard of Legal Personality in the Limited Liability Company",
+          "description": "The recourse to disregard of legal personality must be moderate as a mobile pendulum so that it becomes a truly credible, rational, and fair resource of the socio-economic model, acting as a mitigator of systemic deviations and an inducer of confidence in economic operation, but with transparent, analytically determinable, and formally expressed criteria, dispensing with the ambiguity that arbitrariness can cause. If so, instead of generating the annihilation of legal personality, this recourse will enhance the collective institute, through the pursuit only of lawful social purposes, preventing the misuse of corporate figures.",
+          "href": "https://www.cidp.pt/revistas/ridb/2014/06/2014_06_03989_04073.pdf"
         },
         {
           "imageUrl": "https://images.unsplash.com/photo-1593115057322-e94b77572f20?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "title": "The judge’s margins in the face of restrictions on the fundamental right to retribution",
-          "description": "As a fundamental right, the retributive guarantee is an asset against the political majority and, therefore, acts as an armor in the face of interventions that affect the degree of concretization underlying it, as legislative concretizations reduce the degree of abstraction and generality of the rule, and increase the judge’s margin of control in the face of a restriction, by integrating the content made with the fundamental guarantee.",
-          "href": ""
+          "title": "Margins of the Judge in the Face of Restrictions on the Fundamental Right to Remuneration",
+          "description": "As a Fundamental Right, remunerative guarantee is a trump against political majority and, thus, acts as an armor against interventions that affect the degree of realization underlying it, since legislative realizations decrease the degree of abstraction and generality of the norm and increase the judge's control margin in the face of a restriction, through the integration of the content carried out with the fundamental guarantee.",
+          "href": "https://www.cidp.pt/revistas/ridb/2014/07/2014_07_04825_04916.pdf"
         },
         {
-          "imageUrl": "https://images.unsplash.com/photo-1494888427482-242d32babc0b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "title": "Wage Reducibility and the Prohibition of Retrogression",
-          "description": "Armed with scientific courage and boldness, the author proposes a deconstruction of the principle of the prohibition of retrogression – which does not have to be an absolute principle, not least because Law is not a science that works with the absolute as a rule – to fit in due place reducing it to its own sense in the scale of the values of legal and labor institutions. And so, to the extent of the verification of its practical ineffectiveness, it makes the bridge with jusrationality to show the dogmatic incongruence that underlies the predicted principle.",
-          "href": ""
+          "imageUrl": "https://images.unsplash.com/photo-1619418602850-35ad20aa1700?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "title": "Amendment to the 2009 Labor Code",
+          "description": "Notwithstanding the personal nature and importance of this element in the individual labor situation, since work does not exist, there are people who work, work is, from the economic standpoint of companies, a factor of production that must be attractive so that it can be sought after. This does not mean that work can be pursued at all costs in the logic of absolute optimization of competitiveness and employability, but rather that in any economic situation it should always assume a captive place.",
+          "href": "https://www.cidp.pt/publicacao/revista-do-instituto-do-direito-brasileiro-ano-3-2014-n-8/153"
         }
       ]
     },
