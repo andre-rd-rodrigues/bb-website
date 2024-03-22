@@ -181,9 +181,14 @@
           "imageUrl": "/img/testimonials/sofia.jpg"
         },
         {
-          "author": "André Rodrigues",
+          "author": "André Rodrigo",
           "feedback": "A Dr.ª Bárbara Barbizani simboliza o profissionalismo, cordialidade e competência incomparável. Sob a sua orientação, resolvi com confiança questões jurídicas complexas, seguro de que ela tinha os meus melhores interesses em conta. A dedicação e a experiência da Dr.ª Bárbara são incomparáveis, e sua abordagem altamente empática diferencia-a bastante. Tendo a Dr.ª Bárbara ao seu lado, você não está apenas recebendo um advogado - você está ganhando um aliado de confiança que irá além do esperado para garantir o seu sucesso.",
           "imageUrl": "/img/testimonials/andre.jpg"
+        },
+        {
+          "author": "Betina Ferreira",
+          "feedback": "A Dr.ª Bárbara Barbiani é uma advogada excepcional, cujo talento brilha através da sua abordagem reconfortante. Ela não apenas luta por você com dedicação inabalável, mas também aumenta a confiança nas suas decisões, oferecendo empatia ao longo do processo. Uma verdadeira lutadora em todos os sentidos. Obrigado por me ajudar no meu caso e por ser uma parceira de confiança durante toda o processo. Recomendo vivamente a Dr.ª Bárbara a quem procura representação legal.",
+          "imageUrl": "/img/testimonials/betina.jpg"
         }
       ]
     },

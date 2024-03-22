@@ -183,9 +183,14 @@
           "imageUrl": "/img/testimonials/sofia.jpg"
         },
         {
-          "author": "André Rodrigues",
+          "author": "André Rodrigo",
           "feedback": "Bárbara Barbizani epitomizes professionalism, warmth, and unmatched competence. Under her guidance, I confidently navigated through complex legal matters, secure in the knowledge that she had my best interests at heart. Barbara's dedication and expertise are unmatched, and her compassionate approach sets her apart. With Barbara by your side, you're not just getting a lawyer - you're gaining a trusted ally who will go above and beyond to ensure your success.",
           "imageUrl": "/img/testimonials/andre.jpg"
+        },
+        {
+          "author": "Betina Ferreira",
+          "feedback": "Barbara Barbizani is an exceptional lawyer whose talent shines through her heartwarming approach. She not only fights for you with unwavering dedication but also instills trust in your decisions and offers empathy throughout the process. A true advocate in every sense. Thank you for helping me in my case and for being a reliable partner throughout the journey. I highly recommend Barbara to anyone seeking legal representation.",
+          "imageUrl": "/img/testimonials/betina.jpg"
         }
       ]
     },
@@ -221,7 +226,7 @@
       ]
     },
     "faqs": {
-      "title": "Frequentley Asked Questions",
+      "title": "Frequently Asked Questions",
       "questions": [
         {
           "question": "Education Lawyer & Consultation",
