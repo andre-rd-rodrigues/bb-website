@@ -1,7 +1,13 @@
 import React from "react";
 import { useSpring, animated, useInView } from "@react-spring/web";
 
-const Animated = ({ delay = 0, type = "fade", children, config }) => {
+const Animated = ({
+  delay = 0,
+  type = "fade",
+  children,
+  config,
+  className
+}) => {
   const [ref, inView] = useInView({
     triggerOnce: true
   });
@@ -51,7 +57,7 @@ const Animated = ({ delay = 0, type = "fade", children, config }) => {
   });
 
   return (
-    <animated.div ref={ref} style={props}>
+    <animated.div ref={ref} style={props} className={className}>
       {children}
     </animated.div>
   );

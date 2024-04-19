@@ -22,9 +22,8 @@ export default function Home() {
 
   const { getTranslationsArray } = useTranslation();
 
-  const praticeAreas = getTranslationsArray("components.practiceAreas").slice(
-    0,
-    6
+  const praticeAreas = getTranslationsArray("components.practiceAreas").filter(
+    (area) => area.showPreview
   );
   const aboutExtraInfo = getTranslationsArray("pages.homepage.about.extraInfo");
   const articles = getTranslationsArray("components.articles.articles").slice(
@@ -199,7 +198,7 @@ export default function Home() {
       <PublishedArticlesSection articles={articles} seeMore />
 
       {/* Contacts */}
-      <Section sectionClassName="flex flex-wrap">
+      <Section sectionClassName="flex flex-wrap pt-0">
         <div className="w-full md:w-1/2 p-0 sm:p-4 flex flex-col justify-center ">
           <Animated type="slide-in-left">
             <h3 className="text-blue">{t("homepage.contacts.subtitle")}</h3>

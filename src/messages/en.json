@@ -40,7 +40,7 @@
       "title": "About",
       "title2": "Helping You To Overcome And Ease The Legal Burden.",
 
-      "description": "In addition to providing legal consultancy and courtroom representation for citizens and businesses, she established the legal department of Grupo Abraito in Portugal. Having been a resident of Portugal for the past 10 years, but born in Brazil, she has advocated in both countries, possessing a deep understanding of their legal, cultural, and systemic differences.\nMaster of Legal and Labor Sciences – University of Law of Lisbon.\nAdvanced Specialist in Commercial and Labor Law from the Faculty of Law of the University of Lisbon. Lawyer and legal consultant, Member of the Portuguese Bar Association. Member of the Brazilian Bar Association. Academic researcher with several articles and books published, notably the publication in Constitutional Law '[Ir]Redutibilidade Salarial e Princípio da Proibição do Retrocesso', in 2017.\n\nPORTUGUESE BAR ASSOCIATION NO. 52419L\n\nBRAZILIAN / PR BAR ASSOCIATION NO. 63348",
+      "description": "Lawyer and legal consultant, Member of the Portuguese Bar Association and Member of the Brazilian Bar Association.\nPhD candidate in Legal and Civil Sciences - University of Law of Lisbon.\nMaster in Legal and Labor Sciences - University of Law of Lisbon.\nAdvanced specialist in Commercial and Labor Law by the Faculty of Law of the University of Lisbon.\nAcademic researcher with several articles and books published, highlighting the publication in Constitutional Law - Salary Reductibility and Principle of Non-Retrogression, in 2017.\nExperienced in preventive consultancy and civil litigation, with active registration in the OAB and the Portuguese Bar Association.\nResident in Portugal for the last 12 years, but born in Brazil, she has worked in both countries, holding a deep understanding of their legal, cultural, and systemic differences.\nShe has a client-oriented approach, where trust, ethics, and commitment remain fundamental in creating lasting commercial relationships.\nShe operates locally with a global mindset, specializing in Portuguese, Brazilian, and Chinese companies and citizens. Coordinating migration processes, visas, Portuguese citizenship, real estate investment, company relocation, among other operations involving Portuguese and Brazilian jurisdictions.\nIn addition to extensive practice in legal consultancy and disputes in court for citizens and companies, she created the legal department of Grupo Abraito in Portugal.\n\nPORTUGUESE BAR ASSOCIATION | No. 52419L\n\nBRAZILIAN BAR ASSOCIATION PR | No. 63348",
 
       "hero": {
         "title": "Empowering You Through Expert Legal Services and Consulting",
@@ -58,6 +58,17 @@
       "formDescription": "Whether you have questions, need assistance, or just want to connect, sending a direct message is a hassle-free way to get in touch with me. Simply click on the 'Send Message' button bellow, and share your thoughts, concerns, or inquiries. I value your communication and am dedicated to providing you with a prompt and helpful response.",
       "title2": "Connecting for clarity.",
       "description": "Legal matters require prompt and reliable communication. Whether you have questions, need legal assistance, or want to schedule a consultation, I'm here to help. Feel free to get in touch through the following channels:",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "subject": {
+          "title": "Topic",
+          "options": ["Citizen", "Company", "Other"]
+        },
+        "phone": "Phone (optional)",
+        "message": "Write your message here...",
+        "success": "Your message has been sent successfully. I will get back to you as soon as possible. Thank you for reaching out."
+      },
       "links": [
         {
           "description": "Rua Alvaro Velho, 2D, 2830-327 Barreiro",
@@ -75,8 +86,8 @@
           "icon": "mingcute:whatsapp-fill"
         },
         {
-          "description": "barbara.caiado@caiadolaw.com",
-          "href": "mailto: barbara.caiado@caiadolaw.com",
+          "description": "barbara@barbizanicarvalholaw.com",
+          "href": "mailto: barbara@barbizanicarvalholaw.com",
           "icon": "ic:baseline-email"
         }
       ]
@@ -104,7 +115,8 @@
         "title": "Private International Law",
         "description": "Specialization in emigration processes, Golden Visas in Portugal, Portuguese and Brazilian nationality, regularization and work in Portugal and Brazil, document research, translation and certification of foreign documents, recognition of foreign judgments, regularization of assets, inheritances, and property transfer in Portugal and Brazil, judicial appeals against administrative decisions.",
         "imageUrl": "https://images.unsplash.com/photo-1614107151491-6876eecbff89?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "type": "Citizens"
+        "type": "Citizens",
+        "showPreview": true
       },
       {
         "title": "Real Estate Law",
@@ -134,7 +146,8 @@
         "title": "Civil Law",
         "description": "Specialization in drafting and understanding contracts, validation of conditions, rules, and clauses of commercial legal transactions in general, construction contracts, intellectual property, copyright, and conflicts arising from electronic business and custom software production, insolvency and default, civil liability and corporate liability, representation in judicial proceedings.",
         "imageUrl": "https://images.unsplash.com/photo-1530469525856-cf37954301f7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "type": "Citizens"
+        "type": "Citizens",
+        "showPreview": true
       },
       {
         "title": "General Civil Law",
@@ -200,7 +213,7 @@
 
       "articles": [
         {
-          "imageUrl": "https://images.unsplash.com/photo-1494888427482-242d32babc0b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "imageUrl": "/img/redutibilidade-salarial.jpg",
           "title": "Salary Reductibility and Prohibition of Retrogression",
           "description": "Equipped with scientific courage and audacity, the author proposes a deconstruction of the principle of prohibition of retrogression - which should not be an absolute principle, since Law is not a science that deals with the absolute as a rule - in order to place it in its proper place by reducing it to the meaning that is proper to it on the scale of values of labor law institutions. Thus, to the extent of the practical ineffectiveness, she bridges to juridical rationality to highlight the dogmatic incongruence underlying the aforementioned principle.",
           "href": "https://issuu.com/editoradplacido/docs/issuu_irredutibilidade_salarial"
@@ -292,8 +305,8 @@
               "icon": "mingcute:phone-fill"
             },
             {
-              "name": "barbara.caiado@caiadolaw.com",
-              "href": "mailto: barbara.caiado@caiadolaw.com",
+              "name": "barbara@barbizanicarvalholaw.com",
+              "href": "mailto: barbara@barbizanicarvalholaw.com",
               "icon": "ic:baseline-email"
             }
           ]

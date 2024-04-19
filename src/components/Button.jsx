@@ -1,8 +1,9 @@
 import { dm_serif } from "@/styles/fonts";
 import { useTranslations } from "next-intl";
 import React from "react";
+import PulseLoader from "react-spinners/PulseLoader";
 
-function Button({ className, onClick, label, variant }) {
+function Button({ className, onClick, label, variant, disabled, loading }) {
   const t = useTranslations("components.buttons");
 
   return (
@@ -13,8 +14,9 @@ function Button({ className, onClick, label, variant }) {
         dm_serif.className
       }`}
       onClick={onClick}
+      disabled={disabled}
     >
-      {t(label)}
+      {loading ? <PulseLoader color="white" size={10} /> : t(label)}
     </button>
   );
 }

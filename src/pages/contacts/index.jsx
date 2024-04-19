@@ -4,13 +4,45 @@ import HeroSection from "@/components/HeroSection/HeroSection";
 import IconContact from "@/components/IconContact";
 import Section from "@/components/Section";
 import useTranslation from "@/hooks/useTranslation";
+import { useForm } from "@formspree/react";
+import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
 import React from "react";
+import ReCAPTCHA from "react-google-recaptcha";
+import * as Form from "../../components/Form";
 
 function Contacts() {
   const t = useTranslations("pages");
   const { getTranslationsArray } = useTranslation();
   const contacts = getTranslationsArray("pages.contacts.links");
+  const formOptions = getTranslationsArray(
+    "pages.contacts.form.subject.options"
+  );
+
+  // Form
+  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM || "");
+  const recaptchaRef = React.createRef();
+
+  const onSubmit = (evt) => {
+    evt.preventDefault();
+
+    handleSubmit(evt);
+    /*  recaptchaRef.current.execute(); */
+  };
+
+  /*  const onReCAPTCHAChange = (captchaCode) => {
+    // If the reCAPTCHA code is null or undefined indicating that
+    // the reCAPTCHA was expired then return early
+    if (!captchaCode) {
+      return;
+    }
+    // Else reCAPTCHA was executed successfully so proceed with the
+    // alert
+    handleSubmit();
+    // Reset the reCAPTCHA so that it can be executed again if user
+    // submits another email.
+    recaptchaRef.current.reset();
+  }; */
 
   return (
     <main>
@@ -36,8 +68,79 @@ function Contacts() {
           <p className="my-6">{t("contacts.formDescription")}</p>
         </Animated>
 
+        {/* Form */}
         <Animated delay={400}>
-          <Button label="fill form" className="block mx-auto" />
+          {state.succeeded ? (
+            <Animated type="slide-in-left" className="w-100 text-center">
+              <Icon
+                icon="lets-icons:check-fill"
+                className="text-emerald-400 m-auto"
+                fontSize={90}
+              />
+
+              <p>{t("contacts.form.success")}</p>
+            </Animated>
+          ) : (
+            <form onSubmit={onSubmit} className="max-w-2xl mx-auto">
+              <div className="flex gap-5 mb-5">
+                <Form.Input
+                  icon="mdi:user"
+                  label="Nome"
+                  placeholder={t("contacts.form.name")}
+                  required
+                  disabled={state.submitting}
+                />
+                <Form.Input
+                  icon="ic:baseline-email"
+                  label="Email"
+                  type="email"
+                  placeholder={t("contacts.form.email")}
+                  required
+                  disabled={state.submitting}
+                />
+              </div>
+              <div className="flex gap-5 mb-5">
+                <Form.Input
+                  icon="ic:round-phone"
+                  label="Telefone"
+                  type="tel"
+                  placeholder={t("contacts.form.phone")}
+                  disabled={state.submitting}
+                />
+                <Form.Select
+                  icon="mingcute:information-fill"
+                  label="Assunto"
+                  placeholder={t("contacts.form.subject.title")}
+                  options={formOptions}
+                  required
+                  disabled={state.submitting}
+                />
+              </div>
+              <Form.Textarea
+                icon="mdi:pencil"
+                label="Mensagem"
+                placeholder={t("contacts.form.message")}
+                required
+                disabled={state.submitting}
+              />
+
+              <div className="mt-8 text-center">
+                {/*   <ReCAPTCHA
+                  ref={recaptchaRef}
+                  size="invisible"
+                  sitekey={process.env.NEXT_PUBLIC_CAPTCHA}
+                  onChange={onReCAPTCHAChange}
+                /> */}
+                <Button
+                  label="fill form"
+                  icon="cil:send"
+                  type="submit"
+                  disabled={state.submitting}
+                  loading={state.submitting}
+                />
+              </div>
+            </form>
+          )}
         </Animated>
       </Section>
 

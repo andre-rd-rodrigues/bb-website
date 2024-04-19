@@ -5,7 +5,7 @@
       "subtitle": "Advocacia & Consultoria Jurídica",
       "practice": {
         "title": "Áreas de Atuação",
-        "subtitle": "A minha prática gira em torno da confiança, da ética e do empenhamento. Especializada em direito internacional, direito de cidadania e direito societário, apresento resultados com cuidado e precisão. O seu aliado legal para uma viagem sem problemas através das complexidades da paisagem legal. Explore o poder da advocacia legal comigo."
+        "subtitle": "Especializada em direito internacional, direito de cidadania e direito societário tenho várias áreas de atuação. Selecione o botão \"Ver mais\" para conhecer todas as áreas."
       },
       "about": {
         "title": "Ajudando a superar e aliviar o fardo jurídico.",
@@ -39,7 +39,7 @@
     "about": {
       "title": "Sobre",
       "title2": "Ajudando-o a superar e aliviar o fardo legal.",
-      "description": "Bárbara Barbizani de Carvalho, além de consultoria jurídica e disputas em tribunal para cidadãos e empresas, criou o departamento jurídico do Grupo Abraito em Portugal. Residente em Portugal nos últimos 10 anos, mas nascida no Brasil, defendeu em ambos os países, detendo um alto entendimento das suas diferenças legais, culturais e sistémicas.É \nMestre em Ciências Jurídicas e Laborais pela Universidade de Direito de Lisboa e especialista avançada em Direito Comercial e do Trabalho pela Faculdade de Direito da Universidade de Lisboa, é membro da Ordem dos Advogados Portuguesese e membro da Ordem dos Advogados do Brasil.\nÉ pesquisadora académica com vários artigos e livros publicados, destacando-se a publicação em Direito Constitucional - Redutibilidade Salarial e Princípio da Proibição do Retrocesso - 2017.\n\nORDEM DOS ADVOGADOS DE PORTUGAL | No. 52419L\n\nORDEM DOS ADVOGADOS DO BRASIL PR | No. 63348",
+      "description": "Advogada e consultora jurídica, Membro da Ordem dos Advogados Portugueses e Membro da Ordem dos Advogados do Brasil.\nDoutoranda em Ciências Jurídico-Civis - Universidade de Direito de Lisboa.\nMestre em Ciências Jurídicas e Laborais - Universidade de Direito de Lisboa.\nEspecialista avançada em Direito Comercial e do Trabalho pela Faculdade de Direito da Universidade de Lisboa.\nPesquisadora académica com vários artigos e livros publicados, destacando-se a publicação em Direito Constitucional - Redutibilidade Salarial e Princípio da Proibição do Retrocesso, em 2017.\nDetém experiência em consultoria preventiva e contencioso cível, com inscrição ativa na OAB e na Ordem dos Advogados Portugueses.\nResidente em Portugal nos últimos 12 anos, mas nascida no Brasil, atuou em ambos os países, detendo um alto entendimento das suas diferenças legais, culturais e sistémicas.\nTem uma matriz de atuação orientada para o cliente, na qual confiança, ética e compromisso permanecem como fundamentaiTem uma matriz de atuação orientada para o cliente, na qual confiança, ética e compromisso permanecem como fundamentais na criação de relacionamentos comerciais duradouros.\nAtua localmente com uma mentalidade global, especializada em empresas e cidadãos portugueses, brasileiros e chineses. Coordenando processos migratórios, vistos, cidadania portuguesa, investimento imobiliário, deslocalização de empresas, entre outras operações que envolvam as jurisdições portuguesa e brasileira.\nAlém da ampla prática em consultoria jurídica e disputas em tribunal para cidadãos e empresas, criou o departamento jurídico do Grupo Abraito em Portugal.\n\nORDEM DOS ADVOGADOS DE PORTUGAL | No. 52419L\n\nORDEM DOS ADVOGADOS DO BRASIL PR | No. 63348",
       "hero": {
         "title": "Capacitando-o através de serviços jurídicos especializados e Consultoria",
         "description": "Dedico-me a prestar aconselhamento especializado e serviços de consultoria abrangentes adaptados às suas necessidades específicas. Quer esteja a enfrentar complexos desafios jurídicos ou simplesmente a procurar orientação, estou aqui para o ajudar. O meu compromisso é salvaguardar os seus interesses e orientá-lo para decisões bem informadas, garantindo que recebe o mais alto nível de experiência profissional."
@@ -56,6 +56,17 @@
       "formDescription": "Se tiver dúvidas, precisar de ajuda ou apenas quiser estabelecer contacto, enviar uma mensagem direta é uma forma simples de entrar em contacto comigo. Basta clicar no botão 'Enviar mensagem' abaixo e partilhar as suas ideias, preocupações ou questões. Valorizo a sua comunicação e estou empenhado em fornecer-lhe uma resposta rápida e útil.",
       "title2": "Conexão para compreensão.",
       "description": "Os assuntos jurídicos exigem uma comunicação rápida e fiável. Se tiver dúvidas, precisar de assistência jurídica ou quiser marcar uma consulta, estou aqui para o ajudar. Sinta-se à vontade para entrar em contacto através dos seguintes canais: ",
+      "form": {
+        "name": "Nome",
+        "email": "Email",
+        "subject": {
+          "title": "Assunto",
+          "options": ["Cidadão", "Empresa", "Outro"]
+        },
+        "phone": "Telefone (opcional)",
+        "message": "Escreva a sua mensagem aqui...",
+        "success": "A sua mensagem foi enviada com sucesso. Entrarei em contacto consigo em breve."
+      },
       "links": [
         {
           "description": "Rua Alvaro Velho, 2D, 2830-327 Barreiro",
@@ -73,8 +84,8 @@
           "icon": "mingcute:whatsapp-fill"
         },
         {
-          "description": "barbara.caiado@caiadolaw.com",
-          "href": "mailto: barbara.caiado@caiadolaw.com",
+          "description": "barbara@barbizanicarvalholaw.com",
+          "href": "mailto: barbara@barbizanicarvalholaw.com",
           "icon": "ic:baseline-email"
         }
       ]
@@ -102,7 +113,8 @@
         "title": "Direito Internacional Privado",
         "description": "Especialização em processos de emigração, Vistos Gold em Portugal, nacionalidade portuguesa e brasileira, regularização e trabalho em Portugal e no Brasil, pesquisa de documentos, tradução e certificação de documentos estrangeiros, reconhecimento de sentença estrangeira, regularização de património, heranças e transferência de propriedade, recursos judiciais contra decisões administrativas.",
         "imageUrl": "https://images.unsplash.com/photo-1614107151491-6876eecbff89?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "type": "Citizens"
+        "type": "Citizens",
+        "showPreview": true
       },
       {
         "title": "Direito Imobiliário",
@@ -132,7 +144,8 @@
         "title": "Direito Civil",
         "description": "Especialização em elaboração e entendimento de contratos, validação de condições, regras e cláusulas dos negócios jurídicos comerciais em geral, empreitadas, propriedade intelectual, direitos de autor e conflitos oriundos de negócios eletrónicos e produção de software sob medida, insolvência e inadimplência, responsabilidade civil e responsabilidade societária, representação em processos judiciais.",
         "imageUrl": "https://images.unsplash.com/photo-1530469525856-cf37954301f7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "type": "Citizens"
+        "type": "Citizens",
+        "showPreview": true
       },
       {
         "title": "Direito Civil em Geral",
@@ -197,7 +210,7 @@
       "subtitle": "Notícias",
       "articles": [
         {
-          "imageUrl": "https://images.unsplash.com/photo-1494888427482-242d32babc0b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "imageUrl": "/img/redutibilidade-salarial.jpg",
           "title": "Redutibilidade Salarial e Proibição do Retrocesso",
           "description": "Munida de coragem e de ousadia científicas, a autora propõe uma desconstrução do princípio da proibição do retrocesso – que não há de ser um princípio absoluto, até porque o Direito não é uma ciência que trabalha com o absoluto como regra –para o enquadrar no devido lugar reduzindo-o ao sentido que lhe é próprio na escala dos valores das instituições jurídico-laborais. E assim, na medida da constatação de sua ineficácia prática, faz a ponte com a jusracionalidade para evidenciar a incongruência dogmática que subjaz ao predito princípio.",
           "href": "https://issuu.com/editoradplacido/docs/issuu_irredutibilidade_salarial"
@@ -289,8 +302,8 @@
               "icon": "mingcute:phone-fill"
             },
             {
-              "name": "barbara.caiado@caiadolaw.com",
-              "href": "mailto: barbara.caiado@caiadolaw.com",
+              "name": "barbara@barbizanicarvalholaw.com",
+              "href": "mailto: barbara@barbizanicarvalholaw.com",
               "icon": "ic:baseline-email"
             }
           ]
@@ -299,7 +312,7 @@
     },
     "buttons": {
       "contact": "Contacto",
-      "see more": "Saber mais",
+      "see more": "Ver mais",
       "read more": "Ler mais",
       "pratice areas": "Áreas de Atuação",
       "fill form": "Enviar Mensagem"

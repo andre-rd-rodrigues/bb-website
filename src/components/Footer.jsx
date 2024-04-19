@@ -17,7 +17,9 @@ function Footer() {
     <footer className="bg-blue">
       <Container className="py-7">
         {/* Logo */}
-        <Logo fill="white" width={50} height={50} className="mx-auto" />
+        <Link href="/">
+          <Logo fill="white" width={50} height={50} className="mx-auto" />
+        </Link>
 
         <hr className="my-6 border-gray-400 mx-auto opacity-50" />
 
