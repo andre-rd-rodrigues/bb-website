@@ -73,7 +73,9 @@ export default function Home() {
             config: { tension: 150, friction: 60 }
           }}
         >
-          <Button label="contact" variant />
+          <Link href="/contacts">
+            <Button label="contact" variant />
+          </Link>
         </Animated>
       </HeroSection>
 
