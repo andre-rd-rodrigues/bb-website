@@ -21,28 +21,6 @@ function Contacts() {
 
   // Form
   const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM || "");
-  const recaptchaRef = React.createRef();
-
-  const onSubmit = (evt) => {
-    evt.preventDefault();
-
-    handleSubmit(evt);
-    /*  recaptchaRef.current.execute(); */
-  };
-
-  /*  const onReCAPTCHAChange = (captchaCode) => {
-    // If the reCAPTCHA code is null or undefined indicating that
-    // the reCAPTCHA was expired then return early
-    if (!captchaCode) {
-      return;
-    }
-    // Else reCAPTCHA was executed successfully so proceed with the
-    // alert
-    handleSubmit();
-    // Reset the reCAPTCHA so that it can be executed again if user
-    // submits another email.
-    recaptchaRef.current.reset();
-  }; */
 
   return (
     <main>
@@ -81,7 +59,7 @@ function Contacts() {
               <p>{t("contacts.form.success")}</p>
             </Animated>
           ) : (
-            <form onSubmit={onSubmit} className="max-w-2xl mx-auto">
+            <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
               <div className="flex gap-5 mb-5">
                 <Form.Input
                   icon="mdi:user"
