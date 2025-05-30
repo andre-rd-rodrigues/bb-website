@@ -3,8 +3,8 @@ import "@/styles/globals.scss";
 import { useRouter } from "next/router";
 import Layout from "@/components/Layout";
 import { dm_sans, dm_serif } from "@/styles/fonts";
-import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Analytics from "@/components/Analytics";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -24,8 +24,8 @@ export default function App({ Component, pageProps }) {
         <Layout>
           <Component {...pageProps} />
         </Layout>
-        <Analytics />
         <SpeedInsights />
+        <Analytics />
       </NextIntlClientProvider>
     </>
   );
