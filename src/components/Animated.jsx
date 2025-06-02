@@ -11,6 +11,7 @@ const Animated = ({
   const [ref, inView] = useInView({
     triggerOnce: true
   });
+  
 
   const getTransformFrom = () => {
     switch (type) {
