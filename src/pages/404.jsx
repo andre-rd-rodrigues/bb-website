@@ -16,6 +16,7 @@ function NotFoundPage() {
       <h2 className={`text-blue text-2xl my-3`}>
         {t("pages.notFound.subtitle")}
       </h2>
+
       <p className="mb-7">{t("pages.notFound.description")}</p>
       <Button label={t("go back")} onClick={() => router.back()} />
     </main>
