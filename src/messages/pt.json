@@ -89,6 +89,11 @@
           "icon": "ic:baseline-email"
         }
       ]
+    },
+    "notFound": {
+      "title": "Página não encontrada",
+      "subtitle": "Desculpe, a página que você está procurando não existe.",
+      "description": "Por favor, verifique se a URL está correta ou retorne à página inicial."
     }
   },
   "components": {
@@ -315,7 +320,8 @@
       "see more": "Ver mais",
       "read more": "Ler mais",
       "pratice areas": "Áreas de Atuação",
-      "fill form": "Enviar Mensagem"
+      "fill form": "Enviar Mensagem",
+      "go back": "Voltar"
     }
   },
 
@@ -324,6 +330,7 @@
     "aboutTitle": "Sobre Mim - Bárbara Barbizani",
     "contactsTitle": "Contatos - Bárbara Barbizani",
     "practiceTitle": "Áreas de Atuação - Bárbara Barbizani",
-    "description": "Bárbara Barbizani de Carvalho - Advogacia e Consultoria Jurídica. Comprometida com valores centrados no cliente, como confiança, ética e dedicação. Trato casos seletivamente, garantindo um serviço rápido e de excelência. Especializada em direito português, brasileiro e chinês, colaboro com uma mentalidade de parceria, otimizando o valor legal."
+    "description": "Bárbara Barbizani de Carvalho - Advogacia e Consultoria Jurídica. Comprometida com valores centrados no cliente, como confiança, ética e dedicação. Trato casos seletivamente, garantindo um serviço rápido e de excelência. Especializada em direito português, brasileiro e chinês, colaboro com uma mentalidade de parceria, otimizando o valor legal.",
+    "notFoundTitle": "Página não encontrada"
   }
 }
