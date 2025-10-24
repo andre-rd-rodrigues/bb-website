@@ -19,8 +19,8 @@ function Testimonial({ author, imageUrl, feedback }) {
           <Image
             src={imageUrl}
             alt={`${author} Testimonial`}
-            objectFit="cover"
-            layout="fill"
+            fill
+            style={{ objectFit: 'cover' }}
           />
         </Animated>
       </div>

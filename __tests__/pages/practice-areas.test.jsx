@@ -132,7 +132,7 @@ jest.mock('next-intl', () => ({
 
 // Mock react-responsive-carousel
 jest.mock('react-responsive-carousel', () => ({
-  Carousel: ({ children, ...props }) => (
+  Carousel: ({ children, showStatus, emulateTouch, ...props }) => (
     <div data-testid="carousel" {...props}>
       {children}
     </div>

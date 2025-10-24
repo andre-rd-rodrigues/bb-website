@@ -48,8 +48,8 @@ export default function Home() {
             <Image
               src="/img/logo_gold.png"
               alt="Bárbara Barbizani"
-              layout="fill"
-              objectFit="contain"
+              fill
+              style={{ objectFit: 'contain' }}
             />
           </div>
         </Animated>
@@ -130,8 +130,7 @@ export default function Home() {
                 alt="Barbara Barbizani"
                 width={800}
                 height={800}
-                layout="responsive"
-                objectFit="cover"
+                style={{ objectFit: 'cover' }}
                 className="shadow-2xl"
               />
             </Animated>
@@ -230,8 +229,7 @@ export default function Home() {
                 alt="Barbara Barbizani"
                 width={800}
                 height={800}
-                layout="responsive"
-                objectFit="cover"
+                style={{ objectFit: 'cover' }}
               />
             </Animated>
           </div>

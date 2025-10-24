@@ -8,7 +8,7 @@ const ArticleCard = ({ imageUrl, title, description, href }) => {
     <div className="mb-16 w-full flex flex-col lg:flex-row gap-10 justify-center">
       {/* Left Section (Image) */}
       <div className="lg:w-1/2 relative mx-auto w-full h-96">
-        <Image src={imageUrl} alt={title} layout="fill" objectFit="cover" />
+        <Image src={imageUrl} alt={title} fill style={{ objectFit: 'cover' }} />
       </div>
 
       {/* Right Section (Title, Description, Button) */}
