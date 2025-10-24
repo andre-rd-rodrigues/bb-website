@@ -306,13 +306,19 @@ export const mockReCAPTCHA = () => {
   };
 };
 
-// Mock translation hooks
-export const mockUseTranslation = () => ({
+// Mock translation hooks - generic version
+export const mockUseTranslation = (customTranslations = {}) => ({
   __esModule: true,
   default: () => ({
     getTranslationsArray: (key) => {
-      if (key === "pages.contacts.links") {
-        return [
+      // Check for custom translations first
+      if (customTranslations[key]) {
+        return customTranslations[key];
+      }
+      
+      // Default translations for common keys
+      const defaultTranslations = {
+        "pages.contacts.links": [
           {
             description: "Rua Alvaro Velho, 2D, 2830-327 Barreiro",
             icon: "mdi:location",
@@ -333,41 +339,53 @@ export const mockUseTranslation = () => ({
             href: "mailto: barbara@barbizanicarvalholaw.com",
             icon: "ic:baseline-email"
           }
-        ];
-      }
-      if (key === "pages.contacts.form.subject.options") {
-        return ["Citizen", "Company", "Other"];
-      }
-      return [];
+        ],
+        "pages.contacts.form.subject.options": ["Citizen", "Company", "Other"]
+      };
+      
+      return defaultTranslations[key] || [];
     }
   })
 });
 
-// Mock next-intl
-export const mockNextIntl = () => ({
-  useTranslations: () => (key) => {
-    const translations = {
-      "contacts.title": "Get in Touch for Expert Advice",
-      "contacts.formTitle": "Send a direct message.",
-      "contacts.formDescription":
-        "Whether you have questions, need assistance, or just want to connect, sending a direct message is a hassle-free way to get in touch with me.",
-      "contacts.title2": "Connecting for clarity.",
-      "contacts.description":
-        "Legal matters require prompt and reliable communication. Whether you have questions, need legal assistance, or want to schedule a consultation, I'm here to help.",
-      "contacts.form.name": "Name",
-      "contacts.form.email": "Email",
-      "contacts.form.subject.title": "Topic",
-      "contacts.form.phone": "Phone (optional)",
-      "contacts.form.message": "Write your message here...",
-      "contacts.form.success":
-        "Your message has been sent successfully. I will get back to you as soon as possible. Thank you for reaching out."
+// Mock next-intl - generic version
+export const mockNextIntl = (customTranslations = {}) => ({
+  useTranslations: (namespace) => (key) => {
+    // Check for custom translations first
+    if (customTranslations[namespace] && customTranslations[namespace][key]) {
+      return customTranslations[namespace][key];
+    }
+    
+    // Default translations
+    const defaultTranslations = {
+      "pages": {
+        "contacts.title": "Get in Touch for Expert Advice",
+        "contacts.formTitle": "Send a direct message.",
+        "contacts.formDescription": "Whether you have questions, need assistance, or just want to connect, sending a direct message is a hassle-free way to get in touch with me.",
+        "contacts.title2": "Connecting for clarity.",
+        "contacts.description": "Legal matters require prompt and reliable communication. Whether you have questions, need legal assistance, or want to schedule a consultation, I'm here to help.",
+        "contacts.form.name": "Name",
+        "contacts.form.email": "Email",
+        "contacts.form.subject.title": "Topic",
+        "contacts.form.phone": "Phone (optional)",
+        "contacts.form.message": "Write your message here...",
+        "contacts.form.success": "Your message has been sent successfully. I will get back to you as soon as possible. Thank you for reaching out."
+      },
+      "components": {}
     };
-    return translations[key] || key;
+    
+    // Merge custom translations with default translations
+    const mergedTranslations = {
+      ...defaultTranslations,
+      ...customTranslations
+    };
+    
+    return mergedTranslations[namespace]?.[key] || key;
   }
 });
 
 // Setup all common mocks
-export const setupCommonMocks = () => {
+export const setupCommonMocks = (customTranslations = {}) => {
   jest.mock("next/image", () => mockNextImage());
   jest.mock("next/link", () => mockNextLink());
   jest.mock("next/navigation", () => mockNextNavigation());
@@ -376,8 +394,10 @@ export const setupCommonMocks = () => {
   }));
   jest.mock("@formspree/react", () => mockFormspree());
   jest.mock("react-google-recaptcha", () => mockReCAPTCHA());
-  jest.mock("@/hooks/useTranslation", () => mockUseTranslation());
-  jest.mock("next-intl", () => mockNextIntl());
+  
+  // Mock translation hooks with custom translations
+  jest.mock("@/hooks/useTranslation", () => mockUseTranslation(customTranslations.useTranslation || {}));
+  jest.mock("next-intl", () => mockNextIntl(customTranslations.nextIntl || {}));
 
   // Only mock components that exist in the project
   // Add more mocks as needed based on your actual components
