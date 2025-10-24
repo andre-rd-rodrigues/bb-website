@@ -1,5 +1,4 @@
 import { screen, render } from '@testing-library/react';
-import { MotionConfig } from 'motion/react';
 import React from 'react';
 
 /**
@@ -63,8 +62,7 @@ export const expectElementToHaveClasses = (
 };
 
 /**
- * Helper function to render components with MotionConfig for testing
- * This disables animations to make tests more predictable and faster
+ * Helper function to render components for testing
  * @param component - The React component to render
  * @param options - Optional render options
  */
@@ -72,8 +70,5 @@ export const renderWithMotion = (
   component: React.ReactElement,
   options?: Parameters<typeof render>[1],
 ) => {
-  return render(
-    <MotionConfig transition={{ duration: 0 }}>{component}</MotionConfig>,
-    options,
-  );
+  return render(component, options);
 };
