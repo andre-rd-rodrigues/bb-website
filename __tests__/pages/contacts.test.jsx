@@ -1,5 +1,7 @@
+import React from "react";
+import { screen, fireEvent, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import Contacts from "@/pages/contacts";
-import { screen } from "@testing-library/react";
 import { setupCommonMocks } from "../__mocks__/common";
 import { renderWithMotion } from "../__utils__/test-helpers";
 

@@ -2,36 +2,21 @@ import React, { createElement } from "react";
 
 // Mock Next.js Image component
 export const mockNextImage = () => {
-  return function MockImage({
-    src,
-    alt,
-    fill,
-    ...props
-  }: React.ComponentProps<"img"> & { fill?: boolean }) {
+  return function MockImage({ src, alt, fill, ...props }) {
     return createElement("img", { src, alt, ...props });
   };
 };
 
 // Mock Next.js Link component
 export const mockNextLink = () => {
-  return function MockLink({
-    href,
-    children,
-    ...props
-  }: React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }) {
+  return function MockLink({ href, children, ...props }) {
     return createElement("a", { href, ...props }, children);
   };
 };
 
 // Mock Section component
 export const mockSection = () => {
-  const MockSection = function MockSection({
-    children,
-    className
-  }: {
-    children: React.ReactNode;
-    className?: string;
-  }) {
+  const MockSection = function MockSection({ children, className }) {
     return createElement("section", { className }, children);
   };
 
@@ -40,10 +25,6 @@ export const mockSection = () => {
     title,
     subtitle,
     className
-  }: {
-    title: string;
-    subtitle?: string;
-    className?: string;
   }) {
     return createElement(
       "div",
@@ -61,25 +42,15 @@ export const mockLucideReact = () => {
   return new Proxy(
     {},
     {
-      get:
-        (_target, iconName: string) => (props: React.SVGProps<SVGSVGElement>) =>
-          createElement("svg", { "data-icon": String(iconName), ...props })
+      get: (_target, iconName) => (props) =>
+        createElement("svg", { "data-icon": String(iconName), ...props })
     }
   );
 };
 
 // Mock Lucide React Dynamic icons
 export const mockLucideReactDynamic = () => {
-  const DynamicIcon = ({
-    name,
-    color,
-    size,
-    ...props
-  }: {
-    name: string;
-    color?: string;
-    size?: number;
-  } & React.SVGProps<SVGSVGElement>) =>
+  const DynamicIcon = ({ name, color, size, ...props }) =>
     createElement("svg", {
       "data-testid": name,
       "data-icon": name,
@@ -91,7 +62,7 @@ export const mockLucideReactDynamic = () => {
 
   return {
     DynamicIcon,
-    IconName: {} as Record<string, never>
+    IconName: {}
   };
 };
 
@@ -111,18 +82,7 @@ export const mockNextNavigation = () => ({
 
 // Mock AppLink component
 export const mockAppLink = () => {
-  return function MockAppLink({
-    href,
-    label,
-    variant,
-    icon,
-    ...props
-  }: React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-    href: string;
-    label?: string;
-    variant?: string;
-    icon?: string;
-  }) {
+  return function MockAppLink({ href, label, variant, icon, ...props }) {
     return createElement(
       "a",
       {
@@ -138,7 +98,7 @@ export const mockAppLink = () => {
 
 // Mock SplitLeaf component
 export const mockSplitLeaf = () => {
-  return function MockSplitLeaf({ images }: { images: string[] }) {
+  return function MockSplitLeaf({ images }) {
     return createElement(
       "div",
       { "data-testid": "split-leaf" },
@@ -155,11 +115,7 @@ export const mockSplitLeaf = () => {
 
 // Mock FAQs component
 export const mockFAQs = () => {
-  return function MockFAQs({
-    items
-  }: {
-    items: Array<{ question: string; answer: string }>;
-  }) {
+  return function MockFAQs({ items }) {
     return createElement(
       "div",
       {
@@ -215,10 +171,7 @@ export const mockFramerMotion = () => {
   const { forwardRef, createElement, useContext, useEffect } = React;
 
   // Recursively zero out any duration props in motion configs
-  function deepReplaceDurations(
-    props: Record<string, unknown>,
-    duration: number
-  ) {
+  function deepReplaceDurations(props, duration) {
     // extract only motion props
     const patch = Object.fromEntries(
       Object.entries(props).filter(
@@ -234,7 +187,7 @@ export const mockFramerMotion = () => {
           key === "custom"
       )
     );
-    const stack: Record<string, unknown>[] = [patch];
+    const stack = [patch];
     while (stack.length) {
       const cur = stack.pop();
       if (!cur || typeof cur !== "object") continue;
@@ -249,7 +202,7 @@ export const mockFramerMotion = () => {
         ) {
           cur[key] = { ...val, duration };
         } else if (val && typeof val === "object" && val !== null) {
-          stack.push(val as Record<string, unknown>);
+          stack.push(val);
         }
       }
     }
@@ -259,57 +212,50 @@ export const mockFramerMotion = () => {
 
   // Layout animations don't actually run under Jest, so we "fake" them
   const mockOnLayoutAnimationComplete =
-    (props: Record<string, unknown>) =>
-    (...args: unknown[]) => {
-      (props.onAnimationComplete as (...args: unknown[]) => void)?.(...args);
-      (props.onLayoutAnimationComplete as (...args: unknown[]) => void)?.(
-        ...args
-      );
+    (props) =>
+    (...args) => {
+      props.onAnimationComplete?.(...args);
+      props.onLayoutAnimationComplete?.(...args);
     };
 
   // Proxy componentCache to wrap every motion.<el> on the fly
   const componentCache = new Map();
   const motion = new Proxy(actual.motion, {
-    get(target: Record<string, unknown>, key: string) {
+    get(target, key) {
       const Comp = target[key];
       if (!Comp) return Comp;
 
       // Only create one wrapper per component name
       if (!componentCache.has(key)) {
-        const Wrapped = forwardRef<unknown, Record<string, unknown>>(
-          (props: Record<string, unknown>, ref: unknown) => {
-            // pull duration override from MotionConfigContext
-            const cfg = useContext(actual.MotionConfigContext);
-            const dur = (cfg as { transition?: { duration?: number } })
-              ?.transition?.duration;
+        const Wrapped = forwardRef((props, ref) => {
+          // pull duration override from MotionConfigContext
+          const cfg = useContext(actual.MotionConfigContext);
+          const dur = cfg?.transition?.duration;
 
-            // Since Jest won't run Framer's layout animations, we
-            // manually invoke the callback on every render
-            useEffect(() => {
-              if (props?.onLayoutAnimationComplete) {
-                (props.onLayoutAnimationComplete as () => void)();
-              }
-            });
+          // Since Jest won't run Framer's layout animations, we
+          // manually invoke the callback on every render
+          useEffect(() => {
+            if (props?.onLayoutAnimationComplete) {
+              props.onLayoutAnimationComplete();
+            }
+          });
 
-            // IFF dur is number, zero-out all durations
-            const patched =
-              typeof dur === "number"
-                ? deepReplaceDurations(props, dur)
-                : props;
+          // IFF dur is number, zero-out all durations
+          const patched =
+            typeof dur === "number" ? deepReplaceDurations(props, dur) : props;
 
-            return createElement(
-              Comp as React.ComponentType<Record<string, unknown>>,
-              {
-                ...patched,
-                // wire up both callbacks to unblock your
-                // onLayoutAnimationComplete tests
-                onAnimationComplete: mockOnLayoutAnimationComplete(patched),
-                ref
-              },
-              props.children as React.ReactNode
-            );
-          }
-        );
+          return createElement(
+            Comp,
+            {
+              ...patched,
+              // wire up both callbacks to unblock your
+              // onLayoutAnimationComplete tests
+              onAnimationComplete: mockOnLayoutAnimationComplete(patched),
+              ref
+            },
+            props.children
+          );
+        });
         Wrapped.displayName = `MockMotion${key}`;
         componentCache.set(key, Wrapped);
       }
@@ -328,7 +274,7 @@ export const mockFramerMotion = () => {
 
 // Mock Iconify React
 export const mockIconifyReact = () => {
-  return function MockIcon({ icon, className, fontSize, ...props }: any) {
+  return function MockIcon({ icon, className, fontSize, ...props }) {
     return React.createElement("span", {
       "data-icon": icon,
       className,
@@ -352,7 +298,7 @@ export const mockFormspree = () => ({
 
 // Mock ReCAPTCHA
 export const mockReCAPTCHA = () => {
-  return function MockReCAPTCHA(props: any) {
+  return function MockReCAPTCHA(props) {
     return React.createElement("div", {
       "data-testid": "recaptcha",
       ...props
@@ -364,7 +310,7 @@ export const mockReCAPTCHA = () => {
 export const mockUseTranslation = () => ({
   __esModule: true,
   default: () => ({
-    getTranslationsArray: (key: string) => {
+    getTranslationsArray: (key) => {
       if (key === "pages.contacts.links") {
         return [
           {
@@ -399,8 +345,8 @@ export const mockUseTranslation = () => ({
 
 // Mock next-intl
 export const mockNextIntl = () => ({
-  useTranslations: () => (key: string) => {
-    const translations: Record<string, string> = {
+  useTranslations: () => (key) => {
+    const translations = {
       "contacts.title": "Get in Touch for Expert Advice",
       "contacts.formTitle": "Send a direct message.",
       "contacts.formDescription":
