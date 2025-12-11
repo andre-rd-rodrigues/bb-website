@@ -30,8 +30,8 @@ function Testimonials() {
         <div className="absolute h-36 w-8/12 right-0">
           <Image
             src="/img/columns.jpg"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: 'cover' }}
             className=""
             alt="Testimonials"
           />

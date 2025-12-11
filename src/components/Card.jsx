@@ -12,7 +12,7 @@ const Card = ({ title, description, imageUrl }) => {
         <p className="text-gray-700 my-5 text-base">{description}</p>
       </div>
       <div className="relative h-40">
-        <Image src={imageUrl} alt={title} layout="fill" objectFit="cover" />
+        <Image src={imageUrl} alt={title} fill style={{ objectFit: 'cover' }} />
       </div>
     </div>
   );

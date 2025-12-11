@@ -44,8 +44,7 @@ function About() {
                 alt="Barbara Barbizani"
                 width={800}
                 height={800}
-                layout="responsive"
-                objectFit="cover"
+                style={{ objectFit: 'cover' }}
               />
             </Animated>
           </div>
