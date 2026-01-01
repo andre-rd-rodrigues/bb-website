@@ -24,7 +24,7 @@
   "dependencies": {
     "@formspree/react": "^2.5.1",
     "@headlessui/react": "^1.7.18",
-    "@iconify/react": "^4.1.1",
+    "@iconify/react": "^6.0.2",
     "@next/third-parties": "^16.0.0",
     "@react-spring/web": "^9.7.3",
     "@vercel/analytics": "^1.2.2",
