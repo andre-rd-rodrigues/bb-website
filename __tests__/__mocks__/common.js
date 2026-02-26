@@ -350,6 +350,7 @@ export const mockUseTranslation = (customTranslations = {}) => ({
 
 // Mock next-intl - generic version
 export const mockNextIntl = (customTranslations = {}) => ({
+  useLocale: () => "en",
   useTranslations: (namespace) => (key) => {
     // Check for custom translations first
     if (customTranslations[namespace] && customTranslations[namespace][key]) {

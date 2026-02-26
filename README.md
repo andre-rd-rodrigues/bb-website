@@ -1,40 +1,163 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BB Website
 
-## Getting Started
+Law firm website for Bárbara Barbizani. Next.js (Pages Router), bilingual (Portuguese/English), with practice areas, testimonials, contact form, and SEO/sitemap.
 
-First, run the development server:
+**Tech stack:** Next.js 14, React 18, Tailwind CSS, SASS, next-intl, Formspree, Vercel Analytics & Speed Insights.
+
+---
+
+## Requirements
+
+- **Node.js** ≥ 24
+- **npm** ≥ 9
+
+(Defined in `package.json` `engines`; use `.nvmrc` if you use nvm.)
+
+---
+
+## Quick start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). Default locale is Portuguese (`pt`); English at `/en`.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Repository structure
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+bb-website/
+├── src/
+│   ├── components/          # Reusable UI components
+│   │   ├── Analytics/       # Vercel Analytics wrapper
+│   │   ├── Footer/          # FooterSection
+│   │   ├── Form/            # Input, Textarea, Select (Formspree)
+│   │   ├── HeroSection/
+│   │   ├── PublishedArticlesSection/
+│   │   ├── Testimonials/
+│   │   ├── Animated.jsx     # Scroll-triggered animations (@react-spring)
+│   │   ├── AppHead.jsx     # next-seo DefaultSeo
+│   │   ├── Button.jsx
+│   │   ├── Card.jsx
+│   │   ├── Container.jsx
+│   │   ├── Faqs.jsx
+│   │   ├── Footer.jsx
+│   │   ├── IconContact.jsx
+│   │   ├── LanguageSelector.jsx
+│   │   ├── Layout.jsx       # Navbar + children + Footer
+│   │   ├── Logo.jsx
+│   │   ├── Navbar.jsx
+│   │   └── Section.jsx
+│   ├── pages/               # Next.js file-based routes
+│   │   ├── _app.js          # App shell, NextIntlClientProvider, Layout
+│   │   ├── _document.js
+│   │   ├── 404.jsx
+│   │   ├── index.jsx        # Home
+│   │   ├── about/
+│   │   ├── contacts/
+│   │   └── practice-areas/
+│   ├── messages/            # i18n (next-intl)
+│   │   ├── en.json
+│   │   └── pt.json
+│   ├── styles/
+│   │   ├── fonts.js         # next/font: DM Sans, DM Serif, Encode Sans
+│   │   └── globals.scss
+│   ├── hooks/
+│   │   ├── useIsMobile.jsx
+│   │   └── useTranslation.jsx   # getTranslationsArray for nested i18n arrays
+│   ├── constants/          # Social links, language codes, headConfig
+│   └── utils/               # Shared helpers (e.g. headConfig, language codes)
+├── __tests__/
+│   ├── pages/               # Page tests (about, contacts, practice-areas)
+│   ├── components/         # Button, Card, Layout, HeroSection
+│   ├── hooks/               # useTranslation, useIsMobile
+│   ├── smoke/               # Dependency migration smoke tests
+│   ├── __mocks__/           # common.js (Next, Formspree, next-intl, etc.)
+│   └── __utils__/           # test-helpers (renderWithMotion, etc.)
+├── jest.config.js           # next/jest, jsdom, @/ path alias
+├── jest.setup.js            # jest-dom, common mocks, IntersectionObserver
+├── next.config.js           # i18n (pt, en), images remotePatterns
+├── next-sitemap.config.js  # Sitemap (postbuild)
+├── tailwind.config.js
+└── MISSING_TESTS.md         # Test backlog / checklist
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Path alias:** `@/` → `src/` (see `jsconfig.json`).
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Command | Description |
+|--------|-------------|
+| `npm run dev` | Development server (http://localhost:3000) |
+| `npm run build` | Production build |
+| `npm run start` | Run production server (after `build`) |
+| `npm run prod` | Build then start (local prod preview) |
+| `npm run lint` | ESLint (Next.js config) |
+| `npm test` | Run all Jest tests |
+| `npm run test:watch` | Jest watch mode |
+| `npm run test:coverage` | Jest with coverage report |
+| `npm run test:smoke` | Only dependency migration smoke tests |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Sitemap is generated automatically after `npm run build` (`postbuild` → next-sitemap).
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Internationalization (i18n)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Locales:** `pt` (default), `en`
+- **Config:** `next.config.js` → `i18n`
+- **Strings:** `src/messages/pt.json`, `src/messages/en.json`
+- **Arrays in messages:** use `useTranslation()` → `getTranslationsArray(key)` (e.g. practice areas, articles, FAQs)
+- **Routes:** Locale-prefixed (e.g. `/en/about`, `/pt/contacts`)
+
+---
+
+## Environment variables
+
+Create a `.env` (or `.env.local`) with:
+
+| Variable | Purpose |
+|----------|--------|
+| `NEXT_PUBLIC_FORM` | Formspree form ID (contact form) |
+| `NEXT_PUBLIC_CAPTCHA` | Google reCAPTCHA site key |
+| `NEXT_PUBLIC_HOTJAR_ID` | Hotjar tracking ID |
+| `NEXT_PUBLIC_METRICS_ID` | insights-js metrics ID |
+
+---
+
+## Styling
+
+- **Tailwind** for utilities. Custom colors: `blue` (#1E2E45), `gold` (#B19460), `dark` (#2f333a).
+- **SASS:** `src/styles/globals.scss`; component-level `.module.scss` where used (e.g. Navbar, HeroSection).
+- **Fonts:** `src/styles/fonts.js` (DM Sans, DM Serif Display, Encode Sans) injected in `_app.js` via CSS variables.
+
+---
+
+## Testing
+
+- **Runner:** Jest with `next/jest`, `jsdom`, `@testing-library/react`, `@testing-library/jest-dom`.
+- **Setup:** `jest.setup.js` applies common mocks (Next Image/Link/router, next-intl, Formspree, Iconify, etc.) and an `IntersectionObserver` mock.
+- **Helpers:** `__tests__/__utils__/test-helpers.jsx` (e.g. `renderWithMotion`).
+- **Smoke tests:** `__tests__/smoke/deps-migration.smoke.test.js` checks that key dependencies load and expose the APIs the app uses; run after upgrading deps (`npm run test:smoke`).
+
+See **MISSING_TESTS.md** for the test backlog and suggested order.
+
+---
+
+## Deployment
+
+- **Platform:** Vercel (recommended).
+- **Build:** `npm run build`; sitemap runs in `postbuild`.
+- **Domains:** Supports dual domains (e.g. .com and .pt) via Vercel config.
+
+---
+
+## Other docs
+
+- **WARP.md** – Short context for AI assistants (Warp, Cursor, etc.).
+- **MISSING_TESTS.md** – List of missing tests and priorities.

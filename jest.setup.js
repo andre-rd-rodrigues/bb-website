@@ -4,6 +4,16 @@ import { setupCommonMocks } from "./__tests__/__mocks__/common";
 // Setup all common mocks
 setupCommonMocks();
 
+// Suppress React warning from react-responsive-carousel forwarding showThumbs to a DOM element
+const originalError = console.error;
+console.error = (...args) => {
+  const msg = args.map((a) => (typeof a === "string" ? a : String(a))).join(" ");
+  if (msg.includes("showThumbs") && msg.includes("React does not recognize")) {
+    return;
+  }
+  originalError.apply(console, args);
+};
+
 // Mock CSS custom properties for testing
 Object.defineProperty(window, "getComputedStyle", {
   value: () => ({

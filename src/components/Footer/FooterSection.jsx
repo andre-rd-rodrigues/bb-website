@@ -35,7 +35,7 @@ const FooterSection = ({ title, sectionHref, subLinks }) => {
         )}
 
         {/* When no sub links are provided */}
-        {!subLinks && !isContactSections(title) && (
+        {!subLinks && !isContact && (
           <li>
             <Link href={sectionHref} className="hover:underline text-xs">
               {title}

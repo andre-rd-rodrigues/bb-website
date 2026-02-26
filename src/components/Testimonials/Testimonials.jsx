@@ -37,7 +37,7 @@ function Testimonials() {
           />
         </div>
       </div>
-      <Carousel showStatus={false} emulateTouch={isMobile}>
+      <Carousel showStatus={false} showThumbs={false} emulateTouch={isMobile}>
         {testimonials.map(({ author, feedback, imageUrl }) => (
           <Testimonial
             author={author}
