@@ -20,6 +20,7 @@ export default function App({ Component, pageProps }) {
       <NextIntlClientProvider
         locale={router.locale}
         messages={pageProps.messages}
+        timeZone="Europe/Lisbon"
       >
         <Layout>
           <Component {...pageProps} />
