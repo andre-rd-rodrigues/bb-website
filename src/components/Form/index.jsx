@@ -3,11 +3,11 @@ import { Icon } from "@iconify/react";
 const Input = ({ icon, label, placeholder, ...inputProps }) => {
   return (
     <label
-      className={`flex items-center border-b bg-white  ${
+      className={`flex items-center border-b-2 border-gray-200 bg-white ${
         inputProps.disabled ? "opacity-65" : "opacity-100"
-      } p-4 w-full`}
+      } p-4 w-full transition-colors duration-300 focus-within:border-gold`}
     >
-      <Icon className="text-gold" icon={icon} fontSize={26} />
+      <Icon className="text-gold transition-transform duration-200 group-focus-within:scale-110" icon={icon} fontSize={26} />
 
       <input
         {...inputProps}
@@ -25,9 +25,9 @@ const Input = ({ icon, label, placeholder, ...inputProps }) => {
 const Textarea = ({ icon, label, placeholder, ...textareaProps }) => {
   return (
     <label
-      className={`flex border-b bg-white ${
+      className={`flex border-b-2 border-gray-200 bg-white ${
         textareaProps.disabled ? "opacity-65" : "opacity-100"
-      } p-4 w-full`}
+      } p-4 w-full transition-colors duration-300 focus-within:border-gold`}
     >
       <Icon className="text-gold" icon={icon} fontSize={26} />
 
@@ -48,9 +48,9 @@ const Textarea = ({ icon, label, placeholder, ...textareaProps }) => {
 const Select = ({ icon, label, placeholder, options, ...selectProps }) => {
   return (
     <label
-      className={`flex border-b bg-white ${
+      className={`flex border-b-2 border-gray-200 bg-white ${
         selectProps.disabled ? "opacity-65" : "opacity-100"
-      } p-4 w-full`}
+      } p-4 w-full transition-colors duration-300 focus-within:border-gold`}
     >
       <Icon className="text-gold" icon={icon} fontSize={26} />
       <select

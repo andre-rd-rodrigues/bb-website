@@ -49,14 +49,15 @@ function Contacts() {
         {/* Form */}
         <Animated delay={400}>
           {state.succeeded ? (
-            <Animated type="slide-in-left" className="w-100 text-center">
-              <Icon
-                icon="lets-icons:check-fill"
-                className="text-emerald-400 m-auto"
-                fontSize={90}
-              />
-
-              <p>{t("contacts.form.success")}</p>
+            <Animated type="scale-up" className="w-100 text-center py-8">
+              <div className="w-20 h-20 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-6">
+                <Icon
+                  icon="lets-icons:check-fill"
+                  className="text-gold"
+                  fontSize={50}
+                />
+              </div>
+              <p className="max-w-md mx-auto">{t("contacts.form.success")}</p>
             </Animated>
           ) : (
             <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">

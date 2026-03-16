@@ -21,6 +21,8 @@ const Animated = ({
         return "translateX(20px)";
       case "slide":
         return "translateY(-20px)";
+      case "scale-up":
+        return "scale(0.92)";
       default:
         return "none";
     }
@@ -34,6 +36,8 @@ const Animated = ({
         return "translateX(0px)";
       case "slide":
         return "translateY(0px)";
+      case "scale-up":
+        return "scale(1)";
       default:
         return "none";
     }

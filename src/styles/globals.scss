@@ -4,8 +4,14 @@
 
 :root {
   // Colors
-
   --background: #e8e9e1;
+  --blue: #1e2e45;
+  --gold: #b19460;
+  --white: #ffffff;
+
+  // Easing
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
   //Sizes
   --fs-xxl: clamp(3.5rem, 10vw, 5rem);
@@ -37,11 +43,20 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   overflow-x: hidden;
   background-color: var(--background);
   white-space: pre-line;
+}
+
+::selection {
+  background-color: var(--blue);
+  color: var(--background);
 }
 
 h1 {
@@ -77,4 +92,15 @@ button {
 nav,
 footer {
   padding: 0 var(--padding-y);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
