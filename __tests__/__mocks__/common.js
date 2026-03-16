@@ -244,17 +244,17 @@ export const mockFramerMotion = () => {
           const patched =
             typeof dur === "number" ? deepReplaceDurations(props, dur) : props;
 
+          /* eslint-disable react-hooks/refs */
           return createElement(
             Comp,
             {
               ...patched,
-              // wire up both callbacks to unblock your
-              // onLayoutAnimationComplete tests
               onAnimationComplete: mockOnLayoutAnimationComplete(patched),
               ref
             },
             props.children
           );
+          /* eslint-enable react-hooks/refs */
         });
         Wrapped.displayName = `MockMotion${key}`;
         componentCache.set(key, Wrapped);

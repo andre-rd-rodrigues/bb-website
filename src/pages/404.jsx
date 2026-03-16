@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import React from "react";
 
 function NotFoundPage() {
-  const t = useTranslations();
+  const t = useTranslations("pages.notFound");
   const router = useRouter();
 
   return (
@@ -12,12 +12,12 @@ function NotFoundPage() {
       style={{ height: "50vh" }}
       className="text-center flex flex-col items-center justify-center"
     >
-      <h1 className={`text-blue text-7xl`}>{t("pages.notFound.title")}</h1>
+      <h1 className={`text-blue text-7xl`}>{t("title")}</h1>
       <h2 className={`text-blue text-2xl my-3`}>
-        {t("pages.notFound.subtitle")}
+        {t("subtitle")}
       </h2>
-      <p className="mb-7">{t("pages.notFound.description")}</p>
-      <Button label={t("go back")} onClick={() => router.back()} />
+      <p className="mb-7">{t("description")}</p>
+      <Button label="go back" onClick={() => router.back()} />
     </main>
   );
 }

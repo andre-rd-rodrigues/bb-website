@@ -15,13 +15,9 @@ describe("Dependency migration smoke tests", () => {
   });
 
   describe("react-dom", () => {
-    it("exports render or createRoot", () => {
-      const ReactDOM = require("react-dom");
-      // React 18 uses createRoot; React 17 uses render
-      expect(
-        typeof ReactDOM.createRoot === "function" ||
-          typeof ReactDOM.render === "function"
-      ).toBe(true);
+    it("exports createRoot from react-dom/client", () => {
+      const ReactDOMClient = require("react-dom/client");
+      expect(typeof ReactDOMClient.createRoot).toBe("function");
     });
   });
 
@@ -49,10 +45,12 @@ describe("Dependency migration smoke tests", () => {
   });
 
   describe("@headlessui/react", () => {
-    it("exports Dialog and Transition components", () => {
+    it("exports Dialog, Popover, PopoverButton, and Transition components", () => {
       const headless = require("@headlessui/react");
       expect(headless.Dialog).toBeDefined();
       expect(headless.Transition).toBeDefined();
+      expect(headless.Popover).toBeDefined();
+      expect(headless.PopoverButton).toBeDefined();
     });
   });
 
