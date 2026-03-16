@@ -14,18 +14,16 @@ function LanguageSelector() {
 
   const isMobile = useIsMobile();
 
-  const checkMark = (lang) => (
+  const checkMark = (lang: string): JSX.Element => (
     <span className="ml-4">{locale === lang && `✔`}</span>
   );
 
   return (
     <Popover className="relative mx-5 my-1 flex justify-end">
-      {/* Icon Button */}
       <Popover.Button className="h-full flex items-center justify-center focus:outline-none">
         <Icon icon="ph:globe-thin" fontSize={33} className="text-blue" />
       </Popover.Button>
 
-      {/* Dropdown */}
       <Transition
         as={Fragment}
         enter="transition ease-out duration-200"

@@ -2,9 +2,13 @@ import AppHead from "./AppHead";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { init, trackPages } from "insights-js";
-import { useEffect } from "react";
+import { useEffect, ReactNode } from "react";
 
-export default function Layout({ children }) {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+export default function Layout({ children }: LayoutProps) {
   useEffect(() => {
     init(process.env.NEXT_PUBLIC_METRICS_ID);
     trackPages();

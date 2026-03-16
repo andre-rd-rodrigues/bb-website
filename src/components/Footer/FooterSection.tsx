@@ -1,9 +1,20 @@
 import { dm_serif } from "@/styles/fonts";
+import { Icon } from "@iconify/react";
+import Link from "next/link";
 
-const { Icon } = require("@iconify/react");
-const { default: Link } = require("next/link");
+export interface FooterSubLink {
+  name: string;
+  href: string;
+  icon?: string;
+}
 
-const FooterSection = ({ title, sectionHref, subLinks }) => {
+interface FooterSectionProps {
+  title: string;
+  sectionHref: string;
+  subLinks?: FooterSubLink[] | null;
+}
+
+const FooterSection = ({ title, sectionHref, subLinks }: FooterSectionProps) => {
   const isContact = title.toLowerCase().includes("contact");
 
   return (
@@ -21,7 +32,7 @@ const FooterSection = ({ title, sectionHref, subLinks }) => {
                 href={href}
                 className="hover:underline flex gap-1 items-center mb-2 mt-1"
               >
-                <Icon icon={icon} fontSize={15} />
+                {icon && <Icon icon={icon} fontSize={15} />}
                 <p className="text-xs">{name}</p>
               </Link>
             </li>

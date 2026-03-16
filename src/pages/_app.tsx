@@ -1,3 +1,4 @@
+import type { AppProps } from "next/app";
 import { NextIntlClientProvider } from "next-intl";
 import "@/styles/globals.scss";
 import { useRouter } from "next/router";
@@ -6,7 +7,7 @@ import { dm_sans, dm_serif } from "@/styles/fonts";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Analytics from "@/components/Analytics";
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   return (
@@ -18,7 +19,7 @@ export default function App({ Component, pageProps }) {
         }
       `}</style>
       <NextIntlClientProvider
-        locale={router.locale}
+        locale={router.locale ?? "en"}
         messages={pageProps.messages}
         timeZone="Europe/Lisbon"
       >

@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 
 /**
  * A custom hook to determine if the screen size is mobile.
- * @param {number} breakpoint - The max width in pixels to consider as mobile.
- * @returns {boolean} - True if the screen width is less than or equal to the breakpoint.
+ * @param breakpoint - The max width in pixels to consider as mobile. Default 768.
+ * @returns True if the screen width is less than or equal to the breakpoint.
  */
-const useIsMobile = (breakpoint = 768) => {
+export default function useIsMobile(breakpoint: number = 768): boolean {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -13,17 +13,10 @@ const useIsMobile = (breakpoint = 768) => {
       setIsMobile(window.innerWidth <= breakpoint);
     };
 
-    // Set initial value
     handleResize();
-
-    // Add resize event listener
     window.addEventListener("resize", handleResize);
-
-    // Cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, [breakpoint]);
 
   return isMobile;
-};
-
-export default useIsMobile;
+}

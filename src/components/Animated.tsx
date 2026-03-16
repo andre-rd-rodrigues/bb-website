@@ -1,5 +1,15 @@
-import React from "react";
-import { useSpring, animated, useInView } from "@react-spring/web";
+import React, { ReactNode } from "react";
+import { useSpring, animated, useInView, SpringConfig } from "@react-spring/web";
+
+type AnimatedType = "fade" | "slide-in-left" | "slide-in-right" | "slide";
+
+interface AnimatedProps {
+  delay?: number;
+  type?: AnimatedType;
+  children: ReactNode;
+  config?: SpringConfig;
+  className?: string;
+}
 
 const Animated = ({
   delay = 0,
@@ -7,13 +17,12 @@ const Animated = ({
   children,
   config,
   className
-}) => {
+}: AnimatedProps) => {
   const [ref, inView] = useInView({
     triggerOnce: true
   });
-  
 
-  const getTransformFrom = () => {
+  const getTransformFrom = (): string => {
     switch (type) {
       case "slide-in-left":
         return "translateX(-20px)";
@@ -26,7 +35,7 @@ const Animated = ({
     }
   };
 
-  const getTransformTo = () => {
+  const getTransformTo = (): string => {
     switch (type) {
       case "slide-in-left":
         return "translateX(0px)";
@@ -44,7 +53,7 @@ const Animated = ({
       opacity: 0,
       transform: getTransformFrom()
     },
-    to: async (next, cancel) => {
+    to: async (next) => {
       if (inView) {
         await next({
           opacity: 1,

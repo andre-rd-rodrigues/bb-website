@@ -2,7 +2,13 @@ import { dm_serif } from "@/styles/fonts";
 import Image from "next/image";
 import React from "react";
 
-const Card = ({ title, description, imageUrl }) => {
+interface CardProps {
+  title: string;
+  description: string;
+  imageUrl: string;
+}
+
+function Card({ title, description, imageUrl }: CardProps) {
   return (
     <div className="w-full lg:w-96 h-full flex flex-col justify-between overflow-hidden shadow-lg bg-white">
       <div className="px-7 py-6">
@@ -16,6 +22,6 @@ const Card = ({ title, description, imageUrl }) => {
       </div>
     </div>
   );
-};
+}
 
 export default Card;

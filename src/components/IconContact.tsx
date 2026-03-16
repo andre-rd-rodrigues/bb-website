@@ -1,7 +1,14 @@
 import { Icon } from "@iconify/react";
 import React from "react";
 
-function IconContact({ icon, contact, className, href }) {
+interface IconContactProps {
+  icon: string;
+  contact: string;
+  className?: string;
+  href?: string;
+}
+
+function IconContact({ icon, contact, className, href }: IconContactProps) {
   return href ? (
     <a
       href={href}

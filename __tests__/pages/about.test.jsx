@@ -123,7 +123,7 @@ describe("About Page", () => {
       name: /pratice areas/i
     });
     expect(practiceAreasLink).toBeInTheDocument();
-    expect(practiceAreasLink).toHaveAttribute("href", "practice-areas");
+    expect(practiceAreasLink).toHaveAttribute("href", "/practice-areas");
   });
 
   it("renders the published articles section with correct title and subtitle", () => {
@@ -287,7 +287,7 @@ describe("About Page", () => {
 
     const ctaButton = screen.getByRole("link", { name: /pratice areas/i });
     expect(ctaButton).toBeInTheDocument();
-    expect(ctaButton).toHaveAttribute("href", "practice-areas");
+    expect(ctaButton).toHaveAttribute("href", "/practice-areas");
   });
 
   it("renders articles with proper external link attributes", () => {

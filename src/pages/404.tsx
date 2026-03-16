@@ -2,6 +2,7 @@ import Button from "@/components/Button";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/router";
 import React from "react";
+import type { GetStaticPropsContext } from "next";
 
 function NotFoundPage() {
   const t = useTranslations();
@@ -17,17 +18,17 @@ function NotFoundPage() {
         {t("pages.notFound.subtitle")}
       </h2>
       <p className="mb-7">{t("pages.notFound.description")}</p>
-      <Button label={t("go back")} onClick={() => router.back()} />
+      <Button label="go back" onClick={() => router.back()} />
     </main>
   );
 }
 
 export default NotFoundPage;
 
-export async function getStaticProps({ locale }) {
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
   return {
     props: {
-      messages: (await import(`../messages/${locale}.json`)).default
+      messages: (await import(`../messages/${locale ?? "en"}.json`)).default
     }
   };
 }

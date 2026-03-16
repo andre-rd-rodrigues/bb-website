@@ -1,7 +1,7 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 
-const Stars = () => {
+const Stars: React.FC = () => {
   return (
     <div className="flex items-center">
       {[1, 2, 3, 4, 5].map((index) => (

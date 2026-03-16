@@ -1,8 +1,6 @@
 import Button from "@/components/Button";
 import Card from "@/components/Card";
-import Faqs from "@/components/Faqs";
 import HeroSection from "@/components/HeroSection/HeroSection";
-import Logo from "@/components/Logo";
 import PublishedArticlesSection from "@/components/PublishedArticlesSection/PublishedArticlesSection";
 import Section from "@/components/Section";
 import Testimonials from "@/components/Testimonials/Testimonials";
@@ -15,6 +13,7 @@ import Link from "next/link";
 import Animated from "@/components/Animated";
 import { CountUp } from "use-count-up";
 import { useInView } from "react-intersection-observer";
+import type { GetStaticPropsContext } from "next";
 
 export default function Home() {
   const t = useTranslations("pages");
@@ -23,7 +22,7 @@ export default function Home() {
   const { getTranslationsArray } = useTranslation();
 
   const praticeAreas = getTranslationsArray("components.practiceAreas").filter(
-    (area) => area.showPreview
+    (area: { showPreview?: boolean }) => area.showPreview
   );
   const aboutExtraInfo = getTranslationsArray("pages.homepage.about.extraInfo");
   const articles = getTranslationsArray("components.articles.articles").slice(
@@ -96,23 +95,32 @@ export default function Home() {
 
           <Animated type="fade" delay={800}>
             <div className="flex justify-center sm:justify-start gap-10">
-              {aboutExtraInfo.map(({ title, value }) => (
-                <div className="text-blue" key={title} ref={counterRef}>
-                  <p className={`${dm_serif.className}`}>{title}</p>
-                  <CountUp isCounting={counterInView} end={value} duration={5}>
-                    {({ value }) => (
-                      <div className="flex">
-                        <p className={`${dm_serif.className} text-5xl`}>
-                          {value}
-                        </p>
-                        <span className={`${dm_serif.className} text-5xl`}>
-                          +
-                        </span>
-                      </div>
-                    )}
-                  </CountUp>
-                </div>
-              ))}
+              {aboutExtraInfo.map(
+                (
+                  { title, value }: { title: string; value: number },
+                  _index: number
+                ) => (
+                  <div className="text-blue" key={title} ref={counterRef}>
+                    <p className={`${dm_serif.className}`}>{title}</p>
+                    <CountUp
+                      isCounting={counterInView}
+                      end={value}
+                      duration={5}
+                    >
+                      {({ value }) => (
+                        <div className="flex">
+                          <p className={`${dm_serif.className} text-5xl`}>
+                            {value}
+                          </p>
+                          <span className={`${dm_serif.className} text-5xl`}>
+                            +
+                          </span>
+                        </div>
+                      )}
+                    </CountUp>
+                  </div>
+                )
+              )}
             </div>
           </Animated>
           <Animated type="fade" delay={1000}>
@@ -153,15 +161,24 @@ export default function Home() {
         </Animated>
 
         <div className="flex flex-wrap justify-center gap-10">
-          {praticeAreas.map(({ title, description, imageUrl }, i) => (
-            <Animated type="slide" delay={i * 100} key={title}>
-              <Card
-                title={title}
-                description={description}
-                imageUrl={imageUrl}
-              />
-            </Animated>
-          ))}
+          {praticeAreas.map(
+            (
+              {
+                title,
+                description,
+                imageUrl
+              }: { title: string; description: string; imageUrl: string },
+              i: number
+            ) => (
+              <Animated type="slide" delay={i * 100} key={title}>
+                <Card
+                  title={title}
+                  description={description}
+                  imageUrl={imageUrl}
+                />
+              </Animated>
+            )
+          )}
         </div>
         <Animated type="fade">
           <Link href="/practice-areas">
@@ -188,7 +205,7 @@ export default function Home() {
           </p>
         </Animated>
         <Animated delay={400}>
-          <Link to="/contacts" href="/contacts">
+          <Link href="/contacts">
             <Button label="contact" />
           </Link>
         </Animated>
@@ -238,10 +255,10 @@ export default function Home() {
   );
 }
 
-export async function getStaticProps({ locale }) {
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
   return {
     props: {
-      messages: (await import(`../messages/${locale}.json`)).default
+      messages: (await import(`../messages/${locale ?? "en"}.json`)).default
     }
   };
 }

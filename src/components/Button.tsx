@@ -3,7 +3,23 @@ import { useTranslations } from "next-intl";
 import React from "react";
 import PulseLoader from "react-spinners/PulseLoader";
 
-function Button({ className, onClick, label, variant, disabled, loading }) {
+interface ButtonProps {
+  className?: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  label: string;
+  variant?: boolean;
+  disabled?: boolean;
+  loading?: boolean;
+}
+
+function Button({
+  className = "",
+  onClick,
+  label,
+  variant,
+  disabled,
+  loading
+}: ButtonProps) {
   const t = useTranslations("components.buttons");
 
   return (

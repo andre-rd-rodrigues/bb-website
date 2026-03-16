@@ -5,6 +5,7 @@ import PublishedArticlesSection from "@/components/PublishedArticlesSection/Publ
 import Section from "@/components/Section";
 import useTranslation from "@/hooks/useTranslation";
 import { useTranslations } from "next-intl";
+import type { GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -20,7 +21,7 @@ function About() {
         imageSrc={"/img/balance2.png"}
         overlayStyle={{ backgroundColor: "#1E2E45", opacity: 0.9 }}
         style={{
-          height: "350px"
+          height: "350px",
         }}
       >
         <Animated>
@@ -44,7 +45,7 @@ function About() {
                 alt="Barbara Barbizani"
                 width={800}
                 height={800}
-                style={{ objectFit: 'cover' }}
+                style={{ objectFit: "cover" }}
               />
             </Animated>
           </div>
@@ -68,7 +69,7 @@ function About() {
         </Animated>
 
         <Animated delay={300}>
-          <Link to="/practice-areas" href="practice-areas">
+          <Link href="/practice-areas">
             <Button label="pratice areas" />
           </Link>
         </Animated>
@@ -83,10 +84,11 @@ function About() {
 
 export default About;
 
-export async function getStaticProps({ locale }) {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  const messages = (
+    await import(`../../messages/${locale ?? "en"}.json`)
+  ).default;
   return {
-    props: {
-      messages: (await import(`../../messages/${locale}.json`)).default
-    }
+    props: { messages },
   };
-}
+};

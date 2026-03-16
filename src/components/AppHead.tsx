@@ -2,8 +2,9 @@ import { headConfig } from "@/utils";
 import { useTranslations } from "next-intl";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
+import type { NextSeoProps } from "next-seo";
 
-const AppHead = (props) => {
+function AppHead(props: NextSeoProps) {
   const router = useRouter();
   const t = useTranslations("metadata");
   const { pathname, locale } = router;
@@ -40,6 +41,6 @@ const AppHead = (props) => {
       {...props}
     />
   );
-};
+}
 
 export default AppHead;

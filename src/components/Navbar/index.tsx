@@ -1,19 +1,22 @@
 import useTranslation from "@/hooks/useTranslation";
 import Link from "next/link";
 import { useState } from "react";
-import Logo from "./Logo";
+import Logo from "../Logo";
 import { dm_sans } from "@/styles/fonts";
 import { useRouter } from "next/router";
-import LanguageSelector from "./LanguageSelector";
+import LanguageSelector from "../LanguageSelector";
+
+interface NavLink {
+  href: string;
+  name: string;
+}
 
 export default function Navbar() {
   const router = useRouter();
-
   const [navbarOpen, setNavbarOpen] = useState(false);
-
   const { getTranslationsArray } = useTranslation();
 
-  const navlinks = getTranslationsArray("components.navbar.links");
+  const navlinks = getTranslationsArray("components.navbar.links") as NavLink[];
   const pathname = router.pathname;
 
   return (
@@ -21,13 +24,13 @@ export default function Navbar() {
       <nav className="relative flex flex-wrap items-center justify-between px-2 py-3  mb-3">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            <Link to="/" href="/">
+            <Link href="/">
               <Logo fill="#1E2E45" width={40} height={40} />
             </Link>
             <button
               className="text-blue cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
-              onClick={() => setNavbarOpen((prevState) => !prevState)}
+              onClick={() => setNavbarOpen((prev) => !prev)}
             >
               <svg
                 className="h-6 w-6"
@@ -54,7 +57,7 @@ export default function Navbar() {
                   className="px-5 py-1 flex items-center justify-end lg:justify-center text-md text-left text-blue hover:opacity-75"
                   href={href}
                   key={name}
-                  onClick={() => setNavbarOpen((prevState) => !prevState)}
+                  onClick={() => setNavbarOpen((prev) => !prev)}
                 >
                   <li
                     className={`${

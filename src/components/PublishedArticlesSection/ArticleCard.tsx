@@ -3,15 +3,25 @@ import Image from "next/image";
 import Button from "../Button";
 import Link from "next/link";
 
-const ArticleCard = ({ imageUrl, title, description, href }) => {
+interface ArticleCardProps {
+  imageUrl: string;
+  title: string;
+  description: string;
+  href: string;
+}
+
+const ArticleCard: React.FC<ArticleCardProps> = ({
+  imageUrl,
+  title,
+  description,
+  href
+}) => {
   return (
     <div className="mb-16 w-full flex flex-col lg:flex-row gap-10 justify-center">
-      {/* Left Section (Image) */}
       <div className="lg:w-1/2 relative mx-auto w-full h-96">
         <Image src={imageUrl} alt={title} fill style={{ objectFit: 'cover' }} />
       </div>
 
-      {/* Right Section (Title, Description, Button) */}
       <div className="lg:w-1/2">
         <h6 className="text-3xl text-blue">{title}</h6>
         <div className="border-b border-blue my-6"></div>

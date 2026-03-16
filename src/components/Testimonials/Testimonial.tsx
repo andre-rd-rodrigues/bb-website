@@ -4,7 +4,13 @@ import React from "react";
 import Stars from "./Stars";
 import Animated from "../Animated";
 
-function Testimonial({ author, imageUrl, feedback }) {
+interface TestimonialProps {
+  author: string;
+  imageUrl: string;
+  feedback: string;
+}
+
+function Testimonial({ author, imageUrl, feedback }: TestimonialProps) {
   return (
     <div className="px-10 pb-10 gap-11 flex flex-col md:flex-row items-center m-auto sm:mt-8">
       <div

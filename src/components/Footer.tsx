@@ -11,7 +11,11 @@ import { SOCIAL_MEDIA } from "@/constants";
 function Footer() {
   const t = useTranslations("components");
   const { getTranslationsArray } = useTranslation();
-  const footerLinks = getTranslationsArray("components.footer.links");
+  const footerLinks = getTranslationsArray("components.footer.links") as {
+    name: string;
+    href: string;
+    subLinks?: { name: string; href: string; icon?: string }[];
+  }[];
 
   return (
     <footer className="bg-blue">

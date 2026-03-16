@@ -42,7 +42,7 @@ describe("Contacts Page", () => {
 
     expect(screen.getByPlaceholderText("Name")).toBeInTheDocument();
     expect(screen.getByPlaceholderText("Email")).toBeInTheDocument();
-    expect(screen.getByPlaceholderText("Topic")).toBeInTheDocument();
+    expect(screen.getByRole("combobox")).toBeInTheDocument();
     expect(screen.getByPlaceholderText("Phone (optional)")).toBeInTheDocument();
     expect(
       screen.getByPlaceholderText("Write your message here...")

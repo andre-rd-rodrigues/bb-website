@@ -6,19 +6,35 @@ import Section from "@/components/Section";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import useTranslation from "@/hooks/useTranslation";
 import { useTranslations } from "next-intl";
+import type { GetStaticProps } from "next";
 import Link from "next/link";
 import React from "react";
 
+interface PracticeAreaItem {
+  title: string;
+  description: string;
+  imageUrl: string;
+  type: string;
+  showPreview?: boolean;
+}
+
+interface GroupedServices {
+  citizens: PracticeAreaItem[];
+  companies: PracticeAreaItem[];
+}
+
 function PracticeAreas() {
   const t = useTranslations("pages");
-
   const { getTranslationsArray } = useTranslation();
 
   const services = getTranslationsArray("components.practiceAreas").reduce(
-    (acc, currentValue) => {
-      currentValue.type.toLowerCase() === "citizens"
-        ? acc.citizens.push(currentValue)
-        : acc.companies.push(currentValue);
+    (acc: GroupedServices, currentValue: unknown) => {
+      const item = currentValue as PracticeAreaItem;
+      if (item?.type?.toLowerCase() === "citizens") {
+        acc.citizens.push(item);
+      } else {
+        acc.companies.push(item);
+      }
       return acc;
     },
     { citizens: [], companies: [] }
@@ -30,7 +46,7 @@ function PracticeAreas() {
         imageSrc="/img/balance2.png"
         overlayStyle={{ backgroundColor: "#1E2E45", opacity: 0.9 }}
         style={{
-          height: "350px"
+          height: "350px",
         }}
       >
         <Animated>
@@ -70,7 +86,6 @@ function PracticeAreas() {
                 title={title}
                 description={description}
                 imageUrl={imageUrl}
-                key={title}
               />
             </Animated>
           ))}
@@ -90,7 +105,7 @@ function PracticeAreas() {
         </Animated>
 
         <Animated delay={300}>
-          <Link to="/contacts" href="/contacts">
+          <Link href="/contacts">
             <Button label="contact" />
           </Link>
         </Animated>
@@ -105,10 +120,11 @@ function PracticeAreas() {
 
 export default PracticeAreas;
 
-export async function getStaticProps({ locale }) {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  const messages = (
+    await import(`../../messages/${locale ?? "en"}.json`)
+  ).default;
   return {
-    props: {
-      messages: (await import(`../../messages/${locale}.json`)).default
-    }
+    props: { messages },
   };
-}
+};
