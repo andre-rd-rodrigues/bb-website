@@ -1,0 +1,31 @@
+---
+description: Internationalization patterns with next-intl
+globs: src/messages/**,src/pages/**,src/components/**
+alwaysApply: false
+---
+
+# i18n Conventions
+
+## Message Files
+
+- `src/messages/pt.json` (default locale), `src/messages/en.json`
+- Nested structure: `pages.*` for page content, `components.*` for shared UI, `metadata.*` for SEO
+
+## Usage Patterns
+
+```jsx
+// Simple translations (with namespace)
+const t = useTranslations("pages");
+t("about.title")
+
+// Array data (practice areas, articles, nav links)
+const { getTranslationsArray } = useTranslation();
+const items = getTranslationsArray("components.practiceAreas");
+```
+
+## Rules
+
+- Every page must export `getStaticProps` that loads messages for the locale
+- The `Button` component translates its `label` prop internally via `components.buttons` namespace — pass plain string keys, not pre-translated values
+- Server-side config lives in `src/i18n/request.js` (used by `next-intl/plugin`)
+- When adding new text, add keys to BOTH `en.json` and `pt.json`

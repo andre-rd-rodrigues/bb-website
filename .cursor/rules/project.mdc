@@ -1,0 +1,33 @@
+---
+description: Project structure, stack, and conventions for the BB law firm website
+alwaysApply: true
+---
+
+# BB Website — Project Context
+
+Law firm website for Bárbara Barbizani. Next.js 14 (Pages Router), React 18, bilingual (pt/en).
+
+## Stack & Structure
+
+- **Styling:** Tailwind + SASS. Colors: `blue` (#1E2E45), `gold` (#B19460), `dark` (#2f333a). Background: #e8e9e1.
+- **Fonts:** DM Serif Display (headings, buttons), DM Sans (body, nav), Encode Sans (hero subtitle). Loaded in `src/styles/fonts.js`, injected via CSS vars in `_app.js`.
+- **i18n:** `next-intl` with `pt` (default) and `en`. Strings in `src/messages/{locale}.json`. Arrays accessed via `useTranslation()` → `getTranslationsArray(key)`. Never hardcode visible text.
+- **Animations:** `<Animated type="fade|slide|slide-in-left|slide-in-right|scale-up" />` using `@react-spring/web` + `useInView`. Trigger once on scroll.
+- **Path alias:** `@/` → `src/`.
+- **Forms:** Formspree via `@formspree/react`.
+- **SEO:** `next-seo` in `AppHead.jsx`, `next-sitemap` in postbuild.
+
+## Key Directories
+
+- `src/pages/` — Routes (index, about, contacts, practice-areas, 404)
+- `src/components/` — Layout, Navbar, Footer, HeroSection, Button, Card, Form, Animated, etc.
+- `src/messages/` — `pt.json`, `en.json`
+- `src/hooks/` — `useTranslation.jsx`, `useIsMobile.jsx`
+- `__tests__/` — Jest + Testing Library. Mocks in `jest.setup.js`. Helpers in `__tests__/__utils__/`.
+
+## Commands
+
+- `pnpm dev` — dev server
+- `pnpm build` — production build (+ sitemap)
+- `pnpm test` — all tests
+- `pnpm test:smoke` — dependency smoke tests

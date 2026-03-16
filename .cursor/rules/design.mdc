@@ -1,0 +1,39 @@
+---
+description: Design principles and aesthetic direction for UI/frontend work
+globs: src/components/**,src/pages/**,src/styles/**
+alwaysApply: false
+---
+
+# Design Guidelines
+
+Brand personality: **trustworthy, warm, refined.** Elegant minimalism — prestigious enough to feel expert, warm enough to feel human.
+
+## Palette
+
+- Navy `#1E2E45` — authority, headings, primary surfaces
+- Gold `#B19460` — warmth, accents, hover/focus states, icons
+- Cream `#e8e9e1` — background, ground tone
+- Never pure black (#000) or pure white (#fff)
+
+## Typography
+
+- **Headings/buttons:** DM Serif Display (`dm_serif`)
+- **Body/nav:** DM Sans (`dm_sans`), font-weight 200 for body
+- **Hero subtitle:** Encode Sans (`encode`)
+- Use CSS clamp vars (`--fs-xl`, `--fs-l`, `--fs-m`) for responsive sizing
+
+## Animation
+
+- Scroll-triggered reveals via `<Animated>` component (react-spring)
+- Easing: `ease-out-quart` (cubic-bezier(0.25, 1, 0.5, 1)) — smooth deceleration
+- Hover: subtle lift (`-translate-y-0.5`) + shadow. Active: press down (`translate-y-px`)
+- Always respect `prefers-reduced-motion`
+- Never use bounce or elastic easing
+
+## Do NOT
+
+- Add playful animations, whimsical copy, or bouncy easing
+- Use glassmorphism, gradient text, neon accents, or dark-mode-by-default
+- Introduce colors outside navy/gold/cream without discussion
+- Use generic AI aesthetics (purple gradients, Inter font, card-heavy layouts)
+- Hardcode visible text — use `next-intl` translation keys
