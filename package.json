@@ -29,7 +29,7 @@
     "@next/third-parties": "^16.0.0",
     "@react-spring/web": "^10.0.3",
     "@vercel/analytics": "^1.6.1",
-    "@vercel/speed-insights": "^1.0.10",
+    "@vercel/speed-insights": "^2.0.0",
     "insights-js": "^1.2.11",
     "keen-slider": "^6.8.6",
     "next": "^16.1.6",
