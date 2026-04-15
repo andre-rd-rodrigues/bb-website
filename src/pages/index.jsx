@@ -140,7 +140,7 @@ export default function Home() {
       {/* Practice Areas  */}
       <Section containerClassName="bg-blue text-white">
         <Animated>
-          <h3 className="text-center text-4xl">
+          <h3 className="text-center text-4xl text-white">
             {t("homepage.practice.title")}
           </h3>
         </Animated>
@@ -178,7 +178,7 @@ export default function Home() {
       {/* Hero */}
       <HeroSection className="bg-blue text-white py-20">
         <Animated>
-          <h3 className="text-2xl md:text-4xl mb-4">
+          <h3 className="text-2xl md:text-4xl mb-4 text-white">
             {t("homepage.hero1.title")}
           </h3>
         </Animated>
