@@ -58,7 +58,7 @@ function About() {
       {/* Hero */}
       <HeroSection className="bg-blue text-white py-20">
         <Animated>
-          <h3 className="text-2xl md:text-4xl mb-4">{t("about.hero.title")}</h3>
+          <h3 className="text-2xl md:text-4xl mb-4 text-white">{t("about.hero.title")}</h3>
         </Animated>
 
         <Animated delay={200}>

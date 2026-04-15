@@ -79,7 +79,7 @@ function PracticeAreas() {
 
       <HeroSection className="bg-blue text-white py-20">
         <Animated>
-          <h3 className="text-2xl md:text-4xl mb-4">
+          <h3 className="text-2xl md:text-4xl mb-4 text-white">
             {t("homepage.hero1.title")}
           </h3>
         </Animated>
