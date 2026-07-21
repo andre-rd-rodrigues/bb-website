@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-21T13:20:00.000Z",
+  "title": "Design System: Bárbara Barbizani — Law Practice",
+  "extensions": {
+    "colorMeta": {
+      "counsel-navy": {
+        "role": "primary",
+        "displayName": "Counsel Navy",
+        "canonical": "#1E2E45",
+        "tonalRamp": ["#0d1420", "#131d2e", "#1a2739", "#1E2E45", "#33445f", "#55677f", "#8b98a8", "#c9d0d8"]
+      },
+      "warm-gold": {
+        "role": "secondary",
+        "displayName": "Warm Gold",
+        "canonical": "#B19460",
+        "tonalRamp": ["#4a3c22", "#6b562f", "#8c723e", "#B19460", "#c3ab80", "#d4c2a0", "#e5d9c2", "#f4eee2"]
+      },
+      "soft-parchment": {
+        "role": "neutral",
+        "displayName": "Soft Parchment",
+        "canonical": "#E8E9E1",
+        "tonalRamp": ["#b8bab0", "#c8cabf", "#d8dad0", "#E8E9E1", "#eeefe8", "#f3f4ef", "#f8f9f5", "#fdfdfb"]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White Surface",
+        "canonical": "#FFFFFF",
+        "tonalRamp": ["#d4d4d4", "#dedede", "#e8e8e8", "#f2f2f2", "#f7f7f7", "#fafafa", "#fdfdfd", "#FFFFFF"]
+      },
+      "slate-ink": {
+        "role": "neutral",
+        "displayName": "Slate Ink",
+        "canonical": "#374151",
+        "tonalRamp": ["#1b2028", "#242b34", "#2d3540", "#374151", "#55606f", "#78838f", "#a6adb6", "#d3d7dc"]
+      },
+      "charcoal": {
+        "role": "neutral",
+        "displayName": "Charcoal",
+        "canonical": "#2F333A",
+        "tonalRamp": ["#16181c", "#1e2025", "#26292f", "#2F333A", "#4a4f58", "#6d727c", "#9ba0a8", "#cccfd3"]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "#E5E7EB",
+        "tonalRamp": ["#b7bcc4", "#c4c8cf", "#d4d8dd", "#E5E7EB", "#ebedf0", "#f1f2f4", "#f6f7f8", "#fbfbfc"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero name and largest page headings (h1)." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles across pages." },
+      "title": { "displayName": "Title", "purpose": "Card titles and count-up stat figures." },
+      "body": { "displayName": "Body", "purpose": "All paragraph copy; light-weight DM Sans." },
+      "subtitle": { "displayName": "Subtitle", "purpose": "Hero subtitle only, in Encode Sans." },
+      "label": { "displayName": "Label", "purpose": "Navigation links and small UI labels." }
+    },
+    "shadows": [
+      { "name": "card-rest", "value": "0 10px 15px -3px rgba(0,0,0,0.1)", "purpose": "Resting plane of a white card on parchment." },
+      { "name": "card-hover", "value": "0 25px 50px -12px rgba(0,0,0,0.25)", "purpose": "Card lift on hover, paired with translateY(-6px)." },
+      { "name": "nav-scrolled", "value": "0 1px 2px rgba(0,0,0,0.05)", "purpose": "Appears on the navbar once the page scrolls." }
+    ],
+    "motion": [
+      { "name": "ease-out-quart", "value": "cubic-bezier(0.25, 1, 0.5, 1)", "purpose": "Default easing for reveals, lifts, and nav transitions." },
+      { "name": "ease-out-expo", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Sharper deceleration for emphasis moments." }
+    ],
+    "breakpoints": [
+      { "name": "xs", "value": "380px" },
+      { "name": "sm", "value": "576px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "992px" },
+      { "name": "xl", "value": "1200px" },
+      { "name": "xxl", "value": "1400px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button (Gold)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The workhorse action button; used across the site for secondary CTAs and for the contact CTA on navy sections.",
+      "html": "<button class=\"ds-btn-primary\">Contactar</button>",
+      "css": ".ds-btn-primary { background: #B19460; color: #fff; padding: 8px 40px; letter-spacing: 0.05em; font-family: 'DM Serif Display', Georgia, serif; font-size: 1.05rem; border: none; border-radius: 0; cursor: pointer; transition: opacity 0.2s ease; } .ds-btn-primary:hover { opacity: 0.85; } .ds-btn-primary:focus-visible { outline: 2px solid #1E2E45; outline-offset: 2px; }"
+    },
+    {
+      "name": "Primary Button (Navy)",
+      "kind": "button",
+      "refersTo": "button-navy",
+      "description": "The primary consultation CTA when it sits on a light parchment ground.",
+      "html": "<button class=\"ds-btn-navy\">Marcar consulta</button>",
+      "css": ".ds-btn-navy { background: #1E2E45; color: #fff; padding: 8px 40px; letter-spacing: 0.05em; font-family: 'DM Serif Display', Georgia, serif; font-size: 1.05rem; border: none; border-radius: 0; cursor: pointer; transition: opacity 0.2s ease; } .ds-btn-navy:hover { opacity: 0.85; } .ds-btn-navy:focus-visible { outline: 2px solid #B19460; outline-offset: 2px; }"
+    },
+    {
+      "name": "Practice Area Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "White card on parchment; flat at rest, lifts on hover. Sharp corners, serif title, slate-ink body.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card-body\"><h6 class=\"ds-card-title\">Imigração & Cidadania</h6><p class=\"ds-card-desc\">Orientação clara em cada etapa do seu processo em Portugal.</p></div><div class=\"ds-card-media\"></div></div>",
+      "css": ".ds-card { width: 24rem; max-width: 100%; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; background: #fff; border-radius: 0; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); transition: transform 0.3s cubic-bezier(0.25,1,0.5,1), box-shadow 0.3s cubic-bezier(0.25,1,0.5,1); } .ds-card:hover { transform: translateY(-6px); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); } .ds-card-body { padding: 24px 28px; } .ds-card-title { font-family: 'DM Serif Display', Georgia, serif; font-weight: 700; font-size: 1.5rem; color: #1E2E45; margin: 0; } .ds-card-desc { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 200; color: #374151; margin: 20px 0 0; line-height: 1.6; } .ds-card-media { height: 10rem; background: linear-gradient(135deg, #33445f, #1E2E45); }"
+    },
+    {
+      "name": "Underline Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "White field with a 2px bottom border only; a gold icon leads, and the underline reveals gold on focus.",
+      "html": "<label class=\"ds-input\"><svg class=\"ds-input-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 4h16v16H4z\" fill=\"none\"/><path d=\"m22 6-10 7L2 6\"/></svg><input class=\"ds-input-field\" type=\"text\" placeholder=\"O seu email\" /></label>",
+      "css": ".ds-input { display: flex; align-items: center; gap: 8px; background: #fff; border: none; border-bottom: 2px solid #E5E7EB; padding: 16px; width: 100%; transition: border-color 0.3s ease; } .ds-input:focus-within { border-bottom-color: #B19460; } .ds-input-icon { color: #B19460; flex: 0 0 auto; transition: transform 0.2s ease; } .ds-input:focus-within .ds-input-icon { transform: scale(1.1); } .ds-input-field { border: none; width: 100%; color: #1E2E45; padding: 4px 8px; line-height: 1.2; background: transparent; font-family: 'DM Sans', system-ui, sans-serif; } .ds-input-field:focus { outline: none; }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "DM Sans navy link; active route carries a solid navy underline, hover reveals a gold/50 underline.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link ds-nav-link--active\">Início</a><a class=\"ds-nav-link\">Sobre</a><a class=\"ds-nav-link\">Áreas de atuação</a><a class=\"ds-nav-link\">Contactos</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 8px; background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); padding: 12px 20px; } .ds-nav-link { font-family: 'DM Sans', system-ui, sans-serif; color: #1E2E45; padding: 4px 20px; cursor: pointer; border-bottom: 2px solid transparent; transition: border-color 0.3s ease; } .ds-nav-link:hover { border-bottom-color: rgba(177,148,96,0.5); } .ds-nav-link--active { border-bottom-color: #1E2E45; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Trusted Counsel",
+    "overview": "This is the calm, refined study of an expert who puts you at ease the moment you walk in. Every surface should feel like being received by a high-caliber professional who is also unmistakably human: navy for authority, gold for warmth, parchment for calm. The system is elegant minimalism — prestigious enough to feel expert, warm enough to feel approachable. It carries visitors who arrive stressed or uncertain toward a single confident action: booking a consultation. The palette does the heavy lifting. Counsel Navy anchors headings and authoritative surfaces; Warm Gold appears sparingly as the signal of warmth and interactivity; Soft Parchment grounds the whole page so nothing ever sits on cold, clinical white. Serif display type lends gravitas and tradition; a light-weight sans keeps body copy quiet and unintimidating. Motion is restrained — scroll-triggered reveals that decelerate smoothly and never bounce.",
+    "keyCharacteristics": [
+      "Navy / gold / parchment, and nothing outside it without discussion",
+      "Serif for gravitas, light sans for calm, a distinct sans for the hero subtitle",
+      "Sharp corners everywhere — no border radius is a deliberate signature",
+      "Flat by default; shadow and lift appear only on interaction",
+      "Bilingual by design (PT default, EN equal); layouts hold in both"
+    ],
+    "rules": [
+      { "name": "The Gold Restraint Rule", "body": "Warm Gold is warmth, not decoration. Keep it to a small share of any screen — buttons, icons, hover accents. The moment gold covers large areas it stops signaling warmth and starts signaling cheapness. Its rarity is the point.", "section": "colors" },
+      { "name": "The No-White-Ground Rule", "body": "The page background is always Soft Parchment (#E8E9E1). White is reserved for raised surfaces (cards, inputs, scrolled nav). A full-white page ground is off-brand.", "section": "colors" },
+      { "name": "The Serif-Authority Rule", "body": "Headings and buttons are always DM Serif Display. Never set a heading or a button label in the sans body face; the serif is what carries the practice's gravitas.", "section": "typography" },
+      { "name": "The Light-Body Rule", "body": "Body copy is DM Sans at weight 200. It is intentionally quiet so the page never feels dense or intimidating — but verify it still clears 4.5:1 contrast, never a light gray for elegance.", "section": "typography" },
+      { "name": "The Motion-Serves-Meaning Rule", "body": "Shadows and lifts confirm interactivity; they never perform. If a shadow isn't responding to hover, focus, or scroll state, it probably shouldn't be there.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do ground every page in Soft Parchment (#E8E9E1); reserve white for raised surfaces (cards, inputs, scrolled nav).",
+      "Do set every heading and button in DM Serif Display; keep body copy in DM Sans at weight 200.",
+      "Do keep Warm Gold to a small share of any screen — buttons, icons, hover accents.",
+      "Do keep corners sharp (0 radius) on buttons, cards, and inputs; it is a deliberate signature.",
+      "Do make depth a response to interaction — flat at rest, lift/shadow on hover and focus.",
+      "Do ease all motion with cubic-bezier(0.25, 1, 0.5, 1) (ease-out-quart); honor prefers-reduced-motion.",
+      "Do verify body text clears WCAG AA (>=4.5:1) — navy or slate ink, never a light gray for elegance.",
+      "Do keep layouts working equally in Portuguese and English; never hardcode visible text (use next-intl keys)."
+    ],
+    "donts": [
+      "Don't introduce colors outside navy / gold / parchment without discussion.",
+      "Don't use a full-white page background.",
+      "Don't use glassmorphism decoratively, gradient text, neon accents, or dark-mode-by-default.",
+      "Don't use generic AI aesthetics: purple-to-blue gradients, Inter, or card-heavy layouts.",
+      "Don't add playful animations, bouncy or elastic easing, or whimsical copy — this is a law firm.",
+      "Don't set headings or buttons in the sans body face.",
+      "Don't let Warm Gold cover large areas; it reads as cheap the moment it stops being rare.",
+      "Don't sacrifice readability for visual impact — body stays light-weight DM Sans, but always legible."
+    ]
+  }
+}
