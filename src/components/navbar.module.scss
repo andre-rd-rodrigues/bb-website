@@ -5,23 +5,30 @@
     background-color 0.5s var(--ease-out-quart),
     border-color 0.5s var(--ease-out-quart),
     box-shadow 0.5s var(--ease-out-quart),
-    backdrop-filter 0.5s var(--ease-out-quart);
+    backdrop-filter 0.5s var(--ease-out-quart),
+    -webkit-backdrop-filter 0.5s var(--ease-out-quart);
   border-bottom: 1px solid transparent;
 }
 
 .barRest {
-  background-color: var(--background);
+  background-color: color-mix(in srgb, var(--background) 60%, transparent);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
 }
 
 .barScrolled {
-  background-color: var(--background);
+  background-color: color-mix(in srgb, var(--background) 78%, transparent);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
   border-bottom-color: color-mix(in srgb, var(--gold) 28%, transparent);
   box-shadow: 0 1px 0 color-mix(in srgb, var(--gold) 10%, transparent);
 }
 
+// Solid while the mobile menu overlay is open so the two layers don't clash.
 .barMenuOpen {
   background-color: var(--background);
   backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border-bottom-color: color-mix(in srgb, var(--gold) 28%, transparent);
   box-shadow: 0 1px 0 color-mix(in srgb, var(--gold) 10%, transparent);
 }
@@ -263,7 +270,9 @@
   display: flex;
   flex-direction: column;
   padding: calc(5.5rem + env(safe-area-inset-top, 0px)) 2rem 2.5rem;
-  background-color: var(--blue);
+  background-color: color-mix(in srgb, var(--blue) 80%, transparent);
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;

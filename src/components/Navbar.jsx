@@ -80,7 +80,8 @@ export default function Navbar() {
         return;
       }
 
-      if (navbarOpen) {
+      const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+      if (!isDesktop || navbarOpen) {
         gsap.to(barRef.current, { yPercent: 0, duration: 0.3 });
         lastScroll.current = y;
         return;
@@ -120,7 +121,7 @@ export default function Navbar() {
     <header className="fixed z-50 w-full">
       <div
         ref={barRef}
-        className={`${styles.bar} ${
+        className={`${styles.bar} backdrop-blur-lg ${
           navbarOpen
             ? styles.barMenuOpen
             : scrolled
@@ -191,7 +192,7 @@ export default function Navbar() {
 
       <div
         id="mobile-navigation"
-        className={`${styles.mobileOverlay} ${
+        className={`${styles.mobileOverlay} backdrop-blur-lg ${
           navbarOpen ? styles.mobileOverlayOpen : ""
         }`}
         aria-hidden={!navbarOpen}
