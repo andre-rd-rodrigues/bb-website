@@ -1,0 +1,111 @@
+.content {
+  font-family: var(--font-sans);
+  font-weight: 200;
+  color: var(--blue);
+  font-size: var(--fs-m);
+  line-height: 1.7;
+  // Opt out of the global `white-space: pre-line` (globals.scss): react-markdown
+  // emits "\n" text nodes between blocks, which would otherwise render as extra
+  // line breaks and inflate the spacing between paragraphs, headings and lists.
+  white-space: normal;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif);
+    color: var(--blue);
+    font-weight: 500;
+    line-height: 1.25;
+  }
+
+  h2 {
+    font-size: var(--fs-l);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: var(--fs-l-s);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    margin-bottom: 1.25rem;
+  }
+
+  a {
+    color: var(--gold);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: opacity 0.2s var(--ease-out-quart);
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  strong {
+    font-weight: 600;
+    color: var(--blue);
+  }
+
+  ul,
+  ol {
+    margin: 0 0 1.5rem 1.25rem;
+    padding-left: 1rem;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.25rem;
+  }
+
+  blockquote {
+    font-family: var(--font-serif);
+    font-size: var(--fs-l-s);
+    color: var(--gold);
+    text-align: center;
+    max-width: 90%;
+    margin: 2.5rem auto;
+    line-height: 1.4;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid rgba(30, 46, 69, 0.15);
+    margin: 2.5rem 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+  }
+
+  th,
+  td {
+    border: 1px solid rgba(30, 46, 69, 0.15);
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+  }
+
+  th {
+    font-family: var(--font-serif);
+  }
+}

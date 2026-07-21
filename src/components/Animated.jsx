@@ -1,70 +1,65 @@
-import React from "react";
-import { useSpring, animated, useInView } from "@react-spring/web";
+import React, { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { gsap, prefersMotion } from "@/lib/gsap";
 
+// "From" states per reveal type. autoAlpha handles opacity + visibility together.
+const FROM_BY_TYPE = {
+  fade: { autoAlpha: 0 },
+  slide: { autoAlpha: 0, y: -24 },
+  "slide-up": { autoAlpha: 0, y: 24 },
+  "slide-in-left": { autoAlpha: 0, x: -28 },
+  "slide-in-right": { autoAlpha: 0, x: 28 },
+  "scale-up": { autoAlpha: 0, scale: 0.92 }
+};
+
+/**
+ * Scroll-triggered reveal. GSAP-backed replacement for the previous
+ * react-spring implementation, keeping the same public API
+ * (`type`, `delay`, `config`, `className`) plus an optional `stagger`.
+ *
+ * When `stagger` is set, the wrapper's direct children are revealed in
+ * sequence; otherwise the wrapper itself is revealed as one element.
+ */
 const Animated = ({
   delay = 0,
   type = "fade",
   children,
   config,
-  className
+  className,
+  stagger
 }) => {
-  const [ref, inView] = useInView({
-    triggerOnce: true
-  });
-  
+  const ref = useRef(null);
 
-  const getTransformFrom = () => {
-    switch (type) {
-      case "slide-in-left":
-        return "translateX(-20px)";
-      case "slide-in-right":
-        return "translateX(20px)";
-      case "slide":
-        return "translateY(-20px)";
-      case "scale-up":
-        return "scale(0.92)";
-      default:
-        return "none";
-    }
-  };
+  useGSAP(
+    () => {
+      // Reduced motion: leave content in its natural, fully-visible state.
+      if (!prefersMotion()) return;
 
-  const getTransformTo = () => {
-    switch (type) {
-      case "slide-in-left":
-        return "translateX(0px)";
-      case "slide-in-right":
-        return "translateX(0px)";
-      case "slide":
-        return "translateY(0px)";
-      case "scale-up":
-        return "scale(1)";
-      default:
-        return "none";
-    }
-  };
+      const el = ref.current;
+      if (!el) return;
 
-  const props = useSpring({
-    from: {
-      opacity: 0,
-      transform: getTransformFrom()
+      const from = FROM_BY_TYPE[type] || FROM_BY_TYPE.fade;
+      const targets = stagger ? el.children : el;
+
+      gsap.from(targets, {
+        ...from,
+        delay: delay / 1000,
+        ...(stagger ? { stagger } : {}),
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%",
+          once: true
+        },
+        ...config
+      });
     },
-    to: async (next, cancel) => {
-      if (inView) {
-        await next({
-          opacity: 1,
-          transform: getTransformTo()
-        });
-      }
-    },
-    config: { tension: 150, friction: 40 },
-    delay,
-    ...config
-  });
+    { scope: ref, dependencies: [type, delay, stagger] }
+  );
 
   return (
-    <animated.div ref={ref} style={props} className={className}>
+    <div ref={ref} className={className}>
       {children}
-    </animated.div>
+    </div>
   );
 };
 

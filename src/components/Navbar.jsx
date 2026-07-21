@@ -1,13 +1,21 @@
 import useTranslation from "@/hooks/useTranslation";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Logo from "./Logo";
-import { dm_sans } from "@/styles/fonts";
+import { dm_sans, encode, ivy_presto } from "@/styles/fonts";
 import { useRouter } from "next/router";
 import LanguageSelector from "./LanguageSelector";
+import { useGSAP } from "@gsap/react";
+import { gsap, prefersMotion } from "@/lib/gsap";
+import { useTranslations } from "next-intl";
+import styles from "./navbar.module.scss";
+
+const CONTACT_HREF = "/contacts";
 
 export default function Navbar() {
   const router = useRouter();
+  const t = useTranslations("components.navbar");
+  const tButtons = useTranslations("components.buttons");
 
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -17,76 +25,206 @@ export default function Navbar() {
   const navlinks = getTranslationsArray("components.navbar.links");
   const pathname = router.pathname;
 
+  const barRef = useRef(null);
+  const linksRef = useRef(null);
+  const mobileLinksRef = useRef(null);
+  const lastScroll = useRef(0);
+
+  useGSAP(
+    () => {
+      if (!prefersMotion()) return;
+      const tl = gsap.timeline();
+      tl.from(barRef.current, {
+        yPercent: -100,
+        autoAlpha: 0,
+        duration: 0.8,
+        ease: "power3.out"
+      });
+      if (linksRef.current) {
+        tl.from(
+          linksRef.current.children,
+          { autoAlpha: 0, y: -10, stagger: 0.08, duration: 0.5 },
+          "-=0.3"
+        );
+      }
+    },
+    { scope: barRef }
+  );
+
+  useGSAP(
+    () => {
+      if (!prefersMotion() || !navbarOpen || !mobileLinksRef.current) return;
+
+      gsap.fromTo(
+        mobileLinksRef.current.children,
+        { autoAlpha: 0, y: 18 },
+        {
+          autoAlpha: 1,
+          y: 0,
+          stagger: 0.07,
+          duration: 0.45,
+          ease: "power3.out"
+        }
+      );
+    },
+    { dependencies: [navbarOpen], scope: mobileLinksRef }
+  );
+
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 20);
+
+      if (!prefersMotion() || !barRef.current) {
+        lastScroll.current = y;
+        return;
+      }
+
+      if (navbarOpen) {
+        gsap.to(barRef.current, { yPercent: 0, duration: 0.3 });
+        lastScroll.current = y;
+        return;
+      }
+
+      const scrollingDown = y > lastScroll.current;
+      gsap.to(barRef.current, {
+        yPercent: scrollingDown && y > 140 ? -100 : 0,
+        duration: 0.4,
+        ease: "power2.out"
+      });
+      lastScroll.current = y;
+    };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [navbarOpen]);
+
+  useEffect(() => {
+    document.body.style.overflow = navbarOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [navbarOpen]);
+
+  useEffect(() => {
+    setNavbarOpen(false);
+  }, [pathname]);
+
+  const closeMobileMenu = () => setNavbarOpen(false);
+
+  const isActive = (href) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
-    <header
-      className={`fixed z-50 w-full transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] ${
-        scrolled
-          ? "backdrop-blur-md bg-white/80 shadow-sm"
-          : "backdrop-blur-sm bg-white/30"
-      }`}
-    >
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 mb-3">
-        <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            <Link to="/" href="/">
-              <Logo fill="#1E2E45" width={40} height={40} />
-            </Link>
-            <button
-              className="text-blue cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-              type="button"
-              onClick={() => setNavbarOpen((prevState) => !prevState)}
-            >
-              <svg
-                className="h-6 w-6 transition-transform duration-300"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d="M4 6h16M4 12h16m-7 6h7"></path>
-              </svg>
-            </button>
-          </div>
-          <div
-            className={`w-full lg:w-auto justify-end grid lg:flex transition-[grid-template-rows] duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] ${
-              navbarOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-            }`}
+    <header className="fixed z-50 w-full">
+      <div
+        ref={barRef}
+        className={`${styles.bar} ${
+          navbarOpen
+            ? styles.barMenuOpen
+            : scrolled
+              ? styles.barScrolled
+              : styles.barRest
+        }`}
+      >
+        <nav
+          className={`relative mx-auto flex max-w-[var(--page-max-width)] items-center justify-between gap-4 px-5 py-3.5 sm:px-8 lg:px-10 lg:py-4 ${dm_sans.className}`}
+          aria-label="Main"
+        >
+          <Link href="/" className={styles.brand}>
+            <Logo fill="#1E2E45" width={44} height={44} aria-hidden="true" />
+            <span className={styles.brandText}>
+              <span className={`${styles.brandName} ${ivy_presto.className}`}>
+                {t("brandName")}
+              </span>
+              <span className={`${styles.brandTagline} ${encode.className}`}>
+                {t("brandTagline")}
+              </span>
+            </span>
+          </Link>
+
+          <ul
+            ref={linksRef}
+            className="hidden list-none items-center lg:flex lg:flex-1 lg:justify-center"
           >
-            <div className="overflow-hidden lg:overflow-visible">
-              <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-                {navlinks.map(({ href, name }) => (
-                  <Link
-                    className="px-5 py-1 flex items-center justify-end lg:justify-center text-md text-left text-blue transition-opacity duration-200"
-                    href={href}
-                    key={name}
-                    onClick={() => setNavbarOpen(false)}
-                  >
-                    <li
-                      className={`${
-                        pathname === href
-                          ? "border-b-2 border-blue"
-                          : "border-b-2 border-transparent hover:border-gold/50"
-                      } ${dm_sans.className} transition-colors duration-300`}
-                    >
-                      {name}
-                    </li>
-                  </Link>
-                ))}
-                <LanguageSelector />
-              </ul>
-            </div>
+            {navlinks.map(({ href, name }) => (
+              <li key={name}>
+                <Link
+                  href={href}
+                  className={`${styles.navLink} ${
+                    isActive(href) ? styles.navLinkActive : ""
+                  }`}
+                >
+                  {name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <div className={styles.actions}>
+            <LanguageSelector compact />
+            <span className={styles.actionsDivider} aria-hidden="true" />
+            <Link href={CONTACT_HREF} className={`${styles.cta} ${dm_sans.className}`}>
+              {tButtons("contact")}
+            </Link>
+          </div>
+
+          <button
+            type="button"
+            className={`${styles.menuToggle} ${
+              navbarOpen ? styles.menuToggleOpen : ""
+            }`}
+            aria-expanded={navbarOpen}
+            aria-controls="mobile-navigation"
+            aria-label={navbarOpen ? t("closeMenu") : t("openMenu")}
+            onClick={() => setNavbarOpen((prevState) => !prevState)}
+          >
+            <span className={styles.menuIcon} aria-hidden="true">
+              <span className={styles.menuLine} />
+              <span className={styles.menuLine} />
+              <span className={styles.menuLine} />
+            </span>
+          </button>
+        </nav>
+      </div>
+
+      <div
+        id="mobile-navigation"
+        className={`${styles.mobileOverlay} ${
+          navbarOpen ? styles.mobileOverlayOpen : ""
+        }`}
+        aria-hidden={!navbarOpen}
+      >
+        <ul ref={mobileLinksRef} className={styles.mobileLinks}>
+          {navlinks.map(({ href, name }) => (
+            <li key={name}>
+              <Link
+                href={href}
+                className={`${styles.mobileLink} ${ivy_presto.className} ${
+                  isActive(href) ? styles.mobileLinkActive : ""
+                }`}
+                onClick={closeMobileMenu}
+              >
+                {name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <div className={styles.mobileFooter}>
+          <div className={styles.mobileActionGroup}>
+            <Link
+              href={CONTACT_HREF}
+              className={`${styles.mobileCta} ${dm_sans.className}`}
+              onClick={closeMobileMenu}
+            >
+              {tButtons("contact")}
+            </Link>
+            <LanguageSelector compact light className={styles.mobileLanguage} />
           </div>
         </div>
-      </nav>
+      </div>
     </header>
   );
 }

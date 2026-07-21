@@ -1,3 +1,4 @@
+import Animated from "@/components/Animated";
 import Button from "@/components/Button";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/router";
@@ -12,12 +13,16 @@ function NotFoundPage() {
       style={{ height: "50vh" }}
       className="text-center flex flex-col items-center justify-center"
     >
-      <h1 className={`text-blue text-7xl`}>{t("title")}</h1>
-      <h2 className={`text-blue text-2xl my-3`}>
-        {t("subtitle")}
-      </h2>
-      <p className="mb-7">{t("description")}</p>
-      <Button label="go back" onClick={() => router.back()} />
+      <Animated
+        type="slide"
+        stagger={0.12}
+        className="flex flex-col items-center"
+      >
+        <h1 className={`text-blue text-7xl`}>{t("title")}</h1>
+        <h2 className={`text-blue text-2xl my-3`}>{t("subtitle")}</h2>
+        <p className="mb-7">{t("description")}</p>
+        <Button label="go back" onClick={() => router.back()} />
+      </Animated>
     </main>
   );
 }

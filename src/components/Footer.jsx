@@ -7,6 +7,7 @@ import Logo from "./Logo";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { SOCIAL_MEDIA } from "@/constants";
+import Animated from "./Animated";
 
 function Footer() {
   const t = useTranslations("components");
@@ -17,14 +18,16 @@ function Footer() {
     <footer className="bg-blue">
       <Container className="py-7">
         {/* Logo */}
-        <Link href="/">
-          <Logo fill="white" width={50} height={50} className="mx-auto" />
-        </Link>
+        <Animated type="scale-up">
+          <Link href="/">
+            <Logo fill="white" width={50} height={50} className="mx-auto" />
+          </Link>
+        </Animated>
 
         <hr className="my-6 border-gray-400 mx-auto opacity-50" />
 
         {/* Description & Social Media */}
-        <div className="md:flex md:justify-between ">
+        <Animated type="fade" className="md:flex md:justify-between ">
           <div className="mb-6 md:mb-0 sm:max-w-52">
             <p className="text-white text-sm">{t("footer.description")}</p>
             <div className="flex gap-4 mt-3 justify-center sm:justify-start">
@@ -47,12 +50,12 @@ function Footer() {
               />
             ))}
           </div>
-        </div>
+        </Animated>
 
         <hr className="my-6 border-gray-400 mx-auto opacity-50" />
 
         {/* Copyright */}
-        <div className="text-center">
+        <Animated type="fade" className="text-center">
           <span className="text-sm font-light text-gray-400">
             © 2024{" "}
             <a
@@ -65,7 +68,7 @@ function Footer() {
             . All Rights Reserved.
           </span>
           <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0"></div>
-        </div>
+        </Animated>
       </Container>
     </footer>
   );

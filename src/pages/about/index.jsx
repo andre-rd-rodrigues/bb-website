@@ -1,4 +1,5 @@
 import Animated from "@/components/Animated";
+import TextReveal from "@/components/TextReveal";
 import Button from "@/components/Button";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import PublishedArticlesSection from "@/components/PublishedArticlesSection/PublishedArticlesSection";
@@ -18,23 +19,22 @@ function About() {
     <main>
       <HeroSection
         imageSrc={"/img/balance2.png"}
+        parallax
         overlayStyle={{ backgroundColor: "#1E2E45", opacity: 0.9 }}
         style={{
           height: "350px"
         }}
       >
-        <Animated>
-          <h1 className="text-white mt-10">{t("about.title")}</h1>
-        </Animated>
+        <TextReveal as="h1" className="text-white mt-10">
+          {t("about.title")}
+        </TextReveal>
       </HeroSection>
 
       <Section sectionClassName="relative flex flex-wrap">
         <div className="md:w-1/2 sm:p-4 flex justify-center items-center">
-          <Animated type="slide-in-left">
-            <h2 className="text-4xl text-blue tracking-wide">
-              {t("about.title2")}
-            </h2>
-          </Animated>
+          <TextReveal as="h2" className="text-4xl text-blue tracking-wide">
+            {t("about.title2")}
+          </TextReveal>
         </div>
         <div className="md:w-1/2 w-full">
           <div className="max-w-md m-auto h-full mt-12">
@@ -50,18 +50,18 @@ function About() {
           </div>
         </div>
         <span id="journey"></span>
-        <Animated>
+        <Animated type="slide-up">
           <p className="mt-12">{t("about.description")}</p>
         </Animated>
       </Section>
 
       {/* Hero */}
       <HeroSection className="bg-blue text-white py-20">
-        <Animated>
-          <h3 className="text-2xl md:text-4xl mb-4 text-white">{t("about.hero.title")}</h3>
-        </Animated>
+        <TextReveal as="h3" className="text-2xl md:text-4xl mb-4 text-white">
+          {t("about.hero.title")}
+        </TextReveal>
 
-        <Animated delay={200}>
+        <Animated type="slide-up" delay={200}>
           <p className="mb-10 text-left sm:text-center max-w-5xl">
             {t("about.hero.description")}
           </p>

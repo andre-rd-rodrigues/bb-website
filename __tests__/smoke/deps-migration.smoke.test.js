@@ -139,4 +139,14 @@ describe("Dependency migration smoke tests", () => {
       expect(seo.DefaultSeo != null || seo.NextSeo != null).toBe(true);
     });
   });
+
+  describe("gsap", () => {
+    it("exports the core gsap object with animation methods", () => {
+      const pkg = require("gsap");
+      const gsap = pkg.gsap ?? pkg.default ?? pkg;
+      expect(typeof gsap.to).toBe("function");
+      expect(typeof gsap.from).toBe("function");
+      expect(typeof gsap.registerPlugin).toBe("function");
+    });
+  });
 });

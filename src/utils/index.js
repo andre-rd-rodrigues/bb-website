@@ -21,5 +21,8 @@ export const headConfig = {
   },
   "/contacts": {
     title: "contactsTitle"
+  },
+  "/blog": {
+    title: "blogTitle"
   }
 };

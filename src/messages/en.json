@@ -5,16 +5,16 @@
       "subtitle": "Law Practice & Legal Consulting",
       "practice": {
         "title": "Practice Areas",
-        "subtitle": "My practice revolves around trust, ethics, and commitment. Specializing in international, citizenship, and corporate law, I deliver results with care and precision. Your legal ally for a seamless journey through the complexities of the legal landscape. Explore the power of legal advocacy with me."
+        "subtitle": "Tailored legal solutions for your needs — whether in Barreiro and Margem Sul, or internationally."
       },
       "about": {
         "title": "Helping to overcome and ease the legal burden.",
         "subtitle": "About me",
-        "description": "My name is Bárbara Barbizani de Carvalho, I have a client-oriented approach where trust, ethics, and commitment remain fundamental in building lasting business relationships. I only accept cases when I possess the level of knowledge and experience to provide prompt and excellent service. I operate locally with a global mindset, specializing in serving Portuguese, Brazilian, and Chinese companies and individuals.\nI collaborate with companies and individuals with a partnership mindset, aligned with their goals and focused on optimizing value in their legal issues and disputes. I aim for clients to feel a high level of confidence that they have made the right choice in our partnership and respect their time.\nI create a coherent process that not only delivers results of technical excellence but also does so quickly and robustly.",
+        "description": "My name is Bárbara Barbizani de Carvalho, I have a client-oriented approach where trust, ethics, and commitment remain fundamental in building lasting business relationships. I only accept cases when I possess the level of knowledge and experience to provide prompt and excellent service. Based in Barreiro, I provide legal services throughout Margem Sul and the Setúbal Peninsula, combining dedicated local support with a truly global perspective.\nI collaborate with companies and individuals with a partnership mindset, aligned with their goals and focused on optimizing value in their legal issues and disputes. I aim for clients to feel a high level of confidence that they have made the right choice in our partnership and respect their time.\nI create a coherent process that not only delivers results of technical excellence but also does so quickly and robustly.",
         "extraInfo": [
           {
             "title": "Experience",
-            "value": 10
+            "value": 13
           },
           {
             "title": "Cases",
@@ -28,36 +28,47 @@
       },
       "hero1": {
         "title": "A Careful, Committed, and Dignified Approach to Law.",
-        "description": "I'm here to help. As your legal partner, I provide personalized solutions that protect your interests and guide you to informed decisions. Let's work together to find clarity in legal matters. Schedule a consultation today and take the first step toward peace of mind."
+        "description": "Clear and reliable legal guidance in Barreiro and Margem Sul. Let's work together."
       },
       "contacts": {
         "title": "Get in Touch for Expert Advice",
         "subtitle": "Contacts",
-        "description": "Whether you're navigating complex legal issues or simply seeking guidance, I'm here to assist you. Let's embark on this journey together - your legal matters deserve the attention and expertise I provide. Get in touch today and experience personalized counsel that puts your needs first. Your concerns matter, and I'm committed to providing the expert advice you deserve. I look forward to hearing from you and addressing your legal needs with care and precision."
+        "description": "Schedule an in-person consultation at our Barreiro office or connect with us online from anywhere in the world."
+      },
+      "blog": {
+        "subtitle": "Blog",
+        "title": "Practical Legal Guidance"
       }
     },
     "about": {
       "title": "About",
       "title2": "Helping You To Overcome And Ease The Legal Burden.",
 
-      "description": "Lawyer and legal consultant, Member of the Portuguese Bar Association and Member of the Brazilian Bar Association.\nPhD candidate in Legal and Civil Sciences - University of Law of Lisbon.\nMaster in Legal and Labor Sciences - University of Law of Lisbon.\nAdvanced specialist in Commercial and Labor Law by the Faculty of Law of the University of Lisbon.\nAcademic researcher with several articles and books published, highlighting the publication in Constitutional Law - Salary Reductibility and Principle of Non-Retrogression, in 2017.\nExperienced in preventive consultancy and civil litigation, with active registration in the OAB and the Portuguese Bar Association.\nResident in Portugal for the last 12 years, but born in Brazil, she has worked in both countries, holding a deep understanding of their legal, cultural, and systemic differences.\nShe has a client-oriented approach, where trust, ethics, and commitment remain fundamental in creating lasting commercial relationships.\nShe operates locally with a global mindset, specializing in Portuguese, Brazilian, and Chinese companies and citizens. Coordinating migration processes, visas, Portuguese citizenship, real estate investment, company relocation, among other operations involving Portuguese and Brazilian jurisdictions.\nIn addition to extensive practice in legal consultancy and disputes in court for citizens and companies, she created the legal department of Grupo Abraito in Portugal.\n\nPORTUGUESE BAR ASSOCIATION | No. 52419L\n\nBRAZILIAN BAR ASSOCIATION PR | No. 63348",
+      "description": "Lawyer and legal consultant, Member of the Portuguese Bar Association and Member of the Brazilian Bar Association.\nPhD candidate in Legal and Civil Sciences - University of Law of Lisbon.\nMaster in Legal and Labor Sciences - University of Law of Lisbon.\nAdvanced specialist in Commercial and Labor Law by the Faculty of Law of the University of Lisbon.\nAcademic researcher with several articles and books published, highlighting the publication in Constitutional Law - Salary Reductibility and Principle of Non-Retrogression, in 2017.\nExperienced in preventive consultancy and civil litigation, with active registration in the OAB and the Portuguese Bar Association.\nResident in Portugal for the last 12 years, but born in Brazil, she has worked in both countries, holding a deep understanding of their legal, cultural, and systemic differences.\nShe has a client-oriented approach, where trust, ethics, and commitment remain fundamental in creating lasting commercial relationships.\nBased in Barreiro, she provides legal services throughout Margem Sul and the Setúbal Peninsula, combining dedicated local support with a truly global perspective. Coordinating migration processes, visas, Portuguese citizenship, real estate investment, company relocation, among other operations involving Portuguese and Brazilian jurisdictions.\nIn addition to extensive practice in legal consultancy and disputes in court for citizens and companies, she created the legal department of Grupo Abraito in Portugal.\n\nPORTUGUESE BAR ASSOCIATION | No. 52419L\n\nBRAZILIAN BAR ASSOCIATION PR | No. 63348",
 
       "hero": {
         "title": "Empowering You Through Expert Legal Services and Consulting",
-        "description": "I'm dedicated to providing expert advice and comprehensive consulting services tailored to your unique needs. Whether you're facing intricate legal challenges or simply seeking guidance, I am here to assist you. My commitment is to safeguard your interests and guide you towards well-informed decisions, ensuring you receive the highest level of professional expertise. Explore the range of services."
+        "description": "I'm dedicated to providing expert advice and comprehensive consulting services tailored to your unique needs. Whether you're facing intricate legal challenges or simply seeking guidance, I am here to assist you. My commitment is to safeguard your interests and guide you towards well-informed decisions, ensuring you receive the highest level of professional expertise. Available to clients in Barreiro, across Margem Sul, and internationally."
       }
     },
     "practiceAreas": {
       "title": "Practice Areas",
+      "subtitle": "How I can help",
+      "intro": "From citizenship and property to family and business, explore the areas where I guide clients through Portuguese and Brazilian law.",
       "citizens": "Citizens",
       "companies": "Companies"
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "Insights",
+      "intro": "Practical legal guidance written for the people and families of Barreiro."
     },
     "contacts": {
       "title": "Contacts",
       "formTitle": "Send a direct message.",
-      "formDescription": "Whether you have questions, need assistance, or just want to connect, sending a direct message is a hassle-free way to get in touch with me. Simply click on the 'Send Message' button bellow, and share your thoughts, concerns, or inquiries. I value your communication and am dedicated to providing you with a prompt and helpful response.",
+      "formDescription": "Whether you have questions, need assistance, or just want to connect, sending a direct message is a hassle-free way to get in touch with me. Simply click on the 'Send Message' button bellow, and share your thoughts, concerns, or inquiries. I value your communication and am dedicated to providing you with a prompt and helpful response. I'm available in person in Barreiro and across Margem Sul, or online wherever you are.",
       "title2": "Connecting for clarity.",
-      "description": "Legal matters require prompt and reliable communication. Whether you have questions, need legal assistance, or want to schedule a consultation, I'm here to help. Feel free to get in touch through the following channels:",
+      "description": "Schedule an in-person consultation at our Barreiro office or connect with us online from anywhere in the world.",
       "form": {
         "name": "Name",
         "email": "Email",
@@ -100,6 +111,10 @@
   },
   "components": {
     "navbar": {
+      "brandName": "Bárbara Barbizani",
+      "brandTagline": "Lawyer",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
       "links": [
         {
           "name": "About",
@@ -110,13 +125,14 @@
           "href": "/practice-areas"
         },
         {
-          "name": "Contacts",
-          "href": "/contacts"
+          "name": "Blog",
+          "href": "/blog"
         }
       ]
     },
     "practiceAreas": [
       {
+        "slug": "private-international-law",
         "title": "Private International Law",
         "description": "Specialization in emigration processes, Golden Visas in Portugal, Portuguese and Brazilian nationality, regularization and work in Portugal and Brazil, document research, translation and certification of foreign documents, recognition of foreign judgments, regularization of assets, inheritances, and property transfer in Portugal and Brazil, judicial appeals against administrative decisions.",
         "imageUrl": "https://images.unsplash.com/photo-1614107151491-6876eecbff89?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -124,30 +140,35 @@
         "showPreview": true
       },
       {
+        "slug": "real-estate-law",
         "title": "Real Estate Law",
         "description": "Specialization in real estate due diligence, drafting and review of purchase and sale contracts, conflicts involving false powers of attorney, breach of fiduciary duty, risk mitigation in leasing, representation in assemblies and supervision of properties in plural ownership, licensing, licensing with municipalities, judicial appeals against administrative decisions, judicial representation in property disputes such as leasing, eviction, dispossession, property claims, repossession, and adverse possession.",
         "imageUrl": "https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1596&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "type": "Citizens"
       },
       {
+        "slug": "tax-law",
         "title": "Tax Law",
         "description": "Specialization in tax optimization, financial planning, tax obligations, income tax return, transnational taxation, advice on tax residence and double-taxation regimes, definitive departure from Brazil, non-habitual resident status, judicial appeals against tax executions.",
         "imageUrl": "https://images.unsplash.com/photo-1604156425963-9be03f86a428?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "type": "Citizens"
       },
       {
+        "slug": "labor-law",
         "title": "Labor Law",
         "description": "Specialization in contractual advice and negotiation of working conditions, consultancy and negotiation in case of dismissals, labor calculations of benefits and compensations, communications in case of disconnection and leaves with or without pay, labor litigation and judicial sponsorship.",
         "imageUrl": "https://images.unsplash.com/photo-1620433042638-c9a00b98637c?q=80&w=1494&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "type": "Citizens"
       },
       {
+        "slug": "family-law",
         "title": "Family Law",
         "description": "Specialization in drafting prenuptial agreements, assistance and representation in marriages between foreign spouses, proxy marriage, transcription of marriages that occurred abroad, approval and recognition of common-law unions, drafting of common-law union contracts, consensual and litigious divorce, divorce conference, parental power regulation, judicial representation in cases of parental alienation and international child abduction, judicial representation in probate and division proceedings.",
         "imageUrl": "https://images.unsplash.com/photo-1620433042631-3df212941910?q=80&w=1500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "type": "Citizens"
       },
       {
+        "slug": "civil-law",
         "title": "Civil Law",
         "description": "Specialization in drafting and understanding contracts, validation of conditions, rules, and clauses of commercial legal transactions in general, construction contracts, intellectual property, copyright, and conflicts arising from electronic business and custom software production, insolvency and default, civil liability and corporate liability, representation in judicial proceedings.",
         "imageUrl": "https://images.unsplash.com/photo-1530469525856-cf37954301f7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -155,36 +176,42 @@
         "showPreview": true
       },
       {
+        "slug": "general-civil-law",
         "title": "General Civil Law",
         "description": "Specialization in drafting and reviewing contracts, debt collection, judicial representation in debt collection processes, judicial representation in processes against insurers, judicial representation in processes against airlines.",
         "imageUrl": "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "type": "Citizens"
       },
       {
+        "slug": "labor-law-unions",
         "title": "Labor Law & Unions",
         "description": "Specialization in drafting and analysis of employment contracts, how to properly dismiss employees, advice, calculations, and negotiation, consultancy in subcontracting, consultancy in company's ancillary obligations to employees, resolution of labor disputes, judicial representation, and negotiations.",
         "imageUrl": "https://images.unsplash.com/photo-1556484687-30636164638b?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "type": "Company"
       },
       {
+        "slug": "civil-law-companies",
         "title": "Civil Law",
         "description": "Specialization in drafting and understanding contracts, validation of conditions, rules, and clauses of commercial legal transactions in general, construction contracts, intellectual property, copyright, and conflicts arising from electronic business and custom software production, insolvency and default, civil liability and corporate liability, representation in judicial proceedings.",
         "imageUrl": "https://images.unsplash.com/photo-1530469525856-cf37954301f7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "type": "Company"
       },
       {
+        "slug": "commercial-law",
         "title": "Commercial Law",
         "description": "Specialization in the creation and registration of companies, assemblies, assignments, mergers, closure, and sale of commercial companies, licensing of activities, joint venture regime, adherence to current regulations, mitigation of legal risks, franchise contracts.",
         "imageUrl": "https://images.unsplash.com/photo-1542908371-3d8e22825a4f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "type": "Company"
       },
       {
+        "slug": "intellectual-property",
         "title": "Intellectual Property",
         "description": "Specialization in the registration and protection of trademarks and patents, licensing and royalties contracts, patents and utility models, marketing and transfer of IP, disputes and IP assessment, judicial representation in industrial property and copyright conflicts.",
         "imageUrl": "https://images.unsplash.com/photo-1593444285553-28163240e3f1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "type": "Company"
       },
       {
+        "slug": "tax-consulting",
         "title": "Tax Consulting",
         "description": "Specialization in tax optimization, financial planning, tax obligations, collective income tax return, transnational taxation, dividends, advice on tax residence and double-taxation regimes, judicial appeals against tax executions.",
         "imageUrl": "https://images.unsplash.com/photo-1554224155-a1487473ffd9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -242,6 +269,31 @@
           "href": "https://www.cidp.pt/publicacao/revista-do-instituto-do-direito-brasileiro-ano-3-2014-n-8/153"
         }
       ]
+    },
+    "practiceAreasFilter": {
+      "all": "All areas",
+      "citizens": "Citizens",
+      "companies": "Companies"
+    },
+    "practiceAreasSearch": {
+      "label": "Search practice areas",
+      "placeholder": "Search by topic or keyword…",
+      "empty": "No practice areas match your search."
+    },
+    "blog": {
+      "readingTime": "min read",
+      "empty": "No articles match your search yet.",
+      "search": "Search articles...",
+      "filter": {
+        "all": "All"
+      },
+      "categories": {
+        "family": "Family & Inheritance",
+        "labour": "Employment Law",
+        "housing": "Housing & Tenancy",
+        "nationality": "Nationality & Immigration",
+        "consumer": "Consumer Law"
+      }
     },
     "faqs": {
       "title": "Frequently Asked Questions",
@@ -324,15 +376,17 @@
       "read more": "Read more",
       "pratice areas": "Pratice Areas",
       "fill form": "Send Message",
-      "go back": "Go back"
+      "go back": "Go back",
+      "back to blog": "Back to blog"
     }
   },
   "metadata": {
-    "homeTitle": "Bárbara Barbizani - Law Practice & Legal Consulting",
-    "aboutTitle": "About Me - Bárbara Barbizani",
-    "contactsTitle": "Contacts - Bárbara Barbizani",
-    "practiceTitle": "Pratice Areas - Bárbara Barbizani",
-    "description": "Bárbara Barbizani de Carvalho - Trustworthy legal advocate. Committed to client-centric values of trust, ethics, and dedication. I handle cases selectively, ensuring prompt, excellent service. Specializing in Portuguese, Brazilian, and Chinese law, I collaborate with a partnership mindset, optimizing legal value. ",
+    "homeTitle": "Bárbara Barbizani — Lawyer in Barreiro | Legal Practice & Consulting",
+    "aboutTitle": "About Me — Bárbara Barbizani | Lawyer in Barreiro",
+    "contactsTitle": "Contacts & Barreiro Office | Bárbara Barbizani",
+    "practiceTitle": "Practice Areas | Lawyer in Barreiro and Margem Sul",
+    "blogTitle": "Blog - Bárbara Barbizani",
+    "description": "Law firm in Barreiro providing legal consulting across Margem Sul and the Setúbal Peninsula, specializing in international clients, visas, and Portuguese citizenship.",
     "notFoundTitle": "Page not found"
   }
 }

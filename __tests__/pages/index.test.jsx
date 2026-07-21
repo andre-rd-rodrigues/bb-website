@@ -24,7 +24,7 @@ const practiceAreasWithPreview = [
 ];
 
 const aboutExtraInfo = [
-  { title: "Experience", value: 10 },
+  { title: "Experience", value: 13 },
   { title: "Cases", value: 100 },
   { title: "Clients", value: 128 }
 ];

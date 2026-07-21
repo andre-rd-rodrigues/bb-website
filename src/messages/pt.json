@@ -5,16 +5,16 @@
       "subtitle": "Advocacia & Consultoria Jurídica",
       "practice": {
         "title": "Áreas de Atuação",
-        "subtitle": "Especializada em direito internacional, direito de cidadania e direito societário tenho várias áreas de atuação. Selecione o botão \"Ver mais\" para conhecer todas as áreas."
+        "subtitle": "Soluções jurídicas adaptadas às suas necessidades — quer no Barreiro e Margem Sul, quer à escala internacional."
       },
       "about": {
         "title": "Ajudando a superar e aliviar o fardo jurídico.",
         "subtitle": "Sobre mim",
-        "description": "O meu nome é Bárbara Barbizani de Carvalho, tenho uma matriz de atuação orientada para o cliente, na qual confiança, ética e compromisso permanecem como fundamentais na criação de relacionamentos comerciais duradouros.\n Só aceito casos quando detenho nível de conhecimento e experiência para prestar um serviço tempestivo e de excelência. Atuo localmente com uma mentalidade global, especializada em empresas e cidadãos portugueses, brasileiros e chineses.\n Trabalho em conjunto com empresas e indivíduos com uma mentalidade de parceria, alinhada com os seus objetivos e otimização de valor nos seus problemas e disputas jurídicas.\n Procuro que os clientes sintam um elevado grau de segurança de que fizeram a escolha certa na nossa parceiria e respeitar o seu tempo.\n Crio um processo coerente que permite não apenas entregar resultados de excelência técnica, mas também fazê-lo de forma rápida e robusta.",
+        "description": "O meu nome é Bárbara Barbizani de Carvalho, tenho uma matriz de atuação orientada para o cliente, na qual confiança, ética e compromisso permanecem como fundamentais na criação de relacionamentos comerciais duradouros.\n Só aceito casos quando detenho nível de conhecimento e experiência para prestar um serviço tempestivo e de excelência. Com sede no Barreiro, presto serviços jurídicos em toda a Margem Sul e Península de Setúbal, aliando a proximidade do apoio local a uma visão e atuação verdadeiramente globais.\n Trabalho em conjunto com empresas e indivíduos com uma mentalidade de parceria, alinhada com os seus objetivos e otimização de valor nos seus problemas e disputas jurídicas.\n Procuro que os clientes sintam um elevado grau de segurança de que fizeram a escolha certa na nossa parceiria e respeitar o seu tempo.\n Crio um processo coerente que permite não apenas entregar resultados de excelência técnica, mas também fazê-lo de forma rápida e robusta.",
         "extraInfo": [
           {
             "title": "Experiência",
-            "value": 10
+            "value": 13
           },
           {
             "title": "Casos",
@@ -28,34 +28,45 @@
       },
       "hero1": {
         "title": "Uma abordagem cuidadosa, comprometida e digna da advocacia.",
-        "description": "Como sua parceira jurídica, forneço soluções personalizadas que protegem os seus interesses e orientam para decisões informadas. Vamos trabalhar juntos para encontrar clareza em questões legais. Marque uma sessão hoje e dê o primeiro passo para a paz de espírito."
+        "description": "Aconselhamento jurídico transparente e rigoroso no Barreiro e Margem Sul. Vamos trabalhar juntos?"
       },
       "contacts": {
         "title": "Entre em Contato para Consultoria Especializada",
         "subtitle": "Contatos",
-        "description": "Esteja você navegando por questões legais complexas ou apenas buscando orientação, estou aqui para ajudar. Vamos embarcar juntos nesta jornada - seus assuntos legais merecem a atenção e a experiência que ofereço. Entre em contato hoje e experimente a consultoria personalizada que coloca suas necessidades em primeiro lugar. Suas preocupações são importantes, e estou comprometido em fornecer o aconselhamento especializado que você merece. Aguardo seu contato para atender às suas necessidades legais com cuidado e precisão."
+        "description": "Agende uma consulta presencial no nosso escritório no Barreiro ou um atendimento online, onde quer que esteja."
+      },
+      "blog": {
+        "subtitle": "Blog",
+        "title": "Orientação Jurídica Prática"
       }
     },
     "about": {
       "title": "Sobre",
       "title2": "Ajudando-o a superar e aliviar o fardo legal.",
-      "description": "Advogada e consultora jurídica, Membro da Ordem dos Advogados Portugueses e Membro da Ordem dos Advogados do Brasil.\nDoutoranda em Ciências Jurídico-Civis - Universidade de Direito de Lisboa.\nMestre em Ciências Jurídicas e Laborais - Universidade de Direito de Lisboa.\nEspecialista avançada em Direito Comercial e do Trabalho pela Faculdade de Direito da Universidade de Lisboa.\nPesquisadora académica com vários artigos e livros publicados, destacando-se a publicação em Direito Constitucional - Redutibilidade Salarial e Princípio da Proibição do Retrocesso, em 2017.\nDetém experiência em consultoria preventiva e contencioso cível, com inscrição ativa na OAB e na Ordem dos Advogados Portugueses.\nResidente em Portugal nos últimos 12 anos, mas nascida no Brasil, atuou em ambos os países, detendo um alto entendimento das suas diferenças legais, culturais e sistémicas.\nTem uma matriz de atuação orientada para o cliente, na qual confiança, ética e compromisso permanecem como fundamentaiTem uma matriz de atuação orientada para o cliente, na qual confiança, ética e compromisso permanecem como fundamentais na criação de relacionamentos comerciais duradouros.\nAtua localmente com uma mentalidade global, especializada em empresas e cidadãos portugueses, brasileiros e chineses. Coordenando processos migratórios, vistos, cidadania portuguesa, investimento imobiliário, deslocalização de empresas, entre outras operações que envolvam as jurisdições portuguesa e brasileira.\nAlém da ampla prática em consultoria jurídica e disputas em tribunal para cidadãos e empresas, criou o departamento jurídico do Grupo Abraito em Portugal.\n\nORDEM DOS ADVOGADOS DE PORTUGAL | No. 52419L\n\nORDEM DOS ADVOGADOS DO BRASIL PR | No. 63348",
+      "description": "Advogada e consultora jurídica, Membro da Ordem dos Advogados Portugueses e Membro da Ordem dos Advogados do Brasil.\nDoutoranda em Ciências Jurídico-Civis - Universidade de Direito de Lisboa.\nMestre em Ciências Jurídicas e Laborais - Universidade de Direito de Lisboa.\nEspecialista avançada em Direito Comercial e do Trabalho pela Faculdade de Direito da Universidade de Lisboa.\nPesquisadora académica com vários artigos e livros publicados, destacando-se a publicação em Direito Constitucional - Redutibilidade Salarial e Princípio da Proibição do Retrocesso, em 2017.\nDetém experiência em consultoria preventiva e contencioso cível, com inscrição ativa na OAB e na Ordem dos Advogados Portugueses.\nResidente em Portugal nos últimos 12 anos, mas nascida no Brasil, atuou em ambos os países, detendo um alto entendimento das suas diferenças legais, culturais e sistémicas.\nTem uma matriz de atuação orientada para o cliente, na qual confiança, ética e compromisso permanecem como fundamentaiTem uma matriz de atuação orientada para o cliente, na qual confiança, ética e compromisso permanecem como fundamentais na criação de relacionamentos comerciais duradouros.\nCom sede no Barreiro, presta serviços jurídicos em toda a Margem Sul e Península de Setúbal, aliando a proximidade do apoio local a uma visão e atuação verdadeiramente globais. Coordenando processos migratórios, vistos, cidadania portuguesa, investimento imobiliário, deslocalização de empresas, entre outras operações que envolvam as jurisdições portuguesa e brasileira.\nAlém da ampla prática em consultoria jurídica e disputas em tribunal para cidadãos e empresas, criou o departamento jurídico do Grupo Abraito em Portugal.\n\nORDEM DOS ADVOGADOS DE PORTUGAL | No. 52419L\n\nORDEM DOS ADVOGADOS DO BRASIL PR | No. 63348",
       "hero": {
         "title": "Capacitando-o através de serviços jurídicos especializados e Consultoria",
-        "description": "Dedico-me a prestar aconselhamento especializado e serviços de consultoria abrangentes adaptados às suas necessidades específicas. Quer esteja a enfrentar complexos desafios jurídicos ou simplesmente a procurar orientação, estou aqui para o ajudar. O meu compromisso é salvaguardar os seus interesses e orientá-lo para decisões bem informadas, garantindo que recebe o mais alto nível de experiência profissional."
+        "description": "Dedico-me a prestar aconselhamento especializado e serviços de consultoria abrangentes adaptados às suas necessidades específicas. Quer esteja a enfrentar complexos desafios jurídicos ou simplesmente a procurar orientação, estou aqui para o ajudar. O meu compromisso é salvaguardar os seus interesses e orientá-lo para decisões bem informadas, garantindo que recebe o mais alto nível de experiência profissional. Disponível para clientes no Barreiro, em toda a Margem Sul e à escala internacional."
       }
     },
     "practiceAreas": {
       "title": "Áreas de Atuação",
+      "subtitle": "Como posso ajudar",
+      "intro": "Da cidadania e imóveis à família e empresas, explore as áreas em que oriento clientes através do direito português e brasileiro.",
       "citizens": "Cidadãos",
       "companies": "Empresas"
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "Perspetivas",
+      "intro": "Orientação jurídica prática, escrita para as pessoas e famílias do Barreiro."
     },
     "contacts": {
       "title": "Contactos",
       "formTitle": "Envie uma mensagem direta.",
-      "formDescription": "Se tiver dúvidas, precisar de ajuda ou apenas quiser estabelecer contacto, enviar uma mensagem direta é uma forma simples de entrar em contacto comigo. Basta clicar no botão 'Enviar mensagem' abaixo e partilhar as suas ideias, preocupações ou questões. Valorizo a sua comunicação e estou empenhado em fornecer-lhe uma resposta rápida e útil.",
+      "formDescription": "Se tiver dúvidas, precisar de ajuda ou apenas quiser estabelecer contacto, enviar uma mensagem direta é uma forma simples de entrar em contacto comigo. Basta clicar no botão 'Enviar mensagem' abaixo e partilhar as suas ideias, preocupações ou questões. Valorizo a sua comunicação e estou empenhado em fornecer-lhe uma resposta rápida e útil. Atendo presencialmente no Barreiro e em toda a Margem Sul, ou online, onde quer que esteja.",
       "title2": "Conexão para compreensão.",
-      "description": "Os assuntos jurídicos exigem uma comunicação rápida e fiável. Se tiver dúvidas, precisar de assistência jurídica ou quiser marcar uma consulta, estou aqui para o ajudar. Sinta-se à vontade para entrar em contacto através dos seguintes canais: ",
+      "description": "Agende uma consulta presencial no nosso escritório no Barreiro ou um atendimento online, onde quer que esteja.",
       "form": {
         "name": "Nome",
         "email": "Email",
@@ -98,6 +109,10 @@
   },
   "components": {
     "navbar": {
+      "brandName": "Bárbara Barbizani",
+      "brandTagline": "Advogada",
+      "openMenu": "Abrir menu",
+      "closeMenu": "Fechar menu",
       "links": [
         {
           "name": "Sobre",
@@ -108,13 +123,14 @@
           "href": "/practice-areas"
         },
         {
-          "name": "Contatos",
-          "href": "/contacts"
+          "name": "Blog",
+          "href": "/blog"
         }
       ]
     },
     "practiceAreas": [
       {
+        "slug": "private-international-law",
         "title": "Direito Internacional Privado",
         "description": "Especialização em processos de emigração, Vistos Gold em Portugal, nacionalidade portuguesa e brasileira, regularização e trabalho em Portugal e no Brasil, pesquisa de documentos, tradução e certificação de documentos estrangeiros, reconhecimento de sentença estrangeira, regularização de património, heranças e transferência de propriedade, recursos judiciais contra decisões administrativas.",
         "imageUrl": "https://images.unsplash.com/photo-1614107151491-6876eecbff89?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -122,30 +138,35 @@
         "showPreview": true
       },
       {
+        "slug": "real-estate-law",
         "title": "Direito Imobiliário",
         "description": "Especialização em Due Diligence Imobiliária, elaboração e conferência de contratos de compra e venda, conflitos de procurações falsas, violação do dever fiduciário, mitigação de riscos de arrendamento, representação em assembleias e fiscalização de propriedades em propriedade plural, licença de utilização, licenciamento junto às câmaras, recursos judiciais contra decisões administrativas, representação judicial em conflitos de propriedade como arrendamento, despejo, esbulho, reivindicação de propriedade, restituição de posse e usucapião.",
         "imageUrl": "https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1596&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "type": "Citizens"
       },
       {
+        "slug": "tax-law",
         "title": "Direito Fiscal",
         "description": "Especialização em otimização tributária, planeamento financeiro, obrigações fiscais, declaração de imposto rendimento, tributação transnacional, aconselhamento acerca de residência fiscal e regimes de dupla-tributação, saída definitiva do Brasil, residente não-habitual, recursos judiciais contra execuções fiscais.",
         "imageUrl": "https://images.unsplash.com/photo-1604156425963-9be03f86a428?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "type": "Citizens"
       },
       {
+        "slug": "labor-law",
         "title": "Direito Laboral",
         "description": "Especialização em aconselhamento contratual e negociação de condições de trabalho, consultoria e negociação em caso de despedimentos, cálculos laborais de benefícios e indemnizações, comunicações em caso de desligamento e licenças com ou sem vencimento, contencioso laboral e patrocínio judicial.",
         "imageUrl": "https://images.unsplash.com/photo-1620433042638-c9a00b98637c?q=80&w=1494&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "type": "Citizens"
       },
       {
+        "slug": "family-law",
         "title": "Direito de Família",
         "description": "Especialização em elaboração de pacto antenupcial, acompanhamento e representação em casamentos entre cônjuges estrangeiros, casamento por procuração, transcrição de casamento ocorrido no estrangeiro, homologação e reconhecimento de união de facto, elaboração de contratos de união de facto, divórcio consensual e litigioso, conferência de divórcio, regulação de poder paternal, representação judicial em processos de alienação parental e sequestro internacional de crianças, representação judicial em processos de inventário e partilha.",
         "imageUrl": "https://images.unsplash.com/photo-1620433042631-3df212941910?q=80&w=1500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "type": "Citizens"
       },
       {
+        "slug": "civil-law",
         "title": "Direito Civil",
         "description": "Especialização em elaboração e entendimento de contratos, validação de condições, regras e cláusulas dos negócios jurídicos comerciais em geral, empreitadas, propriedade intelectual, direitos de autor e conflitos oriundos de negócios eletrónicos e produção de software sob medida, insolvência e inadimplência, responsabilidade civil e responsabilidade societária, representação em processos judiciais.",
         "imageUrl": "https://images.unsplash.com/photo-1530469525856-cf37954301f7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -153,36 +174,42 @@
         "showPreview": true
       },
       {
+        "slug": "general-civil-law",
         "title": "Direito Civil em Geral",
         "description": "Especialização em elaboração e conferência de contratos, cobrança de dívidas, representação judicial em processos de cobrança de dívidas, representação judicial em processos contra seguradoras, representação judicial em processos contra cia aérea.",
         "imageUrl": "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "type": "Citizens"
       },
       {
+        "slug": "labor-law-unions",
         "title": "Direito do Trabalho & Sindicatos",
         "description": "Especialização em elaboração e análise de contratos de trabalho, como despedir corretamente, aconselhamento, cálculos e negociação, consultoria em subcontratação, consultoria em obrigações acessórias da empresa para com os funcionários, resolução de litígios trabalhistas, representação judicial e negociações.",
         "imageUrl": "https://images.unsplash.com/photo-1556484687-30636164638b?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "type": "Company"
       },
       {
+        "slug": "civil-law-companies",
         "title": "Direito Civil",
         "description": "Especialização em elaboração e entendimento de contratos, validação de condições, regras e cláusulas dos negócios jurídicos comerciais em geral, empreitadas, propriedade intelectual, direitos de autor e conflitos oriundos de negócios eletrónicos e produção de software sob medida, insolvência e inadimplência, responsabilidade civil e responsabilidade societária, representação em processos judiciais.",
         "imageUrl": "https://images.unsplash.com/photo-1530469525856-cf37954301f7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "type": "Company"
       },
       {
+        "slug": "commercial-law",
         "title": "Direito Comercial",
         "description": "Especialização em criação e registo de empresa, assembleias, cessões, fusões, fechamento e venda de sociedade comerciais, licenciamento de atividades, regime de joint-venture, aderência a regulação em vigor, mitigação de riscos legais, contratos de franchise.",
         "imageUrl": "https://images.unsplash.com/photo-1542908371-3d8e22825a4f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "type": "Company"
       },
       {
+        "slug": "intellectual-property",
         "title": "Propriedade Intelectual",
         "description": "Especialização em registo e proteção de marcas e patentes, contratos de licenciamento e royalties, patentes e modelos de utilidade, comercialização e transferência de IP, disputas e avaliação de IP, representação judicial em conflitos de propriedade industrial e direito de autor.",
         "imageUrl": "https://images.unsplash.com/photo-1593444285553-28163240e3f1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "type": "Company"
       },
       {
+        "slug": "tax-consulting",
         "title": "Consultoria Fiscal",
         "description": "Especialização em otimização tributária, planeamento financeiro, obrigações fiscais, declaração de imposto de rendimento coletivo, tributação transnacional, dividendos, aconselhamento acerca de residência fiscal e regimes de dupla-tributação, recursos judiciais contra execuções fiscais.",
         "imageUrl": "https://images.unsplash.com/photo-1554224155-a1487473ffd9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -239,6 +266,31 @@
           "href": "https://www.cidp.pt/publicacao/revista-do-instituto-do-direito-brasileiro-ano-3-2014-n-8/153"
         }
       ]
+    },
+    "practiceAreasFilter": {
+      "all": "Todas as áreas",
+      "citizens": "Cidadãos",
+      "companies": "Empresas"
+    },
+    "practiceAreasSearch": {
+      "label": "Pesquisar áreas de atuação",
+      "placeholder": "Pesquisar por tema ou palavra-chave…",
+      "empty": "Nenhuma área de atuação corresponde à sua pesquisa."
+    },
+    "blog": {
+      "readingTime": "min de leitura",
+      "empty": "Nenhum artigo corresponde à sua pesquisa.",
+      "search": "Pesquisar artigos...",
+      "filter": {
+        "all": "Todas"
+      },
+      "categories": {
+        "family": "Família e Sucessões",
+        "labour": "Direito do Trabalho",
+        "housing": "Habitação e Arrendamento",
+        "nationality": "Nacionalidade e Imigração",
+        "consumer": "Direito do Consumidor"
+      }
     },
     "faqs": {
       "title": "Perguntas Frequentes",
@@ -316,21 +368,23 @@
       ]
     },
     "buttons": {
-      "contact": "Contacto",
+      "contact": "Contactar",
       "see more": "Ver mais",
       "read more": "Ler mais",
       "pratice areas": "Áreas de Atuação",
       "fill form": "Enviar Mensagem",
-      "go back": "Voltar"
+      "go back": "Voltar",
+      "back to blog": "Voltar ao blog"
     }
   },
 
   "metadata": {
-    "homeTitle": "Bárbara Barbizani - Advocacia e Consultoria Jurídica",
-    "aboutTitle": "Sobre Mim - Bárbara Barbizani",
-    "contactsTitle": "Contatos - Bárbara Barbizani",
-    "practiceTitle": "Áreas de Atuação - Bárbara Barbizani",
-    "description": "Bárbara Barbizani de Carvalho - Advogacia e Consultoria Jurídica. Comprometida com valores centrados no cliente, como confiança, ética e dedicação. Trato casos seletivamente, garantindo um serviço rápido e de excelência. Especializada em direito português, brasileiro e chinês, colaboro com uma mentalidade de parceria, otimizando o valor legal.",
+    "homeTitle": "Bárbara Barbizani — Advogada no Barreiro | Advocacia e Consultoria Jurídica",
+    "aboutTitle": "Sobre mim — Bárbara Barbizani | Advogada no Barreiro",
+    "contactsTitle": "Contactos e Escritório no Barreiro | Bárbara Barbizani",
+    "practiceTitle": "Áreas de Prática | Advogada no Barreiro e Margem Sul",
+    "blogTitle": "Blog - Bárbara Barbizani",
+    "description": "Escritório de advocacia no Barreiro. Consultoria e assistência jurídica na Margem Sul e Península de Setúbal, com especial incidência em clientes internacionais, vistos e nacionalidade.",
     "notFoundTitle": "Página não encontrada"
   }
 }

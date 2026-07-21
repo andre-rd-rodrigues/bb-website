@@ -16,7 +16,7 @@ const customJestConfig = {
     "<rootDir>/__tests__/__mocks__/common.js"
   ],
   transformIgnorePatterns: [
-    "node_modules/(?!(keen-slider|@react-spring|react-intersection-observer)/)"
+    "node_modules/(?!(keen-slider|gsap|@gsap/react|react-intersection-observer|react-markdown|remark-gfm|remark-.*|micromark.*|mdast-.*|unist-.*|unified|bail|is-plain-obj|trough|vfile.*|hast-.*|property-information|space-separated-tokens|comma-separated-tokens|decode-named-character-reference|character-entities.*|html-url-attributes|trim-lines|ccount|escape-string-regexp|markdown-table|zwitch|longest-streak|devlop|estree-.*)/)"
   ],
   collectCoverageFrom: [
     "src/**/*.{js,jsx,ts,tsx}",

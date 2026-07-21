@@ -1,11 +1,13 @@
+import BlogPreview from "@/components/Blog/BlogPreview";
 import Button from "@/components/Button";
-import Card from "@/components/Card";
 import Faqs from "@/components/Faqs";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import Logo from "@/components/Logo";
+import ServiceSection from "@/components/PracticeAreas/ServiceSection";
 import PublishedArticlesSection from "@/components/PublishedArticlesSection/PublishedArticlesSection";
 import Section from "@/components/Section";
 import Testimonials from "@/components/Testimonials/Testimonials";
+import { getAllPosts } from "@/lib/posts";
 import useTranslation from "@/hooks/useTranslation";
 import { dm_sans, dm_serif, encode } from "@/styles/fonts";
 import { useTranslations } from "next-intl";
@@ -13,12 +15,30 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Animated from "@/components/Animated";
+import TextReveal from "@/components/TextReveal";
+import navbarStyles from "@/components/navbar.module.scss";
 import { CountUp } from "use-count-up";
-import { useInView } from "react-intersection-observer";
+import { useRef, useState } from "react";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "@/lib/gsap";
 
-export default function Home() {
+export default function Home({ posts }) {
   const t = useTranslations("pages");
-  const [counterRef, counterInView] = useInView();
+  const counterRef = useRef(null);
+  const [counterInView, setCounterInView] = useState(false);
+
+  useGSAP(
+    () => {
+      if (!counterRef.current) return;
+      ScrollTrigger.create({
+        trigger: counterRef.current,
+        start: "top 85%",
+        once: true,
+        onEnter: () => setCounterInView(true)
+      });
+    },
+    { scope: counterRef }
+  );
 
   const { getTranslationsArray } = useTranslation();
 
@@ -35,6 +55,7 @@ export default function Home() {
     <main>
       <HeroSection
         imageSrc="/img/panteao.jpg"
+        parallax
         overlayStyle={{
           backgroundColor: "#E8E9E1",
           opacity: 0.7
@@ -43,7 +64,7 @@ export default function Home() {
           height: "600px"
         }}
       >
-        <Animated type="slide">
+        <Animated type="scale-up">
           <div className="relative mx-auto w-full h-28">
             <Image
               src="/img/logo_gold.png"
@@ -54,25 +75,19 @@ export default function Home() {
           </div>
         </Animated>
 
-        <Animated type="slide-in-right" delay={200}>
-          <h1 className="text-blue">Bárbara Barbizani</h1>
-        </Animated>
+        <TextReveal as="h1" className="text-blue" delay={250}>
+          Bárbara Barbizani
+        </TextReveal>
 
-        <Animated type="slide-in-left" delay={200}>
+        <Animated type="fade" delay={700}>
           <h2
-            className={`${encode.className} mb-6 text-gold font-medium text-lg`}
+            className={`${navbarStyles.brandTagline} ${encode.className} mb-6`}
           >
             {t("homepage.subtitle")}
           </h2>
         </Animated>
 
-        <Animated
-          type="fade"
-          delay={500}
-          config={{
-            config: { tension: 150, friction: 60 }
-          }}
-        >
+        <Animated type="fade" delay={900}>
           <Link href="/contacts">
             <Button label="contact" variant />
           </Link>
@@ -85,19 +100,20 @@ export default function Home() {
           <Animated type="slide-in-left">
             <h3 className="text-blue"> {t("homepage.about.subtitle")}</h3>
           </Animated>
-          <Animated type="slide-in-left" delay={100}>
-            <h4 className="text-4xl text-blue mt-3">
-              {t("homepage.about.title")}
-            </h4>
-          </Animated>
-          <Animated type="fade" delay={600}>
+          <TextReveal as="h4" className="text-4xl text-blue mt-3">
+            {t("homepage.about.title")}
+          </TextReveal>
+          <Animated type="slide-up" delay={600}>
             <p className="my-7">{t("homepage.about.description")}</p>
           </Animated>
 
           <Animated type="fade" delay={800}>
-            <div className="flex justify-center sm:justify-start gap-10">
+            <div
+              className="flex justify-center sm:justify-start gap-10"
+              ref={counterRef}
+            >
               {aboutExtraInfo.map(({ title, value }) => (
-                <div className="text-blue" key={title} ref={counterRef}>
+                <div className="text-blue" key={title}>
                   <p className={`${dm_serif.className}`}>{title}</p>
                   <CountUp isCounting={counterInView} end={value} duration={5}>
                     {({ value }) => (
@@ -139,11 +155,9 @@ export default function Home() {
 
       {/* Practice Areas  */}
       <Section containerClassName="bg-blue text-white">
-        <Animated>
-          <h3 className="text-center text-4xl text-white">
-            {t("homepage.practice.title")}
-          </h3>
-        </Animated>
+        <TextReveal as="h3" className="text-center text-4xl text-white">
+          {t("homepage.practice.title")}
+        </TextReveal>
         <Animated delay={300}>
           <p
             className={`${dm_sans.className} sm:text-center  font-extralight mt-3 mb-12 max-w-4xl mx-auto`}
@@ -152,20 +166,22 @@ export default function Home() {
           </p>
         </Animated>
 
-        <div className="flex flex-wrap justify-center gap-10">
-          {praticeAreas.map(({ title, description, imageUrl }, i) => (
-            <Animated type="slide" delay={i * 100} key={title}>
-              <Card
-                title={title}
-                description={description}
-                imageUrl={imageUrl}
-              />
-            </Animated>
+        <div className="mt-4 flex flex-col gap-16 lg:gap-24">
+          {praticeAreas.map(({ slug, title, description, imageUrl }, i) => (
+            <ServiceSection
+              key={slug || title}
+              title={title}
+              description={description}
+              imageUrl={imageUrl}
+              variant="onDark"
+              compact
+              imagePosition={i % 2 === 0 ? "right" : "left"}
+            />
           ))}
         </div>
         <Animated type="fade">
           <Link href="/practice-areas">
-            <Button label="see more" className="block mx-auto mt-10" />
+            <Button label="see more" className="block mx-auto mt-14" />
           </Link>
         </Animated>
       </Section>
@@ -177,12 +193,10 @@ export default function Home() {
 
       {/* Hero */}
       <HeroSection className="bg-blue text-white py-20">
-        <Animated>
-          <h3 className="text-2xl md:text-4xl mb-4 text-white">
-            {t("homepage.hero1.title")}
-          </h3>
-        </Animated>
-        <Animated delay={200}>
+        <TextReveal as="h3" className="text-2xl md:text-4xl mb-4 text-white">
+          {t("homepage.hero1.title")}
+        </TextReveal>
+        <Animated type="slide-up" delay={200}>
           <p className="mb-10 max-w-5xl text-left sm:text-center">
             {t("homepage.hero1.description")}
           </p>
@@ -197,18 +211,19 @@ export default function Home() {
       {/* Published Articles */}
       <PublishedArticlesSection articles={articles} seeMore />
 
+      {/* Blog preview */}
+      <BlogPreview posts={posts} />
+
       {/* Contacts */}
       <Section sectionClassName="flex flex-wrap pt-0">
         <div className="w-full md:w-1/2 p-0 sm:p-4 flex flex-col justify-center ">
           <Animated type="slide-in-left">
             <h3 className="text-blue">{t("homepage.contacts.subtitle")}</h3>
           </Animated>
-          <Animated type="slide-in-left" delay={200}>
-            <h4 className="text-4xl text-blue mt-3">
-              {t("homepage.contacts.title")}
-            </h4>
-          </Animated>
-          <Animated delay={300}>
+          <TextReveal as="h4" className="text-4xl text-blue mt-3">
+            {t("homepage.contacts.title")}
+          </TextReveal>
+          <Animated type="slide-up" delay={300}>
             <p className="my-7">{t("homepage.contacts.description")}</p>
           </Animated>
           <Animated delay={400}>
@@ -241,6 +256,7 @@ export default function Home() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
+      posts: getAllPosts(locale).slice(0, 2),
       messages: (await import(`../messages/${locale}.json`)).default
     }
   };

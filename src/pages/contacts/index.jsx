@@ -1,4 +1,5 @@
 import Animated from "@/components/Animated";
+import TextReveal from "@/components/TextReveal";
 import Button from "@/components/Button";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import IconContact from "@/components/IconContact";
@@ -26,75 +27,74 @@ function Contacts() {
     <main>
       <HeroSection
         imageSrc="/img/balance2.png"
+        parallax
         overlayStyle={{ backgroundColor: "#1E2E45", opacity: 0.9 }}
         style={{
           height: "350px"
         }}
       >
-        <Animated type="slide-in-right">
-          <h1 className="text-white mt-10">{t("contacts.title")}</h1>
-        </Animated>
+        <TextReveal as="h1" className="text-white mt-10">
+          {t("contacts.title")}
+        </TextReveal>
       </HeroSection>
 
       <Section>
-        <Animated type="slide-in-left">
-          <h2 className="text-4xl text-blue tracking-wide">
-            {t("contacts.formTitle")}
-          </h2>
-        </Animated>
-        <Animated delay={200}>
+        <TextReveal as="h2" className="text-4xl text-blue tracking-wide">
+          {t("contacts.formTitle")}
+        </TextReveal>
+        <Animated type="slide-up" delay={200}>
           <p className="my-6">{t("contacts.formDescription")}</p>
         </Animated>
 
         {/* Form */}
-        <Animated delay={400}>
-          {state.succeeded ? (
-            <Animated type="scale-up" className="w-100 text-center py-8">
-              <div className="w-20 h-20 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-6">
-                <Icon
-                  icon="lets-icons:check-fill"
-                  className="text-gold"
-                  fontSize={50}
-                />
-              </div>
-              <p className="max-w-md mx-auto">{t("contacts.form.success")}</p>
+        {state.succeeded ? (
+          <Animated type="scale-up" className="w-100 text-center py-8">
+            <div className="w-20 h-20 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-6">
+              <Icon
+                icon="lets-icons:check-fill"
+                className="text-gold"
+                fontSize={50}
+              />
+            </div>
+            <p className="max-w-md mx-auto">{t("contacts.form.success")}</p>
+          </Animated>
+        ) : (
+          <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
+            <Animated type="slide" className="flex gap-5 mb-5">
+              <Form.Input
+                icon="mdi:user"
+                label="Nome"
+                placeholder={t("contacts.form.name")}
+                required
+                disabled={state.submitting}
+              />
+              <Form.Input
+                icon="ic:baseline-email"
+                label="Email"
+                type="email"
+                placeholder={t("contacts.form.email")}
+                required
+                disabled={state.submitting}
+              />
             </Animated>
-          ) : (
-            <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
-              <div className="flex gap-5 mb-5">
-                <Form.Input
-                  icon="mdi:user"
-                  label="Nome"
-                  placeholder={t("contacts.form.name")}
-                  required
-                  disabled={state.submitting}
-                />
-                <Form.Input
-                  icon="ic:baseline-email"
-                  label="Email"
-                  type="email"
-                  placeholder={t("contacts.form.email")}
-                  required
-                  disabled={state.submitting}
-                />
-              </div>
-              <div className="flex gap-5 mb-5">
-                <Form.Input
-                  icon="ic:round-phone"
-                  label="Telefone"
-                  type="tel"
-                  placeholder={t("contacts.form.phone")}
-                  disabled={state.submitting}
-                />
-                <Form.Select
-                  icon="mingcute:information-fill"
-                  label="Assunto"
-                  placeholder={t("contacts.form.subject.title")}
-                  options={formOptions}
-                  required
-                  disabled={state.submitting}
-                />
-              </div>
+            <Animated type="slide" delay={120} className="flex gap-5 mb-5">
+              <Form.Input
+                icon="ic:round-phone"
+                label="Telefone"
+                type="tel"
+                placeholder={t("contacts.form.phone")}
+                disabled={state.submitting}
+              />
+              <Form.Select
+                icon="mingcute:information-fill"
+                label="Assunto"
+                placeholder={t("contacts.form.subject.title")}
+                options={formOptions}
+                required
+                disabled={state.submitting}
+              />
+            </Animated>
+            <Animated type="slide" delay={240}>
               <Form.Textarea
                 icon="mdi:pencil"
                 label="Mensagem"
@@ -102,36 +102,34 @@ function Contacts() {
                 required
                 disabled={state.submitting}
               />
+            </Animated>
 
-              <div className="mt-8 text-center">
-                {/*   <ReCAPTCHA
-                  ref={recaptchaRef}
-                  size="invisible"
-                  sitekey={process.env.NEXT_PUBLIC_CAPTCHA}
-                  onChange={onReCAPTCHAChange}
-                /> */}
-                <Button
-                  label="fill form"
-                  icon="cil:send"
-                  type="submit"
-                  disabled={state.submitting}
-                  loading={state.submitting}
-                />
-              </div>
-            </form>
-          )}
-        </Animated>
+            <Animated type="fade" delay={360} className="mt-8 text-center">
+              {/*   <ReCAPTCHA
+                ref={recaptchaRef}
+                size="invisible"
+                sitekey={process.env.NEXT_PUBLIC_CAPTCHA}
+                onChange={onReCAPTCHAChange}
+              /> */}
+              <Button
+                label="fill form"
+                icon="cil:send"
+                type="submit"
+                disabled={state.submitting}
+                loading={state.submitting}
+              />
+            </Animated>
+          </form>
+        )}
       </Section>
 
       <Section sectionClassName="relative flex flex-wrap -mt-6">
         <div className="lg:w-1/2 w-full mb-10">
-          <Animated type="slide-in-left">
-            <h2 className="text-4xl text-blue tracking-wide">
-              {t("contacts.title2")}
-            </h2>
-          </Animated>
+          <TextReveal as="h2" className="text-4xl text-blue tracking-wide">
+            {t("contacts.title2")}
+          </TextReveal>
 
-          <Animated delay={100}>
+          <Animated type="slide-up" delay={100}>
             <p className="my-7 lg:mr-6">{t("contacts.description")}</p>
           </Animated>
 

@@ -57,6 +57,16 @@ module.exports = {
       lastmod: new Date().toISOString(),
       priority: 0.7
     });
+    paths.push({
+      loc: "https://barbizanicarvalholaw.pt/blog",
+      lastmod: new Date().toISOString(),
+      priority: 0.7
+    });
+    paths.push({
+      loc: "https://barbizanicarvalholaw.pt/en/blog",
+      lastmod: new Date().toISOString(),
+      priority: 0.7
+    });
     return paths;
   }
 };

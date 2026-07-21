@@ -5,13 +5,13 @@ import Navbar from "@/components/Navbar";
 import { renderWithMotion } from "../__utils__/test-helpers";
 
 const mockNavLinks = [
-  { href: "/", name: "Home" },
   { href: "/about", name: "About" },
-  { href: "/contacts", name: "Contact" }
+  { href: "/practice-areas", name: "Practice Areas" },
+  { href: "/blog", name: "Blog" }
 ];
 
 jest.mock("next/router", () => ({
-  useRouter: () => ({ pathname: "/", locale: "en", route: "/" })
+  useRouter: () => ({ pathname: "/about", locale: "en", route: "/about" })
 }));
 
 jest.mock("@/hooks/useTranslation", () => ({
@@ -34,47 +34,66 @@ describe("Navbar", () => {
     expect(header).toHaveClass("fixed");
   });
 
-  it("renders navigation links from translations", () => {
+  it("renders brand name and navigation links from translations", () => {
     renderWithMotion(<Navbar />);
-    expect(screen.getByRole("link", { name: "Home" })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "About" })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Contact" })).toBeInTheDocument();
+    expect(screen.getAllByText("brandName").length).toBeGreaterThan(0);
+    expect(screen.getAllByRole("link", { name: "About" }).length).toBeGreaterThan(0);
+    expect(screen.getAllByRole("link", { name: "Practice Areas" }).length).toBeGreaterThan(0);
+    expect(screen.getAllByRole("link", { name: "Blog" }).length).toBeGreaterThan(0);
   });
 
   it("renders links with correct hrefs", () => {
     renderWithMotion(<Navbar />);
-    expect(screen.getByRole("link", { name: "Home" })).toHaveAttribute("href", "/");
-    expect(screen.getByRole("link", { name: "About" })).toHaveAttribute("href", "/about");
-    expect(screen.getByRole("link", { name: "Contact" })).toHaveAttribute("href", "/contacts");
+    expect(screen.getAllByRole("link", { name: "About" })[0]).toHaveAttribute(
+      "href",
+      "/about"
+    );
+    expect(screen.getAllByRole("link", { name: "Practice Areas" })[0]).toHaveAttribute(
+      "href",
+      "/practice-areas"
+    );
+    expect(screen.getAllByRole("link", { name: "Blog" })[0]).toHaveAttribute(
+      "href",
+      "/blog"
+    );
+  });
+
+  it("renders a contact call-to-action", () => {
+    renderWithMotion(<Navbar />);
+    expect(screen.getAllByRole("link", { name: "contact" }).length).toBeGreaterThan(0);
+    expect(screen.getAllByRole("link", { name: "contact" })[0]).toHaveAttribute(
+      "href",
+      "/contacts"
+    );
   });
 
   it("renders mobile menu toggle button", () => {
     renderWithMotion(<Navbar />);
-    const nav = screen.getByRole("banner").querySelector("nav");
-    const toggle = nav.querySelector("button");
-    expect(toggle).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "openMenu" })).toBeInTheDocument();
   });
 
   it("toggles mobile menu on button click", async () => {
     const user = userEvent.setup();
     renderWithMotion(<Navbar />);
-    const banner = screen.getByRole("banner");
-    const nav = banner.querySelector("nav");
-    const toggle = nav.querySelector("button");
-    const linksContainer = nav.querySelector(".lg\\:flex");
-    expect(linksContainer).toHaveClass("hidden");
+
+    const toggle = screen.getByRole("button", { name: "openMenu" });
+    const mobileNav = document.getElementById("mobile-navigation");
+
+    expect(mobileNav).not.toHaveClass("mobileOverlayOpen");
     await user.click(toggle);
-    expect(linksContainer).toHaveClass("flex");
-    await user.click(toggle);
-    expect(linksContainer).toHaveClass("hidden");
+    expect(mobileNav).toHaveClass("mobileOverlayOpen");
+    expect(screen.getByRole("button", { name: "closeMenu" })).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "closeMenu" }));
+    expect(mobileNav).not.toHaveClass("mobileOverlayOpen");
   });
 
-  it("highlights active link when pathname matches", () => {
+  it("highlights the active route link", () => {
     renderWithMotion(<Navbar />);
-    const homeLink = screen.getByRole("link", { name: "Home" });
-    // Navbar structure: Link wraps li, so the li is a child of the link
-    const homeLi = homeLink.querySelector("li");
-    expect(homeLi).toBeInTheDocument();
-    expect(homeLi).toHaveClass("border-b-2", "border-blue");
+    const aboutLinks = screen.getAllByRole("link", { name: "About" });
+    expect(aboutLinks[0].className).toMatch(/navLinkActive/);
+
+    const blogLinks = screen.getAllByRole("link", { name: "Blog" });
+    expect(blogLinks[0].className).not.toMatch(/navLinkActive/);
   });
 });

@@ -6,6 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Testimonial from "./Testimonial";
 import useIsMobile from "@/hooks/useIsMobile";
 import Animated from "../Animated";
+import TextReveal from "../TextReveal";
 
 function Testimonials() {
   const t = useTranslations("components");
@@ -21,32 +22,31 @@ function Testimonials() {
           <Animated type="slide-in-left">
             <h3 className="text-blue">{t("testimonials.subtitle")}</h3>
           </Animated>
-          <Animated type="slide-in-left" delay={100}>
-            <h4 className="text-4xl text-blue mt-3">
-              {t("testimonials.title")}
-            </h4>
-          </Animated>
+          <TextReveal as="h4" className="text-4xl text-blue mt-3">
+            {t("testimonials.title")}
+          </TextReveal>
         </div>
-        <div className="absolute h-36 w-8/12 right-0">
+        <div className="absolute h-36 w-8/12 right-0" data-speed="0.9">
           <Image
             src="/img/columns.jpg"
             fill
-            style={{ objectFit: 'cover' }}
-            className=""
+            style={{ objectFit: "cover" }}
             alt="Testimonials"
           />
         </div>
       </div>
-      <Carousel showStatus={false} showThumbs={false} emulateTouch={isMobile}>
-        {testimonials.map(({ author, feedback, imageUrl }) => (
-          <Testimonial
-            author={author}
-            feedback={feedback}
-            imageUrl={imageUrl}
-            key={author}
-          />
-        ))}
-      </Carousel>
+      <Animated type="fade" delay={200}>
+        <Carousel showStatus={false} showThumbs={false} emulateTouch={isMobile}>
+          {testimonials.map(({ author, feedback, imageUrl }) => (
+            <Testimonial
+              author={author}
+              feedback={feedback}
+              imageUrl={imageUrl}
+              key={author}
+            />
+          ))}
+        </Carousel>
+      </Animated>
     </>
   );
 }

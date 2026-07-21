@@ -6,6 +6,7 @@ import ArticleCard from "./ArticleCard";
 import Link from "next/link";
 import Button from "../Button";
 import Animated from "../Animated";
+import TextReveal from "../TextReveal";
 
 function PublishedArticlesSection({ articles, seeMore }) {
   const t = useTranslations("components");
@@ -17,20 +18,19 @@ function PublishedArticlesSection({ articles, seeMore }) {
           <h3 className="text-blue">{t("articles.subtitle")}</h3>
         </Animated>
 
-        <Animated type="slide-in-right">
-          <h4 className="text-4xl text-blue mt-3">{t("articles.title")}</h4>
-        </Animated>
+        <TextReveal as="h4" className="text-4xl text-blue mt-3">
+          {t("articles.title")}
+        </TextReveal>
       </div>
       <div className="block w-full mt-16 mx-auto">
-        {articles.map(({ imageUrl, title, description, href }, i) => (
-          <Animated delay={i * 100} key={title}>
-            <ArticleCard
-              imageUrl={imageUrl}
-              title={title}
-              description={description}
-              href={href}
-            />
-          </Animated>
+        {articles.map(({ imageUrl, title, description, href }) => (
+          <ArticleCard
+            key={title}
+            imageUrl={imageUrl}
+            title={title}
+            description={description}
+            href={href}
+          />
         ))}
       </div>
       {seeMore && (

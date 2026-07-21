@@ -1,9 +1,37 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import useTranslation from "@/hooks/useTranslation";
 import { Icon } from "@iconify/react";
+import { useGSAP } from "@gsap/react";
+import { gsap, prefersMotion } from "@/lib/gsap";
 import Animated from "./Animated";
+
+/**
+ * Collapsible answer body. Reveals with a short fade + rise each time it opens.
+ */
+const FaqAnswer = ({ children }) => {
+  const ref = useRef(null);
+
+  useGSAP(
+    () => {
+      if (!prefersMotion() || !ref.current) return;
+      gsap.from(ref.current, {
+        autoAlpha: 0,
+        y: -8,
+        duration: 0.4,
+        ease: "power2.out"
+      });
+    },
+    { scope: ref }
+  );
+
+  return (
+    <div ref={ref} className="px-4 pb-7">
+      {children}
+    </div>
+  );
+};
 
 const Faqs = () => {
   const t = useTranslations("components");
@@ -65,9 +93,9 @@ const Faqs = () => {
 
                 {/* Collapsible content */}
                 {openIndex === index && (
-                  <div className="px-4 pb-7">
+                  <FaqAnswer>
                     <p>{faq.answer}</p>
-                  </div>
+                  </FaqAnswer>
                 )}
               </li>
             </Animated>
