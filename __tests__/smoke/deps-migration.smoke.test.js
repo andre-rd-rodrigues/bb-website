@@ -100,13 +100,6 @@ describe("Dependency migration smoke tests", () => {
     });
   });
 
-  describe("react-intersection-observer", () => {
-    it("exports useInView", () => {
-      const pkg = require("react-intersection-observer");
-      expect(typeof pkg.useInView).toBe("function");
-    });
-  });
-
   describe("use-count-up", () => {
     it("exports CountUp component", () => {
       const pkg = require("use-count-up");

@@ -1,5 +1,5 @@
 import { IntlErrorCode, NextIntlClientProvider } from "next-intl";
-import "@/styles/globals.scss";
+import "@/styles/globals.css";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Layout from "@/components/Layout";

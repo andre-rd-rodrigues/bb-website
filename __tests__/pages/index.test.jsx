@@ -97,10 +97,6 @@ jest.mock("next-intl", () => ({
   }
 }));
 
-jest.mock("react-intersection-observer", () => ({
-  useInView: () => [jest.fn(), true]
-}));
-
 describe("Home Page", () => {
   beforeEach(() => {
     jest.clearAllMocks();

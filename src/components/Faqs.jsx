@@ -67,7 +67,7 @@ const Faqs = () => {
       </div>
 
       {/* FAQs section on the right */}
-      <div className="flex-grow sm:p-8">
+      <div className="grow sm:p-8">
         {/* FAQs List */}
         <ul>
           {faqsData.map((faq, index) => (

@@ -28,7 +28,7 @@ function LanguageSelector({ compact = false, light = false, className = "" }) {
   return (
     <Popover className={`relative flex ${compact ? "" : "mx-5 my-1 justify-end"} ${className}`}>
       <PopoverButton
-        className={`flex h-full items-center justify-center rounded-sm transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 ${
+        className={`flex h-full items-center justify-center rounded-xs transition-colors duration-300 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 ${
           light ? "focus-visible:ring-offset-blue" : "focus-visible:ring-offset-[var(--background)]"
         }`}
         aria-label={locale === "pt" ? "Language: Portuguese" : "Language: English"}

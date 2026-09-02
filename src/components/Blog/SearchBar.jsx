@@ -15,7 +15,7 @@ const SearchBar = ({ value, onChange, placeholder, label }) => {
       <input
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        className={`border-none w-full text-blue py-1 px-2 leading-tight focus:outline-none ${dm_sans.className}`}
+        className={`border-none w-full text-blue py-1 px-2 leading-tight focus:outline-hidden ${dm_sans.className}`}
         style={{ background: "transparent" }}
         type="text"
         placeholder={placeholder}
