@@ -1,6 +1,7 @@
 import useTranslation from "@/hooks/useTranslation";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import { Icon } from "@iconify/react";
 import Logo from "./Logo";
 import { dm_sans, encode, ivy_presto } from "@/styles/fonts";
 import { useRouter } from "next/router";
@@ -10,7 +11,8 @@ import { gsap, prefersMotion } from "@/lib/gsap";
 import { useTranslations } from "next-intl";
 import styles from "./navbar.module.scss";
 
-const CONTACT_HREF = "/contacts";
+const WHATSAPP_HREF = "https://wa.me/916690609";
+const WHATSAPP_ICON = "mingcute:whatsapp-fill";
 
 export default function Navbar() {
   const router = useRouter();
@@ -166,9 +168,19 @@ export default function Navbar() {
           <div className={styles.actions}>
             <LanguageSelector compact />
             <span className={styles.actionsDivider} aria-hidden="true" />
-            <Link href={CONTACT_HREF} className={`${styles.cta} ${dm_sans.className}`}>
+            <a
+              href={WHATSAPP_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${styles.cta} inline-flex items-center justify-center gap-2 ${dm_sans.className}`}
+            >
+              <Icon
+                icon={WHATSAPP_ICON}
+                fontSize={16}
+                aria-hidden="true"
+              />
               {tButtons("contact")}
-            </Link>
+            </a>
           </div>
 
           <button
@@ -215,13 +227,20 @@ export default function Navbar() {
 
         <div className={styles.mobileFooter}>
           <div className={styles.mobileActionGroup}>
-            <Link
-              href={CONTACT_HREF}
-              className={`${styles.mobileCta} ${dm_sans.className}`}
+            <a
+              href={WHATSAPP_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${styles.mobileCta} inline-flex items-center justify-center gap-2 ${dm_sans.className}`}
               onClick={closeMobileMenu}
             >
+              <Icon
+                icon={WHATSAPP_ICON}
+                fontSize={18}
+                aria-hidden="true"
+              />
               {tButtons("contact")}
-            </Link>
+            </a>
             <LanguageSelector compact light className={styles.mobileLanguage} />
           </div>
         </div>

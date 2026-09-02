@@ -7,7 +7,8 @@ import { renderWithMotion } from "../__utils__/test-helpers";
 const mockNavLinks = [
   { href: "/about", name: "About" },
   { href: "/practice-areas", name: "Practice Areas" },
-  { href: "/blog", name: "Blog" }
+  { href: "/blog", name: "Blog" },
+  { href: "/contacts", name: "Contacts" }
 ];
 
 jest.mock("next/router", () => ({
@@ -40,6 +41,7 @@ describe("Navbar", () => {
     expect(screen.getAllByRole("link", { name: "About" }).length).toBeGreaterThan(0);
     expect(screen.getAllByRole("link", { name: "Practice Areas" }).length).toBeGreaterThan(0);
     expect(screen.getAllByRole("link", { name: "Blog" }).length).toBeGreaterThan(0);
+    expect(screen.getAllByRole("link", { name: "Contacts" }).length).toBeGreaterThan(0);
   });
 
   it("renders links with correct hrefs", () => {
@@ -56,15 +58,18 @@ describe("Navbar", () => {
       "href",
       "/blog"
     );
-  });
-
-  it("renders a contact call-to-action", () => {
-    renderWithMotion(<Navbar />);
-    expect(screen.getAllByRole("link", { name: "contact" }).length).toBeGreaterThan(0);
-    expect(screen.getAllByRole("link", { name: "contact" })[0]).toHaveAttribute(
+    expect(screen.getAllByRole("link", { name: "Contacts" })[0]).toHaveAttribute(
       "href",
       "/contacts"
     );
+  });
+
+  it("renders a WhatsApp contact call-to-action", () => {
+    renderWithMotion(<Navbar />);
+    const ctas = screen.getAllByRole("link", { name: "contact" });
+    expect(ctas.length).toBeGreaterThan(0);
+    expect(ctas[0]).toHaveAttribute("href", "https://wa.me/916690609");
+    expect(ctas[0]).toHaveAttribute("target", "_blank");
   });
 
   it("renders mobile menu toggle button", () => {

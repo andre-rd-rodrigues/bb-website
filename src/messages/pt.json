@@ -125,6 +125,10 @@
         {
           "name": "Blog",
           "href": "/blog"
+        },
+        {
+          "name": "Contactos",
+          "href": "/contacts"
         }
       ]
     },
