@@ -8,9 +8,10 @@ import useTranslation from "@/hooks/useTranslation";
 import { useForm } from "@formspree/react";
 import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
-import React from "react";
+import React, { useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import * as Form from "../../components/Form";
+import { trackGenerateLead } from "@/lib/analytics";
 
 function Contacts() {
   const t = useTranslations("pages");
@@ -22,6 +23,11 @@ function Contacts() {
 
   // Form
   const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM || "");
+
+  // Fire a single lead-conversion event once the form is accepted.
+  useEffect(() => {
+    if (state.succeeded) trackGenerateLead();
+  }, [state.succeeded]);
 
   return (
     <main>

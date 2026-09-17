@@ -8,6 +8,7 @@ import useTranslation from "@/hooks/useTranslation";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
+import { gaAttrs } from "@/lib/analytics";
 import React from "react";
 
 function About() {
@@ -68,7 +69,13 @@ function About() {
         </Animated>
 
         <Animated delay={300}>
-          <Link to="/practice-areas" href="practice-areas">
+          <Link
+            href="/practice-areas"
+            {...gaAttrs("cta_click", {
+              cta: "practice_areas",
+              location: "about_page"
+            })}
+          >
             <Button label="pratice areas" />
           </Link>
         </Animated>

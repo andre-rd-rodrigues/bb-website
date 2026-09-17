@@ -15,6 +15,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Animated from "@/components/Animated";
+import { gaAttrs } from "@/lib/analytics";
 import TextReveal from "@/components/TextReveal";
 import navbarStyles from "@/components/navbar.module.scss";
 import { CountUp } from "use-count-up";
@@ -88,7 +89,10 @@ export default function Home({ posts }) {
         </Animated>
 
         <Animated type="fade" delay={900}>
-          <Link href="/contacts">
+          <Link
+            href="/contacts"
+            {...gaAttrs("cta_click", { cta: "contact", location: "home_hero" })}
+          >
             <Button label="contact" variant />
           </Link>
         </Animated>
@@ -132,7 +136,11 @@ export default function Home({ posts }) {
             </div>
           </Animated>
           <Animated type="fade" delay={1000}>
-            <Link href="/about" className="flex justify-center sm:block">
+            <Link
+              href="/about"
+              className="flex justify-center sm:block"
+              {...gaAttrs("cta_click", { cta: "about", location: "home_about" })}
+            >
               <Button label="see more" variant className={"mt-8"} />
             </Link>
           </Animated>
@@ -180,7 +188,13 @@ export default function Home({ posts }) {
           ))}
         </div>
         <Animated type="fade">
-          <Link href="/practice-areas">
+          <Link
+            href="/practice-areas"
+            {...gaAttrs("cta_click", {
+              cta: "practice_areas",
+              location: "home_practice_areas"
+            })}
+          >
             <Button label="see more" className="block mx-auto mt-14" />
           </Link>
         </Animated>
@@ -202,7 +216,13 @@ export default function Home({ posts }) {
           </p>
         </Animated>
         <Animated delay={400}>
-          <Link to="/contacts" href="/contacts">
+          <Link
+            href="/contacts"
+            {...gaAttrs("cta_click", {
+              cta: "contact",
+              location: "home_cta_banner"
+            })}
+          >
             <Button label="contact" />
           </Link>
         </Animated>
@@ -230,6 +250,10 @@ export default function Home({ posts }) {
             <Link
               href="/contacts"
               className="flex justify-center sm:justify-start"
+              {...gaAttrs("cta_click", {
+                cta: "contact",
+                location: "home_contacts_section"
+              })}
             >
               <Button label={"contact"} variant />
             </Link>

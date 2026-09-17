@@ -1,11 +1,22 @@
 import { Icon } from "@iconify/react";
 import React from "react";
+import { gaAttrs, resolveContactMethod } from "@/lib/analytics";
 
-function IconContact({ icon, contact, className, href }) {
+function IconContact({
+  icon,
+  contact,
+  className,
+  href,
+  location = "contacts_page"
+}) {
   return href ? (
     <a
       href={href}
       target="_blank"
+      {...gaAttrs("contact_click", {
+        method: resolveContactMethod(href),
+        location
+      })}
       className={`${className} group inline-flex gap-2 justify-center items-center transition-opacity duration-200 hover:opacity-70`}
     >
       <Icon fontSize={20} icon={icon} className="text-gold transition-transform duration-200 group-hover:scale-110" />

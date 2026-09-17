@@ -18,6 +18,7 @@ import { Flip, gsap, prefersMotion } from "@/lib/gsap";
 import { useGSAP } from "@gsap/react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import { gaAttrs } from "@/lib/analytics";
 import React, { useMemo, useRef, useState } from "react";
 
 function PracticeAreas() {
@@ -198,7 +199,13 @@ function PracticeAreas() {
         </Animated>
 
         <Animated delay={300}>
-          <Link to="/contacts" href="/contacts">
+          <Link
+            href="/contacts"
+            {...gaAttrs("cta_click", {
+              cta: "contact",
+              location: "practice_areas_page"
+            })}
+          >
             <Button label="contact" />
           </Link>
         </Animated>

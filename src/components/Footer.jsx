@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { SOCIAL_MEDIA } from "@/constants";
 import Animated from "./Animated";
+import { gaAttrs, resolveSocialNetwork } from "@/lib/analytics";
 
 function Footer() {
   const t = useTranslations("components");
@@ -31,11 +32,23 @@ function Footer() {
           <div className="mb-6 md:mb-0 sm:max-w-52">
             <p className="text-white text-sm">{t("footer.description")}</p>
             <div className="flex gap-4 mt-3 justify-center sm:justify-start">
-              {SOCIAL_MEDIA.map(({ icon, href }) => (
-                <Link href={href} key={href} target="_blank">
-                  <Icon color="white" icon={icon} fontSize={20} />
-                </Link>
-              ))}
+              {SOCIAL_MEDIA.map(({ icon, href }) => {
+                const network = resolveSocialNetwork(icon);
+                // WhatsApp is a contact channel, not a social follow — segment
+                // it as such so `contact_click` counts every way to reach out.
+                const event =
+                  network === "whatsapp"
+                    ? gaAttrs("contact_click", {
+                        method: "whatsapp",
+                        location: "footer"
+                      })
+                    : gaAttrs("social_click", { network, location: "footer" });
+                return (
+                  <Link href={href} key={href} target="_blank" {...event}>
+                    <Icon color="white" icon={icon} fontSize={20} />
+                  </Link>
+                );
+              })}
             </div>
           </div>
 

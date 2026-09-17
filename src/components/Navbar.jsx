@@ -10,6 +10,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap, prefersMotion } from "@/lib/gsap";
 import { useTranslations } from "next-intl";
 import styles from "./navbar.module.scss";
+import { gaAttrs } from "@/lib/analytics";
 
 const WHATSAPP_HREF = "https://wa.me/916690609";
 const WHATSAPP_ICON = "mingcute:whatsapp-fill";
@@ -173,6 +174,10 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               className={`${styles.cta} inline-flex items-center justify-center gap-2 ${dm_sans.className}`}
+              {...gaAttrs("contact_click", {
+                method: "whatsapp",
+                location: "navbar"
+              })}
             >
               <Icon
                 icon={WHATSAPP_ICON}
@@ -232,6 +237,10 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               className={`${styles.mobileCta} inline-flex items-center justify-center gap-2 ${dm_sans.className}`}
+              {...gaAttrs("contact_click", {
+                method: "whatsapp",
+                location: "navbar_mobile"
+              })}
               onClick={closeMobileMenu}
             >
               <Icon

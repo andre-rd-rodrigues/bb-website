@@ -1,4 +1,5 @@
 import { dm_serif } from "@/styles/fonts";
+import { gaAttrs, resolveContactMethod } from "@/lib/analytics";
 
 const { Icon } = require("@iconify/react");
 const { default: Link } = require("next/link");
@@ -19,6 +20,10 @@ const FooterSection = ({ title, sectionHref, subLinks }) => {
             <li key={i}>
               <Link
                 href={href}
+                {...gaAttrs("contact_click", {
+                  method: resolveContactMethod(href),
+                  location: "footer"
+                })}
                 className="hover:underline flex gap-1 items-center mb-2 mt-1"
               >
                 <Icon icon={icon} fontSize={15} />
