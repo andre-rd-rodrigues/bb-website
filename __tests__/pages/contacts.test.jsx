@@ -80,14 +80,23 @@ describe("Contacts Page", () => {
   it("renders all contact links with correct href attributes", () => {
     renderWithMotion(<Contacts />);
 
-    const addressLink = screen.getByRole("link", {
-      name: "Rua Alvaro Velho, 2D, 2830-327 Barreiro"
+    const lisbonLink = screen.getByRole("link", {
+      name: "Lisbon - Campo Grande 12, 2nd floor, office 16, 1700-092"
     });
-    expect(addressLink).toHaveAttribute(
+    expect(lisbonLink).toHaveAttribute(
       "href",
-      "https://maps.app.goo.gl/3uHBdwxH8aqrWCp76"
+      "https://maps.app.goo.gl/hgFD6NgBimp4iao28"
     );
-    expect(addressLink).toHaveAttribute("target", "_blank");
+    expect(lisbonLink).toHaveAttribute("target", "_blank");
+
+    const barreiroLink = screen.getByRole("link", {
+      name: "Barreiro - R. Miguel Bombarda 75, 2830-354"
+    });
+    expect(barreiroLink).toHaveAttribute(
+      "href",
+      "https://share.google/Zkn9KrPkJ7LQtbtF8"
+    );
+    expect(barreiroLink).toHaveAttribute("target", "_blank");
 
     const phoneLink = screen.getByRole("link", { name: "+351 211 956 606" });
     expect(phoneLink).toHaveAttribute("href", "tel:+351211956606");
@@ -126,34 +135,39 @@ describe("Contacts Page", () => {
     expect(iconNames).toContain("ic:baseline-email");
   });
 
-  it("renders the Google Maps iframe with correct attributes", () => {
+  it("renders the Google Maps iframes with correct attributes", () => {
     renderWithMotion(<Contacts />);
 
-    const iframe = document.querySelector("iframe");
-    expect(iframe).toBeInTheDocument();
-    expect(iframe).toHaveAttribute(
-      "src",
-      expect.stringContaining("google.com/maps/embed")
-    );
-    expect(iframe).toHaveAttribute("loading", "lazy");
-    expect(iframe).toHaveAttribute("frameborder", "0");
-    expect(iframe).toHaveAttribute("allowfullscreen", "");
-    expect(iframe).toHaveAttribute("aria-hidden", "false");
-    expect(iframe).toHaveAttribute("tabindex", "0");
+    const iframes = document.querySelectorAll("iframe");
+    expect(iframes).toHaveLength(2);
+
+    iframes.forEach((iframe) => {
+      expect(iframe).toHaveAttribute(
+        "src",
+        expect.stringContaining("google.com/maps")
+      );
+      expect(iframe).toHaveAttribute("loading", "lazy");
+      expect(iframe).toHaveAttribute("frameborder", "0");
+      expect(iframe).toHaveAttribute("allowfullscreen", "");
+      expect(iframe).toHaveAttribute("aria-hidden", "false");
+      expect(iframe).toHaveAttribute("tabindex", "0");
+    });
   });
 
-  it("renders the map iframe with correct styling", () => {
+  it("renders the map iframes with correct styling", () => {
     renderWithMotion(<Contacts />);
 
-    const iframe = document.querySelector("iframe");
-    expect(iframe).toHaveClass(
-      "absolute",
-      "top-0",
-      "left-0",
-      "w-full",
-      "h-full",
-      "border-none"
-    );
+    const iframes = document.querySelectorAll("iframe");
+    iframes.forEach((iframe) => {
+      expect(iframe).toHaveClass(
+        "absolute",
+        "top-0",
+        "left-0",
+        "w-full",
+        "h-full",
+        "border-none"
+      );
+    });
   });
 
   it("applies correct CSS classes to main sections", () => {
@@ -224,7 +238,14 @@ describe("Contacts Page", () => {
     renderWithMotion(<Contacts />);
 
     expect(
-      screen.getByText("Rua Alvaro Velho, 2D, 2830-327 Barreiro")
+      screen.getByRole("link", {
+        name: "Lisbon - Campo Grande 12, 2nd floor, office 16, 1700-092"
+      })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("link", {
+        name: "Barreiro - R. Miguel Bombarda 75, 2830-354"
+      })
     ).toBeInTheDocument();
     expect(screen.getByText("+351 211 956 606")).toBeInTheDocument();
     expect(

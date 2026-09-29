@@ -10,22 +10,27 @@ const legalServiceJsonLd = {
   "@id": "https://www.barbizanicarvalholaw.com/#legalservice",
   name: "Bárbara Barbizani — Advocacia e Consultoria Jurídica",
   description:
-    "Escritório de advocacia no Barreiro especializado em consultoria jurídica local e clientes internacionais.",
+    "Escritório de advocacia em Lisboa e no Barreiro especializado em consultoria jurídica local e clientes internacionais.",
   url: "https://www.barbizanicarvalholaw.com",
   telephone: "+351211956606",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Rua Álvaro Velho, 2D",
-    addressLocality: "Barreiro",
-    postalCode: "2830-327",
-    addressCountry: "PT"
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: "38.661998",
-    longitude: "-9.083387"
-  },
+  address: [
+    {
+      "@type": "PostalAddress",
+      streetAddress: "Campo Grande 12, 2.º andar, escritório 16",
+      addressLocality: "Lisboa",
+      postalCode: "1700-092",
+      addressCountry: "PT"
+    },
+    {
+      "@type": "PostalAddress",
+      streetAddress: "R. Miguel Bombarda 75",
+      addressLocality: "Barreiro",
+      postalCode: "2830-354",
+      addressCountry: "PT"
+    }
+  ],
   areaServed: [
+    "Lisboa",
     "Barreiro",
     "Margem Sul",
     "Moita",

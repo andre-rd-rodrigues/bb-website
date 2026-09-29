@@ -320,9 +320,16 @@ export const mockUseTranslation = (customTranslations = {}) => ({
       const defaultTranslations = {
         "pages.contacts.links": [
           {
-            description: "Rua Alvaro Velho, 2D, 2830-327 Barreiro",
+            city: "Lisbon",
+            description: "Campo Grande 12, 2nd floor, office 16, 1700-092",
             icon: "mdi:location",
-            href: "https://maps.app.goo.gl/3uHBdwxH8aqrWCp76"
+            href: "https://maps.app.goo.gl/hgFD6NgBimp4iao28"
+          },
+          {
+            city: "Barreiro",
+            description: "R. Miguel Bombarda 75, 2830-354",
+            icon: "mdi:location",
+            href: "https://share.google/Zkn9KrPkJ7LQtbtF8"
           },
           {
             description: "+351 211 956 606",
