@@ -43,7 +43,7 @@
     "react-google-recaptcha": "^3.1.0",
     "react-markdown": "^10.1.0",
     "react-responsive-carousel": "^3.2.23",
-    "react-spinners": "^0.17.0",
+    "react-spinners": "^0.17.1",
     "react-transition-group": "^4.4.5",
     "remark-gfm": "^4.0.1",
     "sass": "^1.103.1",
